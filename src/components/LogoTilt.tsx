@@ -1,6 +1,6 @@
 // src/components/LogoTilt.tsx
 import Tilt from 'react-parallax-tilt';
-import logo from '@/assets/icon.png';
+import logo from '@/assets/logo.png';
 import '@/styles/logoSpin.css';
 import React from 'react';
 

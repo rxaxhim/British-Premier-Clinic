@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
 
 const Hero = () => {
   const stats = [
@@ -29,14 +30,19 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-hero" />
-      </div>
+    <section className="relative min-h-[90svh] md:min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image as <img> with overlay */}
+      <picture>
+        <source srcSet={heroBg} media="(min-width: 768px)" />
+        <img
+          src={heroBgMobile}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+        />
+      </picture>
+      <div className="absolute inset-0 bg-gradient-hero" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">

@@ -74,7 +74,7 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="outline" size="sm" asChild>
-              <Link to="/contact" className="flex items-center space-x-2">
+              <Link to="/contact" className="flex items-center space-x-2 border-black/30">
                 <Phone className="h-4 w-4" />
                 <span>Call Us</span>
               </Link>

@@ -8,19 +8,24 @@ const FloatingAppointment = () => {
   const [isMinimized, setIsMinimized] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Show after scrolling down 200px
-      setIsVisible(window.scrollY > 200);
-    };
-
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setIsVisible(window.scrollY > 200);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // set initial state
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 animate-fade-in">
+    <div
+      className="
+        fixed inset-x-0 
+        bottom-[calc(env(safe-area-inset-bottom,0px)+16px)]
+        z-40 flex justify-center px-4
+        md:inset-x-auto md:right-6 md:bottom-6 md:justify-end
+        animate-fade-in
+      "
+    >
       {isMinimized ? (
         <Button
           onClick={() => setIsMinimized(false)}
@@ -30,7 +35,7 @@ const FloatingAppointment = () => {
           <Calendar className="h-6 w-6" />
         </Button>
       ) : (
-        <div className="bg-card border border-border rounded-xl shadow-large p-4 max-w-sm animate-scale-in">
+        <div className="bg-card border border-border rounded-xl shadow-large p-4 max-w-sm w-full md:w-auto animate-scale-in">
           <div className="flex items-center justify-between mb-3">
             <h4 className="font-semibold text-foreground">Need an Appointment?</h4>
             <Button
@@ -46,8 +51,8 @@ const FloatingAppointment = () => {
             Schedule your consultation with our expert mental health professionals.
           </p>
           <div className="flex space-x-2">
-            <Button 
-              asChild 
+            <Button
+              asChild
               className="flex-1 bg-gradient-primary text-primary-foreground hover:opacity-90"
             >
               <Link to="/appointment" className="flex items-center justify-center space-x-2">
@@ -55,11 +60,7 @@ const FloatingAppointment = () => {
                 <span>Book Now</span>
               </Link>
             </Button>
-            <Button 
-              variant="outline" 
-              size="sm" 
-              asChild
-            >
+            <Button variant="outline" size="sm" asChild className="border-black/30">
               <Link to="/contact">Call Us</Link>
             </Button>
           </div>

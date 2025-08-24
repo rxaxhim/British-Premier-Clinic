@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Medical Design System for British Premier Psychiatry & Psychology Center */
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 99%;
+    --foreground: 210 24% 16%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 210 24% 16%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 16%;
+
+    /* Primary brand - Medical Blue */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 85%;
+    --primary-dark: 210 100% 35%;
+
+    /* Secondary - Healing Green */
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 142 45% 85%;
+
+    /* Accent - Warm Trust */
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 199 89% 90%;
+
+    /* Muted colors */
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 16% 46%;
+
+    /* Medical themed colors */
+    --medical-trust: 210 100% 45%;
+    --medical-calm: 142 76% 36%;
+    --medical-warm: 199 89% 48%;
+    --medical-neutral: 210 20% 50%;
+
+    /* Status colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 48 96% 53%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 210 40% 90%;
+    --input: 210 40% 95%;
+    --ring: 210 100% 45%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--secondary) / 0.8));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(var(--primary) / 0.08);
+    --shadow-medium: 0 4px 16px hsl(var(--primary) / 0.12);
+    --shadow-large: 0 8px 32px hsl(var(--primary) / 0.16);
+
+    /* Typography */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    /* Spacing and sizing */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 24% 8%;
+    --foreground: 210 20% 90%;
+
+    --card: 210 24% 10%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 210 24% 10%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 210 100% 55%;
+    --primary-foreground: 210 24% 8%;
+    --primary-light: 210 100% 75%;
+    --primary-dark: 210 100% 45%;
+
+    --secondary: 142 76% 46%;
+    --secondary-foreground: 210 24% 8%;
+    --secondary-light: 142 45% 75%;
+
+    --accent: 199 89% 58%;
+    --accent-foreground: 210 24% 8%;
+    --accent-light: 199 89% 80%;
+
+    --muted: 210 24% 15%;
+    --muted-foreground: 210 20% 65%;
+
+    --medical-trust: 210 100% 55%;
+    --medical-calm: 142 76% 46%;
+    --medical-warm: 199 89% 58%;
+    --medical-neutral: 210 20% 60%;
+
+    --success: 142 76% 46%;
+    --success-foreground: 210 24% 8%;
+    --warning: 48 96% 63%;
+    --warning-foreground: 210 24% 8%;
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 210 24% 8%;
+
+    --border: 210 24% 20%;
+    --input: 210 24% 15%;
+    --ring: 210 100% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--secondary) / 0.8));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.15);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.20);
+    --shadow-large: 0 8px 32px hsl(0 0% 0% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

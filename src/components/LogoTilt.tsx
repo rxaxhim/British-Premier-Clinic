@@ -1,7 +1,7 @@
 // src/components/LogoTilt.tsx
 import Tilt from 'react-parallax-tilt';
-import logo from '../assets/icon.png';
-import '../styles/LogoSpin.css';
+import logo from '@/assets/icon.png';
+import '@/styles/LogoSpin.css';
 import React from 'react';
 
 type Props = {

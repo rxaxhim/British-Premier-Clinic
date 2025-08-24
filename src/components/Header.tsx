@@ -41,8 +41,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <img src={logo} alt="British Premier Psychiatry" className="h-12 w-12" />
-            <div className="hidden sm:block">
+            <img src={logo} alt="British Premier Psychiatry" className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24" />
+            <div className="block">
               <h1 className="text-lg font-semibold text-foreground leading-tight">
                 British Premier
               </h1>
@@ -94,7 +94,7 @@ const Header = () => {
             <SheetContent side="right" className="w-72">
               <div className="flex flex-col space-y-6 mt-8">
                 <div className="flex items-center space-x-3">
-                  <img src={logo} alt="British Premier Psychiatry" className="h-10 w-10" />
+                  <img src={logo} alt="British Premier Psychiatry" className="h-14 w-14 sm:h-16 sm:w-16" />
                   <div>
                     <h2 className="font-semibold text-foreground">British Premier</h2>
                     <p className="text-sm text-muted-foreground">Psychiatry & Psychology</p>

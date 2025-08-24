@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Calendar, 
-  Phone, 
-  Star, 
-  Award, 
-  Shield, 
+import {
+  Calendar,
+  Phone,
+  Star,
+  Award,
+  Shield,
   Heart,
   ArrowRight,
   CheckCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import LogoTilt from "@/components/LogoTilt";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
 
@@ -24,14 +25,14 @@ const Hero = () => {
 
   const features = [
     "Expert Psychiatrists & Psychologists",
-    "Evidence-Based Treatment Methods", 
+    "Evidence-Based Treatment Methods",
     "Multilingual Support Available",
     "Flexible Appointment Scheduling"
   ];
 
   return (
     <section className="relative min-h-[90svh] md:min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image as <img> with overlay */}
+      {/* Background */}
       <picture>
         <source srcSet={heroBg} media="(min-width: 768px)" />
         <img
@@ -45,35 +46,58 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-hero" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      {/* Extra top padding on mobile so the small logo has breathing room */}
+      <div className="relative z-10 container mx-auto px-4 pt-36 md:pt-24 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
+          {/* Left Column */}
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-4">
-              <Badge 
-                variant="secondary" 
-                className="bg-white/20 text-white border-white/30 backdrop-blur-sm"
-              >
-                Premier Mental Health Care in UAE
-              </Badge>
-              
+              {/* Tiny 3D logo centered above the badge (phone) and aligned with left column (desktop) */}
+              <div className="space-y-2">
+                <div className="flex justify-center sm:justify-start">
+                  {/* Slot that reserves just a little vertical space */}
+                  <div className="relative h-8 sm:h-9 md:h-10 w-24">
+                    {/* We absolutely position + scale the existing 260px LogoTilt so it appears small.
+                        Negative top offsets counter the inner 4rem margin from LogoTilt. */}
+                    <div className="
+                      absolute left-1/2 -translate-x-1/2
+                      -top-10 sm:-top-12 md:-top-14
+                      origin-bottom
+                      pointer-events-none
+                      scale-[2.5] sm:scale-[2.5] md:scale-[2.5]
+                    ">
+                      <div className="pointer-events-auto">
+                        <LogoTilt />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <Badge
+                  variant="secondary"
+                  className="bg-white/20 text-white border-white/30 backdrop-blur-sm"
+                >
+                  Premier Mental Health Care in UAE
+                </Badge>
+              </div>
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Expert Mental Health Care{" "}
                 <span className="bg-gradient-to-r from-accent-light to-secondary-light bg-clip-text text-transparent">
                   Within Reach
                 </span>
               </h1>
-              
+
               <p className="text-xl text-white/90 leading-relaxed max-w-2xl">
-                Professional psychiatric and psychological services providing compassionate, 
+                Professional psychiatric and psychological services providing compassionate,
                 evidence-based treatment for individuals and families across the UAE.
               </p>
             </div>
 
-            {/* Features List */}
+            {/* Features */}
             <div className="grid sm:grid-cols-2 gap-3">
               {features.map((feature, index) => (
-                <div 
+                <div
                   key={feature}
                   className="flex items-center space-x-2 animate-slide-in-left"
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -84,10 +108,10 @@ const Hero = () => {
               ))}
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-white text-primary hover:bg-white/90 transition-all hover:scale-105 shadow-large"
                 asChild
               >
@@ -97,9 +121,9 @@ const Hero = () => {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              
-              <Button 
-                variant="outline" 
+
+              <Button
+                variant="outline"
                 size="lg"
                 className="border-white/30 text-white bg-white/10 backdrop-blur-sm"
                 asChild
@@ -111,27 +135,25 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Trust Indicators */}
+            {/* Trust */}
             <div className="flex flex-wrap items-center gap-6 pt-4">
               <div className="flex items-center space-x-2">
                 <div className="flex">
-                  {[1,2,3,4,5].map((star) => (
+                  {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
                 <span className="text-white/90 text-sm">4.9/5 Patient Rating</span>
               </div>
-              <div className="text-white/90 text-sm">
-                ✓ DHA Licensed & Regulated
-              </div>
+              <div className="text-white/90 text-sm">✓ DHA Licensed & Regulated</div>
             </div>
           </div>
 
-          {/* Right Column - Stats */}
+          {/* Right Column */}
           <div className="space-y-6 animate-fade-in">
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
-                <div 
+                <div
                   key={stat.label}
                   className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -158,7 +180,7 @@ const Hero = () => {
                   <span className="text-white/90">Same-day Appointments Available</span>
                 </div>
               </div>
-              <Button 
+              <Button
                 className="w-full mt-4 bg-accent text-accent-foreground hover:bg-accent/90"
                 asChild
               >
@@ -170,7 +192,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float z-20">
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
         </div>

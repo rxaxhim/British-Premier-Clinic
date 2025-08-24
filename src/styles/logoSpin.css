@@ -1,0 +1,111 @@
+/* src/styles/LogoSpin.css */
+
+/* Size driven by a CSS variable (small by default, scales up on larger screens) */
+.logo-3d-cube {
+  --logo-size: 56px;        /* base size (mobile) */
+  --face: var(--logo-size);
+  --half: calc(var(--logo-size) / 2);
+
+  position: relative;
+  width: var(--face);
+  height: var(--face);
+  transform-style: preserve-3d;
+  margin: 0;
+
+  /* continuous spin */
+  animation: spin-diag 16s linear infinite;
+}
+
+/* Faces — frosted/blurred white glass */
+.cube-face {
+  position: absolute;
+  width: var(--face);
+  height: var(--face);
+
+  /* frosted look */
+  background: rgba(255, 255, 255, 0.45);             /* main white layer */
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%); /* Safari */
+
+  border: 1px solid rgba(255, 255, 255, 0.32);       /* subtle edge */
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.25),                  /* outer depth */
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);         /* inner highlight */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.cube-face img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Depth placement */
+.front  { transform: translateZ(var(--half)); }
+.back   { transform: rotateY(180deg) translateZ(var(--half)); }
+.right  { transform: rotateY( 90deg) translateZ(var(--half)); }
+.left   { transform: rotateY(-90deg) translateZ(var(--half)); }
+.top    { transform: rotateX( 90deg) translateZ(var(--half)); }
+.bottom { transform: rotateX(-90deg) translateZ(var(--half)); }
+
+/* Diagonal 3-axis spin (stylish) */
+@keyframes spin-diag {
+  0%   { transform: rotateX(10deg) rotateY(  0deg) rotateZ(  0deg); }
+  25%  { transform: rotateX(25deg) rotateY( 90deg) rotateZ( 90deg); }
+  50%  { transform: rotateX(10deg) rotateY(180deg) rotateZ(180deg); }
+  75%  { transform: rotateX(25deg) rotateY(270deg) rotateZ(270deg); }
+  100% { transform: rotateX(10deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+/* Soft sheen sweep */
+.cube-face::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255,255,255,0.18) 50%,
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  animation: shine 4s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
+}
+
+/* Fallback if blur isn't supported: make faces more opaque white */
+@supports not ((backdrop-filter: blur(0px)) or (-webkit-backdrop-filter: blur(0px))) {
+  .cube-face {
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+/* Responsive sizing via the variable */
+@media (min-width: 640px) {  /* sm */
+  .logo-3d-cube { --logo-size: 64px; }
+}
+@media (min-width: 1024px) { /* lg */
+  .logo-3d-cube { --logo-size: 72px; }
+}
+@media (min-width: 1280px) { /* xl */
+  .logo-3d-cube { --logo-size: 80px; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .logo-3d-cube {
+    animation: none;
+    transform: rotateX(15deg) rotateY(10deg);
+  }
+  .cube-face::before { animation: none; }
+}

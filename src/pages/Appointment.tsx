@@ -1,8 +1,18 @@
+import HeroBanner from "@/components/HeroBanner";
+
 const Appointment = () => {
   return (
     <div className="min-h-screen">
-      <h1 className="text-4xl font-bold text-center py-20">Book Appointment</h1>
-      <p className="text-center text-muted-foreground">Coming soon...</p>
+      <HeroBanner
+        eyebrow="Appointments"
+        title="Book Appointment"
+        description="Schedule a consultation with our psychiatry & psychology team."
+        badges={["Secure booking", "New patients welcome"]}
+      />
+
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <p className="text-center text-muted-foreground">Coming soon...</p>
+      </section>
     </div>
   );
 };

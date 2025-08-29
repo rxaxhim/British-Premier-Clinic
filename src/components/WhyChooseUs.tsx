@@ -118,7 +118,8 @@ const WhyChooseUs = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-in">
           {/* Left - Certifications */}
           <div className="space-y-6">
-            <div className="space-y-4">
+            {/* Center this block on mobile */}
+            <div className="space-y-4 text-center md:text-left max-w-prose mx-auto md:mx-0">
               <h3 className="text-2xl font-bold text-foreground">
                 Accredited & Certified
               </h3>

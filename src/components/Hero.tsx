@@ -11,18 +11,16 @@ import {
   CheckCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import LogoTilt from "@/components/LogoTilt";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
-import { ColourfulText } from "@/components/ui/colourful-text";
+import brandLogo from "@/assets/logo.png"; // big logo at the top
 
 const Hero = () => {
-  // Gave each stat icon its own brand-friendly color
   const stats = [
     { icon: Award, label: "Years of Excellence", value: "15+", color: "text-amber-300" },
-    { icon: Heart, label: "Patients Treated", value: "10K+", color: "text-rose-400", fill: "fill-rose-400" },
+    { icon: Heart, label: "Patients Treated", value: "10K+", color: "text-rose-400" },
     { icon: Shield, label: "Success Rate", value: "95%", color: "text-emerald-300" },
-    { icon: Star, label: "Patient Rating", value: "4.9/5", color: "text-yellow-300", fill: "fill-yellow-300" }
+    { icon: Star, label: "Patient Rating", value: "4.9/5", color: "text-yellow-300" }
   ];
 
   const features = [
@@ -47,66 +45,29 @@ const Hero = () => {
       </picture>
       <div className="absolute inset-0 bg-gradient-hero" />
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-36 md:pt-24 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Content (logo is its own row, in flow) */}
+      <div className="relative z-10 container mx-auto px-4 pt-4 sm:pt-6 md:pt-8 pb-16 md:pb-18">
+        {/* Top logo row — centered, reduced bottom margin */}
+        <div className="flex justify-center mb-3 sm:mb-4 md:mb-6">
+          <img
+            src={brandLogo}
+            alt="British Premier logo"
+            className="w-[62vw] max-w-[15rem] sm:max-w-[18rem] md:max-w-[22rem] lg:max-w-[22rem] xl:max-w-[22rem] h-auto drop-shadow-2xl"
+            loading="eager"
+          />
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column */}
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-5">
-              {/* Logo + Clinic Name */}
-              <div className="space-y-3">
-                <div className="flex justify-center sm:justify-start">
-                  {/* Slot that reserves just a little vertical space */}
-                  <div className="relative h-8 sm:h-9 md:h-10 w-24">
-                    {/* Position the existing 260px LogoTilt so it appears small */}
-                    <div
-                      className="
-                        absolute left-1/2 -translate-x-1/2
-                        -top-10 sm:-top-12 md:-top-14
-                        origin-bottom
-                        pointer-events-none
-                        scale-[2.5] sm:scale-[2.5] md:scale-[2.5]
-                      "
-                    >
-                      <div className="pointer-events-auto">
-                        <LogoTilt />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Clinic Name under the logo */}
-                <div className="text-center sm:text-left leading-tight">
-                  <span className="block font-bold text-lg sm:text-xl">
-                    <ColourfulText text="BRITISH PREMIER" fixedColor="#0b2a6f" />
-                  </span>
-                  <span
-                    className="
-                      block
-                      text-base sm:text-lg
-                      font-medium
-                      text-[#991b1b]           /* darker red */
-                      tracking-[0.015em]       /* subtle letterspacing for readability */
-                      leading-tight
-                      [font-kerning:normal]    /* enable kerning */
-                    "
-                  >
-                    Psychiatry
-                    <span className="relative -top-[1px] mx-1 text-[0.9em] font-semibold">
-                      &amp;
-                    </span>
-                    Psychology
-                  </span>
-                </div>
-
-                <div className="flex justify-center sm:justify-start">
-                  <Badge
-                    variant="secondary"
-                    className="bg-white/20 text-white border-white/30 backdrop-blur-sm uppercase tracking-wider"
-                  >
-                    Premier Mental Health Care in UAE
-                  </Badge>
-                </div>
+              <div className="flex justify-center sm:justify-start">
+                <Badge
+                  variant="secondary"
+                  className="bg-white/20 text-white border-white/30 backdrop-blur-sm uppercase tracking-wider"
+                >
+                  Premier Mental Health Care in UAE
+                </Badge>
               </div>
 
               <h1 className="text-center sm:text-left text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
@@ -186,7 +147,8 @@ const Hero = () => {
                   className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <stat.icon className={`h-8 w-8 mb-3 ${stat.color} ${stat.fill ?? ""}`} />
+                  {/* colored icon */}
+                  <stat.icon className={`h-8 w-8 mb-3 ${stat.color}`} />
                   <div className="space-y-1">
                     <p className="text-2xl font-bold text-white">{stat.value}</p>
                     <p className="text-white/80 text-sm">{stat.label}</p>
@@ -220,8 +182,8 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float z-20">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center animate-float">
           <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
         </div>
       </div>

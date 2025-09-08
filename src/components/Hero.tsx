@@ -13,7 +13,7 @@ import {
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
-import brandLogo from "@/assets/logo.png"; // big logo at the top
+import brandLogo from "@/assets/logo_hero.png"; // big logo at the top
 
 const Hero = () => {
   const stats = [
@@ -43,7 +43,7 @@ const Hero = () => {
           fetchPriority="high"
         />
       </picture>
-      <div className="absolute inset-0 bg-gradient-hero" />
+      <div className="absolute inset-0 backdrop-blur-md bg-blue-700/45" />
 
       {/* Content (logo is its own row, in flow) */}
       <div className="relative z-10 container mx-auto px-4 pt-4 sm:pt-6 md:pt-8 pb-16 md:pb-18">
@@ -52,7 +52,7 @@ const Hero = () => {
           <img
             src={brandLogo}
             alt="British Premier logo"
-            className="w-[62vw] max-w-[15rem] sm:max-w-[18rem] md:max-w-[22rem] lg:max-w-[22rem] xl:max-w-[22rem] h-auto drop-shadow-2xl"
+            className="w-[65vw] max-w-[22rem] sm:max-w-[26rem] md:max-w-[30rem] lg:max-w-[34rem] xl:max-w-[36rem] h-auto drop-shadow-2xl"
             loading="eager"
           />
         </div>
@@ -72,7 +72,7 @@ const Hero = () => {
 
               <h1 className="text-center sm:text-left text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
                 Expert Mental Health Care{" "}
-                <span className="bg-gradient-to-r from-accent-light to-secondary-light bg-clip-text text-transparent">
+                <span className="bg-gradient-to-br from-blue-800 via-blue-700 to-red-800 bg-clip-text text-transparent">
                   Within Reach
                 </span>
               </h1>

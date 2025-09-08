@@ -1,4 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+type Cta = {
+  label: string;
+  /** Prefer this for in-app routes so basename is respected */
+  to?: string;
+  /** For external links or when you intentionally want a full reload */
+  href?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  variant?: "solid" | "outline";
+  target?: string;
+  rel?: string;
+} | undefined;
 
 type HeroBannerProps = {
   eyebrow?: string;
@@ -7,8 +20,10 @@ type HeroBannerProps = {
   badges?: string[];
   className?: string;
   gradientClassName?: string;
-  center?: boolean; // default true
+  center?: boolean;
   children?: React.ReactNode;
+  primaryCta?: Cta;
+  secondaryCta?: Cta;
 };
 
 export default function HeroBanner({
@@ -20,10 +35,40 @@ export default function HeroBanner({
   gradientClassName,
   center = true,
   children,
+  primaryCta,
+  secondaryCta,
 }: HeroBannerProps) {
   const align = center
     ? "text-center items-center justify-center"
     : "text-left items-start justify-start";
+
+  const Buttonish = ({ cta }: { cta: NonNullable<Cta> }) => {
+    const common =
+      "inline-flex items-center justify-center rounded-md px-5 py-2.5 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-white/40";
+    const solid = "bg-white text-blue-950 hover:bg-white/90 shadow";
+    const outline = "bg-transparent text-white border border-white/30 hover:bg-white/10";
+    const classes = `${common} ${cta.variant === "outline" ? outline : solid}`;
+
+    if (cta?.to) {
+      return (
+        <Link to={cta.to} target={cta.target} rel={cta.rel} className={classes}>
+          {cta.label}
+        </Link>
+      );
+    }
+    if (cta?.href) {
+      return (
+        <a href={cta.href} target={cta.target} rel={cta.rel} className={classes}>
+          {cta.label}
+        </a>
+      );
+    }
+    return (
+      <button onClick={cta?.onClick} className={classes} type="button">
+        {cta?.label}
+      </button>
+    );
+  };
 
   return (
     <section
@@ -33,8 +78,8 @@ export default function HeroBanner({
         className,
       ].join(" ")}
     >
-      {/* Subtle radial highlights */}
       <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(600px_200px_at_10%_10%,rgba(255,255,255,0.08),transparent),radial-gradient(600px_200px_at_90%_60%,rgba(255,255,255,0.06),transparent)]" />
+
       <div className="relative container mx-auto px-4 py-24 md:py-32 flex flex-col gap-4">
         {eyebrow && (
           <div className={`flex ${align} w-full`}>
@@ -55,6 +100,15 @@ export default function HeroBanner({
             <p className="mt-1 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
               {description}
             </p>
+          </div>
+        )}
+
+        {(primaryCta || secondaryCta) && (
+          <div className={`flex ${align} w-full`}>
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              {primaryCta && <Buttonish cta={primaryCta} />}
+              {secondaryCta && <Buttonish cta={{ variant: "outline", ...secondaryCta }} />}
+            </div>
           </div>
         )}
 

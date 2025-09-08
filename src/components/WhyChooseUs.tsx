@@ -81,9 +81,9 @@ const WhyChooseUs = () => {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
-            <Card 
+            <Card
               key={feature.title}
-              className="group hover:shadow-large transition-all duration-300 hover:-translate-y-1 animate-scale-in border-0 bg-gradient-card"
+              className="group rounded-xl border border-border/60 bg-gradient-card hover:border-border transition-all duration-300 hover:shadow-large hover:-translate-y-1 animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8 space-y-6">

@@ -790,14 +790,14 @@ const About = () => {
               Take the first step towards better mental health. We're here to support you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
+              <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90" asChild>
                 <Link to="/appointment">Book Your Appointment</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 asChild
-                className="border border-border hover:border-border"
+                className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
               >
                 <Link to="/contact">Contact Us</Link>
               </Button>

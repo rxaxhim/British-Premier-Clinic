@@ -66,12 +66,22 @@ const About = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <HeroBanner
-        eyebrow="About"
-        title="About Us"
-        description="Dedicated psychiatry & psychology care grounded in science and compassion."
-        badges={["Multidisciplinary team", "Evidence-based care"]}
-        primaryCta={{ label: "Schedule Consultation", href: "/appointment" }}
-        secondaryCta={{ label: "Our Services", href: "/services" }}
+      eyebrow="About"
+      title="About Us"
+      description="Dedicated psychiatry & psychology care grounded in science and compassion."
+      badges={["Multidisciplinary team", "Evidence-based care"]}
+      primaryCta={{
+        label: "Schedule Consultation",
+        href: "/appointment",
+        className:
+          "bg-transparent text-primary hover:bg-transparent hover:text-white hover:border hover:border-white transition-all",
+      }}
+      secondaryCta={{
+        label: "Our Services",
+        href: "/services",
+        className:
+          "bg-transparent border border-white text-white hover:bg-white hover:text-primary transition-all",
+      }}
       />
 
       {/* Stats Section */}
@@ -125,11 +135,22 @@ const About = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
+                <div className="aspect-square relative rounded-2xl overflow-hidden flex items-center justify-center">
+                  {/* Background image */}
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1679429321023-dff2ea455b0c?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Background"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
+                  {/* Blurred overlay */}
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+
+                  {/* Foreground content */}
+                  <div className="relative text-center text-white">
                     <Heart className="h-16 w-16 text-primary mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-                    <p className="text-muted-foreground px-6">
+                    <p className="text-white/90 px-6">
                       Empowering individuals to achieve mental wellness through compassionate, evidence-based care.
                     </p>
                   </div>
@@ -180,17 +201,31 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Card with background image */}
               <div className="order-2 md:order-1">
-                <div className="aspect-square bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
+                <div className="aspect-square relative rounded-2xl overflow-hidden flex items-center justify-center">
+                  {/* Background image */}
+                  <img
+                    src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg"
+                    alt="Holistic approach background"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
+                  {/* Blurred overlay */}
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+
+                  {/* Foreground content */}
+                  <div className="relative text-center text-white">
                     <Star className="h-16 w-16 text-secondary mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Holistic Approach</h3>
-                    <p className="text-muted-foreground px-6">
+                    <p className="text-white/90 px-6">
                       We treat the whole person, not just symptoms.
                     </p>
                   </div>
                 </div>
               </div>
+
+              {/* Text content */}
               <div className="order-1 md:order-2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Philosophy</h2>
                 <div className="space-y-4 text-muted-foreground">
@@ -222,6 +257,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Text content */}
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Cultural Sensitivity</h2>
                 <div className="space-y-4 text-muted-foreground">
@@ -250,12 +286,25 @@ const About = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Card with background image */}
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
+                <div className="aspect-square relative rounded-2xl overflow-hidden flex items-center justify-center">
+                  {/* Background image */}
+                  <img
+                    src="https://images.unsplash.com/photo-1651421479704-470a78eef530?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Culturally inclusive care background"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
+                  {/* Blurred overlay */}
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+
+                  {/* Foreground content */}
+                  <div className="relative text-center text-white">
                     <Users className="h-20 w-20 text-accent mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Culturally Inclusive Care</h3>
-                    <p className="text-muted-foreground px-6">
+                    <p className="text-white/90 px-6">
                       Respecting traditions while delivering excellence
                     </p>
                   </div>
@@ -265,6 +314,7 @@ const About = () => {
           </div>
         </div>
       </section>
+
 
       {/* Awards & Recognition */}
       <section className="py-20">
@@ -372,6 +422,7 @@ const About = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Text content */}
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Our Initiatives</h3>
                 <div className="space-y-6">
@@ -410,12 +461,25 @@ const About = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Card with background image */}
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
+                <div className="aspect-square relative rounded-2xl overflow-hidden flex items-center justify-center">
+                  {/* Background image */}
+                  <img
+                    src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Community background"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
+                  {/* Blurred overlay */}
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+
+                  {/* Foreground content */}
+                  <div className="relative text-center text-white">
                     <Users className="h-20 w-20 text-primary mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Community First</h3>
-                    <p className="text-muted-foreground px-6">
+                    <p className="text-white/90 px-6">
                       Building a stronger, healthier community together.
                     </p>
                   </div>
@@ -425,6 +489,7 @@ const About = () => {
           </div>
         </div>
       </section>
+
 
       {/* Team Section */}
       <section className="py-20">

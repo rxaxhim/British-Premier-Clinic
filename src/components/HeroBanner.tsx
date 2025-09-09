@@ -11,6 +11,7 @@ type Cta = {
   variant?: "solid" | "outline";
   target?: string;
   rel?: string;
+  className?: string;
 } | undefined;
 
 type HeroBannerProps = {
@@ -45,9 +46,10 @@ export default function HeroBanner({
   const Buttonish = ({ cta }: { cta: NonNullable<Cta> }) => {
     const common =
       "inline-flex items-center justify-center rounded-md px-5 py-2.5 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-white/40";
-    const solid = "bg-white text-blue-950 hover:bg-white/90 shadow";
-    const outline = "bg-transparent text-white border border-white/30 hover:bg-white/10";
-    const classes = `${common} ${cta.variant === "outline" ? outline : solid}`;
+    const outline =
+      "bg-transparent border border-white text-white hover:bg-white hover:text-blue-950";
+
+    const classes = `${common} ${outline} ${cta.className || ""}`;
 
     if (cta?.to) {
       return (

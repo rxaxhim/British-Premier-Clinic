@@ -73,8 +73,13 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" asChild>
-              <Link to="/contact" className="flex items-center space-x-2 border-black/30">
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
+            >
+              <Link to="/contact" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
                 <span>Call Us</span>
               </Link>

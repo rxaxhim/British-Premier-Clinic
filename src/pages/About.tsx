@@ -74,7 +74,7 @@ const About = () => {
         label: "Schedule Consultation",
         href: "/appointment",
         className:
-          "bg-transparent text-primary hover:bg-transparent hover:text-white hover:border hover:border-white transition-all",
+          "bg-transparent text-primary hover:bg-transparent hover:text-primary hover:border hover:border-white transition-all",
       }}
       secondaryCta={{
         label: "Our Services",
@@ -186,11 +186,12 @@ const About = () => {
         </div>
         
         {/* Link to Full Doctor Profiles */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6">
+        <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 text-center">
+          <h3 className="text-2xl font-semibold mb-4">Clinical Services</h3>
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Review our comprehensive suite of clinical services.
           </p>
-          <Button size="lg" asChild>
+          <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90" asChild>
             <Link to="/services">View Services</Link>
           </Button>
         </div>
@@ -326,29 +327,31 @@ const About = () => {
                 Our commitment to excellence has been recognized by professional organizations and the community.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-gradient-to-br from-primary/5 to-transparent">
-                <CardContent className="p-6 text-center">
-                  <Award className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">Best Mental Health Practice 2023</h3>
-                  <p className="text-sm text-muted-foreground">Regional Healthcare Excellence Awards</p>
-                </CardContent>
-              </Card>
-              <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-gradient-to-br from-secondary/5 to-transparent">
-                <CardContent className="p-6 text-center">
-                  <Star className="h-12 w-12 text-secondary mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">Community Impact Award</h3>
-                  <p className="text-sm text-muted-foreground">City Health & Wellness Initiative</p>
-                </CardContent>
-              </Card>
-              <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-gradient-to-br from-accent/5 to-transparent">
-                <CardContent className="p-6 text-center">
-                  <Heart className="h-12 w-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">Patient Choice Award</h3>
-                  <p className="text-sm text-muted-foreground">State Medical Association</p>
-                </CardContent>
-              </Card>
-            </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Card className="rounded-xl border border-border/60 bg-gradient-to-br from-primary/5 to-transparent shadow-sm hover:shadow-md hover:border-border/80 transition-all">
+                  <CardContent className="p-6 text-center">
+                    <Award className="h-12 w-12 text-primary mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-2">Best Mental Health Practice 2023</h3>
+                    <p className="text-sm text-muted-foreground">Regional Healthcare Excellence Awards</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="rounded-xl border border-border/60 bg-gradient-to-br from-secondary/5 to-transparent shadow-sm hover:shadow-md hover:border-border/80 transition-all">
+                  <CardContent className="p-6 text-center">
+                    <Star className="h-12 w-12 text-secondary mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-2">Community Impact Award</h3>
+                    <p className="text-sm text-muted-foreground">City Health & Wellness Initiative</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="rounded-xl border border-border/60 bg-gradient-to-br from-accent/5 to-transparent shadow-sm hover:shadow-md hover:border-border/80 transition-all">
+                  <CardContent className="p-6 text-center">
+                    <Heart className="h-12 w-12 text-accent mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-2">Patient Choice Award</h3>
+                    <p className="text-sm text-muted-foreground">State Medical Association</p>
+                  </CardContent>
+                </Card>
+              </div>
           </div>
         </div>
       </section>
@@ -535,7 +538,7 @@ const About = () => {
               <p className="text-muted-foreground mb-6">
                 Want to learn more about our doctors and their expertise?
               </p>
-              <Button size="lg" asChild>
+              <Button className="bg-gradient-primary text-primary-foreground hover:opacity-90" size="lg" asChild>
                 <Link to="/doctors">View All Doctor Profiles</Link>
               </Button>
             </div>
@@ -790,7 +793,12 @@ const About = () => {
               <Button size="lg" asChild>
                 <Link to="/appointment">Book Your Appointment</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="border border-border hover:border-border"
+              >
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>

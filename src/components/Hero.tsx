@@ -72,9 +72,9 @@ const Hero = () => {
 
               <h1 className="text-center sm:text-left text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
                 Expert Mental Health Care{" "}
-                <span className="bg-gradient-to-br from-blue-800 via-blue-700 to-red-800 bg-clip-text text-transparent">
-                  Within Reach
-                </span>
+              <span className="bg-gradient-to-br from-sky-500 via-blue-300 to-indigo-200 bg-clip-text text-transparent drop-shadow-sm">
+                Within Reach
+              </span>
               </h1>
 
               <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">

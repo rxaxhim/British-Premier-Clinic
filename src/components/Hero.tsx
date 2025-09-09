@@ -13,7 +13,7 @@ import {
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
-import brandLogo from "@/assets/logo_hero.png"; // big logo at the top
+import brandLogo from "@/assets/BP-logo.png"; // big logo at the top
 
 const Hero = () => {
   const stats = [

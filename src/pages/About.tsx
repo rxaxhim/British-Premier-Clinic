@@ -186,14 +186,28 @@ const About = () => {
         </div>
         
         {/* Link to Full Doctor Profiles */}
-        <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-semibold mb-4">Clinical Services</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Review our comprehensive suite of clinical services.
-          </p>
-          <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90" asChild>
-            <Link to="/services">View Services</Link>
-          </Button>
+        <div className="mt-12 md:mt-16">
+          <div
+            className="relative overflow-hidden text-white
+                      bg-gradient-to-br from-blue-950 via-blue-900 to-red-900
+                      rounded-none md:rounded-2xl
+                      -mx-4 sm:-mx-6 md:mx-auto
+                      px-4 sm:px-6 md:p-8 py-8
+                      md:max-w-6xl md:shadow-lg md:ring-1 md:ring-white/10"
+          >
+            {/* subtle highlights like HeroBanner */}
+            <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(600px_200px_at_10%_10%,rgba(255,255,255,0.08),transparent),radial-gradient(600px_200px_at_90%_60%,rgba(255,255,255,0.06),transparent)]" />
+
+            <div className="relative text-center">
+              <h3 className="text-2xl font-semibold mb-4">Clinical Services</h3>
+              <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+                Review our comprehensive suite of clinical services.
+              </p>
+              <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90" asChild>
+                <Link to="/services">View Services</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -357,62 +371,69 @@ const About = () => {
       </section>
 
       {/* Patient Testimonials */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative overflow-hidden text-white bg-gradient-to-br from-blue-950 via-blue-900 to-red-900">
+        {/* subtle hero-style highlights */}
+        <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(600px_200px_at_10%_10%,rgba(255,255,255,0.08),transparent),radial-gradient(600px_200px_at_90%_60%,rgba(255,255,255,0.06),transparent)]" />
+
+        <div className="relative container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Patients Say</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl text-white/90 max-w-2xl mx-auto">
                 Real stories from real people who have found healing and hope through our care.
               </p>
             </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="border-0 shadow-sm">
+              <Card className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-4 italic">
-                    "The compassionate care I received here changed my life. The staff truly listens and 
+                  <p className="text-white/90 mb-4 italic">
+                    "The compassionate care I received here changed my life. The staff truly listens and
                     creates a safe space for healing."
                   </p>
-                  <p className="font-semibold">- Sarah M.</p>
+                  <p className="font-semibold text-white">- Sarah M.</p>
                 </CardContent>
               </Card>
-              <Card className="border-0 shadow-sm">
+
+              <Card className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-4 italic">
-                    "Professional, caring, and effective. I finally found the help I needed after struggling 
+                  <p className="text-white/90 mb-4 italic">
+                    "Professional, caring, and effective. I finally found the help I needed after struggling
                     for years with anxiety."
                   </p>
-                  <p className="font-semibold">- Michael R.</p>
+                  <p className="font-semibold text-white">- Michael R.</p>
                 </CardContent>
               </Card>
-              <Card className="border-0 shadow-sm">
+
+              <Card className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-4 italic">
-                    "The team approach here is amazing. Everyone works together to ensure the best care 
+                  <p className="text-white/90 mb-4 italic">
+                    "The team approach here is amazing. Everyone works together to ensure the best care
                     possible. Highly recommend!"
                   </p>
-                  <p className="font-semibold">- Jennifer L.</p>
+                  <p className="font-semibold text-white">- Jennifer L.</p>
                 </CardContent>
               </Card>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Community Involvement */}
       <section className="py-20">

@@ -80,7 +80,7 @@ const About = () => {
         label: "Schedule Consultation",
         href: "/appointment",
         className:
-          "bg-transparent text-primary hover:bg-transparent hover:text-primary hover:border hover:border-white transition-all",
+          "bg-gradient-primary text-primary-foreground hover:opacity-90 border-0 hover:text-primary-foreground",
       }}
       secondaryCta={{
         label: "Our Services",

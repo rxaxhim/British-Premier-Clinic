@@ -359,7 +359,7 @@ const Contact = () => {
                         size="lg"
                         variant="outline"
                         asChild
-                        className="text-[#25D366] hover:bg-[#25D366]/10"
+                        className="text-[#25D366] hover:bg-[#25D366] hover:border-none"
                       >
                         <a
                           href="https://wa.me/971526372821"  /* <-- update to your real number */

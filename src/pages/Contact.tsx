@@ -20,6 +20,7 @@ import { Badge } from "@/components/ui/badge";
 import parkingEntrance from "@/assets/parking-entrance.png";
 import parkingSpaces from "@/assets/parking-spaces.png";
 import valetParking from "@/assets/valet-parking.png";
+import { FaWhatsapp } from "react-icons/fa";
 
 const API_URL = "https://urgbdxszsa.execute-api.us-east-2.amazonaws.com/prod/contact";
 const CLIENT_ID = "britishpremier";
@@ -342,12 +343,33 @@ const Contact = () => {
                     <p className="text-white/90 max-w-2xl mx-auto">
                       Call us during business hours or email anytime. We’ll reply within 1–2 business days.
                     </p>
-
-                    <div className="mt-6 flex justify-center">
-                      <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90" asChild>
-                        <a href="tel:+97141234567" className="inline-flex items-center gap-2">
+                    <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                      <Button
+                        size="lg"
+                        className="bg-gradient-primary text-primary-foreground hover:opacity-90"
+                        asChild
+                      >
+                        <a href="tel:+97141234567" className="inline-flex items-center gap-2" aria-label="Call Now">
                           <Phone className="h-4 w-4" />
                           Call Now
+                        </a>
+                      </Button>
+
+                      <Button
+                        size="lg"
+                        variant="outline"
+                        asChild
+                        className="text-[#25D366] hover:bg-[#25D366]/10"
+                      >
+                        <a
+                          href="https://wa.me/971526372821"  /* <-- update to your real number */
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2"
+                          aria-label="Message on WhatsApp"
+                        >
+                          <FaWhatsapp className="h-5 w-5 transition-transform duration-200 ease-out group-hover:scale-110" />
+                          Message on WhatsApp
                         </a>
                       </Button>
                     </div>

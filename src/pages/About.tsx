@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Users, Award, Clock, Shield, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import drSarahImg from "@/assets/sarah.jpg";
+import drMichaelImg from "@/assets/michael.jpg";
+import drEmilyImg from "@/assets/emily.jpg";
 
 const About = () => {
   const values = [
@@ -42,22 +45,25 @@ const About = () => {
       role: "Clinical Director",
       credentials: "MD, PhD in Psychology",
       experience: "15 years",
-      specialties: ["Anxiety Disorders", "Depression", "PTSD"]
+      specialties: ["Anxiety Disorders", "Depression", "PTSD"],
+      photo: drSarahImg, // 👈 new
     },
     {
       name: "Dr. Michael Chen",
       role: "Senior Psychiatrist",
       credentials: "MD, Board Certified",
       experience: "12 years",
-      specialties: ["Bipolar Disorder", "Addiction", "Family Therapy"]
+      specialties: ["Bipolar Disorder", "Addiction", "Family Therapy"],
+      photo: drMichaelImg, // 👈 new
     },
     {
       name: "Dr. Emily Rodriguez",
       role: "Child Psychologist",
       credentials: "PhD, Licensed Psychologist",
       experience: "10 years",
-      specialties: ["Child Psychology", "ADHD", "Autism Spectrum"]
-    }
+      specialties: ["Child Psychology", "ADHD", "Autism Spectrum"],
+      photo: drEmilyImg, // 👈 new
+    },
   ];
 
   const YEAR_PILL = "text-xs rounded-full px-2.5 py-0.5 bg-[hsl(var(--secondary))]/10 border border-[hsl(var(--secondary))]/25 text-[hsl(var(--secondary))]";
@@ -528,8 +534,25 @@ const About = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="aspect-square bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
-                    <Users className="h-16 w-16 text-primary" />
+                  <div className="relative aspect-[4/5] bg-muted">
+                    {member.photo ? (
+                      <>
+                        <img
+                          src={member.photo}
+                          alt={`${member.name} – ${member.role}`}
+                          loading="lazy"
+                          decoding="async"
+                          className="absolute inset-0 h-full w-full object-cover"
+                          sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
+                        />
+                        {/* subtle top gradient for text separation if needed later */}
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+                      </>
+                    ) : (
+                      <div className="h-full w-full bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
+                        <Users className="h-16 w-16 text-primary" />
+                      </div>
+                    )}
                   </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-1">{member.name}</h3>

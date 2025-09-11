@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Users, X } from "lucide-react";
+import { MessageSquare, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import whatsapplogo from "@/assets/whatsapp-logo.png";
+// at top
+import { FaWhatsapp } from "react-icons/fa";
 
 const FloatingAppointment = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +34,7 @@ const FloatingAppointment = () => {
           className="h-14 w-14 rounded-full bg-gradient-primary text-primary-foreground shadow-large hover:scale-105 transition-transform animate-pulse-glow"
           size="sm"
         >
-          <Users className="h-6 w-6" />
+          <MessageSquare className="h-6 w-6" />
         </Button>
       ) : (
         <div className="bg-card border border-border rounded-xl shadow-large p-4 max-w-sm w-full md:w-auto animate-scale-in">
@@ -57,24 +58,29 @@ const FloatingAppointment = () => {
               className="flex-1 bg-gradient-primary text-primary-foreground hover:opacity-90"
             >
               <Link to="/appointment" className="flex items-center justify-center space-x-2">
-                <Users className="h-4 w-4" />
+                <MessageSquare className="h-4 w-4" />
                 <span>Book Now</span>
               </Link>
             </Button>
             <Button variant="outline" size="sm" asChild className="border-black/30">
               <Link to="/contact">Call Us</Link>
             </Button>
-            {/* WhatsApp placeholder button */}
+            {/* WhatsApp button */}
             <Button
               variant="outline"
               size="sm"
-              className="p-2 border-green-500 hover:bg-green-50"
+              asChild
+              className="group border-[#25D366] text-[#25D366] hover:bg-[#25D366]/5 hover:text-[#25D366]"
             >
-              <img
-                src={whatsapplogo}
-                alt="WhatsApp"
-                className="w-5 h-5"
-              />
+              <a
+                href="https://wa.me/971XXXXXXXXX" // <-- your number
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
+                className="flex items-center justify-center"
+              >
+                <FaWhatsapp className="h-5 w-5 transition-transform duration-200 ease-out group-hover:scale-125" />
+              </a>
             </Button>
           </div>
         </div>

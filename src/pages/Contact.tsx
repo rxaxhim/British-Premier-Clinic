@@ -9,11 +9,11 @@ import {
   Globe,
   CheckCircle,
   MessageSquare,
-  Heart,
   Shield,
   Car,
   Navigation,
   MapPin as LocationIcon,
+  ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -374,7 +374,8 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4 scale-110">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4 md:scale-105 lg:scale-110 md:origin-center">
+              {/* On Site Parking */}
               <div className="group">
                 <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border transition-all hover:shadow-xl hover:-translate-y-1">
                   <div className="relative overflow-hidden">
@@ -394,18 +395,27 @@ const Contact = () => {
                       Protected parking spaces with easy access to our clinic entrance. Available 24/7 with
                       security monitoring.
                     </p>
-                    <a 
-                      href="https://maps.app.goo.gl/Je8DBpVDUebdqkCP6" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="mt-4 text-sm text-primary font-semibold"
+
+                    <Button
+                      variant="ghost"
+                      className="mt-4 w-full md:w-auto group/button group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                      asChild
                     >
-                      Directions to on site parking
-                    </a>
+                      <a
+                        href="https://maps.app.goo.gl/Je8DBpVDUebdqkCP6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center space-x-2 no-underline"
+                      >
+                        <span>Directions to on site parking</span>
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
 
+              {/* Street Parking */}
               <div className="group">
                 <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border transition-all hover:shadow-xl hover:-translate-y-1">
                   <div className="relative overflow-hidden">
@@ -418,25 +428,34 @@ const Contact = () => {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
-                      <Shield className="w-5 h-5 text-primary" />
+                      <Car className="w-5 h-5 text-primary" />
                       Street Parking
                     </h3>
                     <p className="text-muted-foreground">
                       Dedicated and accessible parking spots located close to the main entrance for easy
                       access.
                     </p>
-                    <a 
-                      href="https://maps.app.goo.gl/Je8DBpVDUebdqkCP6" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="mt-4 text-sm text-primary font-semibold"
+
+                    <Button
+                      variant="ghost"
+                      className="mt-4 w-full md:w-auto group/button group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                      asChild
                     >
-                      Directions to street parking
-                    </a>
+                      <a
+                        href="https://maps.app.goo.gl/Je8DBpVDUebdqkCP6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center space-x-2 no-underline"
+                      >
+                        <span>Directions to street parking</span>
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
 
+              {/* Mall Parking */}
               <div className="group">
                 <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border transition-all hover:shadow-xl hover:-translate-y-1">
                   <div className="relative overflow-hidden">
@@ -449,28 +468,37 @@ const Contact = () => {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
-                      <Heart className="w-5 h-5 text-primary" />
+                      <Car className="w-5 h-5 text-primary" />
                       Mall Parking
                     </h3>
                     <p className="text-muted-foreground">
-                      Convenient parking available inside the nearby shopping mall. Easy walking access to our clinic through the mall entrance. 
+                      Convenient parking available inside the nearby shopping mall. Easy walking access to our clinic
+                      through the mall entrance.
                     </p>
-                    <a 
-                      href="https://maps.app.goo.gl/Je8DBpVDUebdqkCP6" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="mt-4 text-sm text-primary font-semibold"
+
+                    <Button
+                      variant="ghost"
+                      className="mt-4 w-full md:w-auto group/button group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                      asChild
                     >
-                      Directions to mall parking
-                    </a>
+                      <a
+                        href="https://maps.app.goo.gl/Je8DBpVDUebdqkCP6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center space-x-2 no-underline"
+                      >
+                        <span>Directions to mall parking</span>
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
+
 
       {/* LOCATION */}
       <section className="py-20 bg-muted/30">

@@ -48,7 +48,7 @@ const Footer = () => {
     { name: "Meet Our Team", href: "/doctors" },
     { name: "Blog & Resources", href: "/blog" },
     { name: "Contact Us", href: "/contact" },
-    { name: "Book Appointment", href: "/appointment" },
+    // { name: "Book Appointment", href: "/appointment" },
   ];
 
   return (
@@ -280,7 +280,7 @@ const Footer = () => {
                     href="mailto:info@britishpremier.ae"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    info@britishpremier.ae
+                    info@britishpremier.com
                   </a>
                 </div>
 
@@ -294,7 +294,7 @@ const Footer = () => {
               </div>
 
               <Button className="w-full bg-gradient-primary text-primary-foreground" asChild>
-                <Link to="/appointment">Book Appointment</Link>
+                <Link to="/contact">Book Appointment</Link>
               </Button>
             </div>
           </div>

@@ -104,7 +104,7 @@ const Hero = () => {
                 className="bg-white text-primary hover:bg-white/90 transition-all hover:scale-105 shadow-large font-semibold"
                 asChild
               >
-                <Link to="/appointment" className="flex items-center space-x-2">
+                <Link to="/contact" className="flex items-center space-x-2">
                   <Calendar className="h-5 w-5" />
                   <span>Book Appointment</span>
                   <ArrowRight className="h-4 w-4" />

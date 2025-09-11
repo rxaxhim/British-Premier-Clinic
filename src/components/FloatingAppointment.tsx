@@ -57,7 +57,7 @@ const FloatingAppointment = () => {
               asChild
               className="flex-1 bg-gradient-primary text-primary-foreground hover:opacity-90"
             >
-              <Link to="/appointment" className="flex items-center justify-center space-x-2">
+              <Link to="/contact" className="flex items-center justify-center space-x-2">
                 <MessageSquare className="h-4 w-4" />
                 <span>Book Now</span>
               </Link>

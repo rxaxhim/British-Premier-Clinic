@@ -190,7 +190,7 @@ const ServicesSection = () => {
               className="bg-gradient-primary text-primary-foreground hover:opacity-90"
               asChild
             >
-              <Link to="/appointment" className="flex items-center space-x-2">
+              <Link to="/contact" className="flex items-center space-x-2">
                 <Clock className="h-5 w-5" />
                 <span>Schedule Consultation</span>
               </Link>

@@ -78,7 +78,7 @@ const About = () => {
       badges={["Multidisciplinary team", "Evidence-based care"]}
       primaryCta={{
         label: "Schedule Consultation",
-        href: "/appointment",
+        href: "/British-Premier-Clinic/contact",
         className:
           "bg-gradient-primary text-primary-foreground hover:opacity-90 border-0 hover:text-primary-foreground",
       }}
@@ -835,7 +835,7 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90" asChild>
-                <Link to="/appointment">Book Your Appointment</Link>
+                <Link to="/contact">Book Your Appointment</Link>
               </Button>
               <Button
                 size="lg"

@@ -100,8 +100,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+971 4 xxx xxxx",
-      action: "tel:+97141234567",
+      details: "+971 52 637 2821",
+      action: "tel:+971526372821",
       description: "Mon-Fri, 9AM-6PM GST",
     },
     {
@@ -280,8 +280,8 @@ const Contact = () => {
                         href={info.action}
                         className="flex items-start gap-4 p-6 rounded-xl bg-background border border-border hover:shadow-md hover:-translate-y-0.5 transition-all"
                       >
-                        <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow">
-                          <info.icon className="w-5 h-5 text-primary-foreground" />
+                        <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow shrink-0">
+                          <info.icon className="w-6 h-6 md:w-7 md:h-7 text-primary-foreground" />
                         </div>
                         <div>
                           <div className="font-semibold text-lg mb-1">{info.title}</div>
@@ -292,6 +292,7 @@ const Contact = () => {
                     ))}
                   </div>
                 </div>
+
 
                 <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
                   <h4 className="text-xl font-bold mb-6 flex items-center gap-3">
@@ -373,13 +374,13 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4 scale-110">
               <div className="group">
                 <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border transition-all hover:shadow-xl hover:-translate-y-1">
                   <div className="relative overflow-hidden">
                     <img
-                      src={parkingEntrance}
-                      alt="Covered parking entrance with clear signage"
+                      src="https://images.pexels.com/photos/2833714/pexels-photo-2833714.jpeg"
+                      alt="On site parking image"
                       className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
@@ -387,13 +388,20 @@ const Contact = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                       <Car className="w-5 h-5 text-primary" />
-                      Covered Parking
+                      On Site Parking
                     </h3>
                     <p className="text-muted-foreground">
                       Protected parking spaces with easy access to our clinic entrance. Available 24/7 with
                       security monitoring.
                     </p>
-                    <div className="mt-4 text-sm text-primary font-semibold">Free for patients</div>
+                    <a 
+                      href="https://maps.app.goo.gl/Je8DBpVDUebdqkCP6" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="mt-4 text-sm text-primary font-semibold"
+                    >
+                      Directions to on site parking
+                    </a>
                   </div>
                 </div>
               </div>
@@ -402,8 +410,8 @@ const Contact = () => {
                 <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border transition-all hover:shadow-xl hover:-translate-y-1">
                   <div className="relative overflow-hidden">
                     <img
-                      src={parkingSpaces}
-                      alt="Disabled access parking spaces and organized parking layout"
+                      src="https://images.pexels.com/photos/5065812/pexels-photo-5065812.jpeg"
+                      alt="Roadside parking spots by the clinic"
                       className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
@@ -411,13 +419,20 @@ const Contact = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                       <Shield className="w-5 h-5 text-primary" />
-                      Accessible Spaces
+                      Street Parking
                     </h3>
                     <p className="text-muted-foreground">
-                      Dedicated wheelchair accessible parking spots located close to the main entrance for easy
+                      Dedicated and accessible parking spots located close to the main entrance for easy
                       access.
                     </p>
-                    <div className="mt-4 text-sm text-primary font-semibold">Priority access available</div>
+                    <a 
+                      href="https://maps.app.goo.gl/Je8DBpVDUebdqkCP6" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="mt-4 text-sm text-primary font-semibold"
+                    >
+                      Directions to street parking
+                    </a>
                   </div>
                 </div>
               </div>
@@ -435,13 +450,19 @@ const Contact = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                       <Heart className="w-5 h-5 text-primary" />
-                      Valet Service
+                      Mall Parking
                     </h3>
                     <p className="text-muted-foreground">
-                      Premium valet parking service available for patients who prefer the convenience of assisted
-                      parking.
+                      Convenient parking available inside the nearby shopping mall. Easy walking access to our clinic through the mall entrance. 
                     </p>
-                    <div className="mt-4 text-sm text-primary font-semibold">By appointment</div>
+                    <a 
+                      href="https://maps.app.goo.gl/Je8DBpVDUebdqkCP6" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="mt-4 text-sm text-primary font-semibold"
+                    >
+                      Directions to mall parking
+                    </a>
                   </div>
                 </div>
               </div>

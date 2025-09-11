@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, X } from "lucide-react";
+import { Users, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import whatsapplogo from "@/assets/whatsapp-logo.png";
 
 const FloatingAppointment = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +33,7 @@ const FloatingAppointment = () => {
           className="h-14 w-14 rounded-full bg-gradient-primary text-primary-foreground shadow-large hover:scale-105 transition-transform animate-pulse-glow"
           size="sm"
         >
-          <Calendar className="h-6 w-6" />
+          <Users className="h-6 w-6" />
         </Button>
       ) : (
         <div className="bg-card border border-border rounded-xl shadow-large p-4 max-w-sm w-full md:w-auto animate-scale-in">
@@ -56,12 +57,24 @@ const FloatingAppointment = () => {
               className="flex-1 bg-gradient-primary text-primary-foreground hover:opacity-90"
             >
               <Link to="/appointment" className="flex items-center justify-center space-x-2">
-                <Calendar className="h-4 w-4" />
+                <Users className="h-4 w-4" />
                 <span>Book Now</span>
               </Link>
             </Button>
             <Button variant="outline" size="sm" asChild className="border-black/30">
               <Link to="/contact">Call Us</Link>
+            </Button>
+            {/* WhatsApp placeholder button */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="p-2 border-green-500 hover:bg-green-50"
+            >
+              <img
+                src={whatsapplogo}
+                alt="WhatsApp"
+                className="w-5 h-5"
+              />
             </Button>
           </div>
         </div>

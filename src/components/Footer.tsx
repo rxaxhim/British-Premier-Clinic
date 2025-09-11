@@ -122,8 +122,8 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-muted-foreground">
-                    Dubai Healthcare City<br />
-                    Building 64, Block A<br />
+                    Kia Flagship Building<br />
+                    1st Floor, Unit 110<br />
                     Dubai, UAE
                   </p>
                 </div>
@@ -135,7 +135,7 @@ const Footer = () => {
                   href="tel:+97143219494" 
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  +971 4 321 9494
+                  +971 52 637 2821
                 </a>
               </div>
               

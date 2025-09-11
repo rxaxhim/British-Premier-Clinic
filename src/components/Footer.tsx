@@ -302,11 +302,26 @@ const Footer = () => {
           <Separator className="my-8" />
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2 text-muted-foreground">
-              <p>&copy; {currentYear} British Premier Psychiatry & Psychology Center.</p>
-              <Heart className="h-4 w-4 text-red-500" />
-              <p>All rights reserved.</p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
+            <div className="flex flex-col items-center md:items-start text-muted-foreground">
+              <div className="flex items-center space-x-2">
+                <p>&copy; {currentYear} British Premier Psychiatry & Psychology Center.</p>
+                <Heart className="h-4 w-4 text-red-500" />
+                <p>All rights reserved.</p>
+              </div>
+
+              {/* Site credit */}
+              <p className="text-xs md:text-sm mt-1">
+                Website designed &amp; maintained by{" "}
+                <a
+                  href="https://yoururls.ca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-foreground hover:text-primary transition-colors underline underline-offset-2"
+                >
+                  YourURLs
+                </a>.
+              </p>
             </div>
 
             <div className="flex space-x-6 text-sm">

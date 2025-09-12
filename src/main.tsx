@@ -4,7 +4,7 @@ import App from "./App"
 import "./index.css"
 
 // Use the same base as your repo (or pull from Vite's BASE_URL if you set it)
-const BASENAME = "/British-Premier-Clinic/"
+const BASENAME = "/British-Premier-Clinic"
 
 // 🔹 GitHub Pages SPA redirect fix (preserve deep links on refresh)
 const saved = sessionStorage.getItem("gh:redirect")

@@ -8,17 +8,14 @@ import {
   Clock,
   Globe,
   CheckCircle,
-  MessageSquare,
   Shield,
   Car,
   Navigation,
-  MapPin as LocationIcon,
   ArrowRight,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import parkingEntrance from "@/assets/parking-entrance.png";
-import parkingSpaces from "@/assets/parking-spaces.png";
 import valetParking from "@/assets/valet-parking.png";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -38,6 +35,10 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [botField, setBotField] = useState("");
+
+  // New: controls the success video overlay
+  const [showAppointmentVideo, setShowAppointmentVideo] = useState(false);
+  const closeVideo = () => setShowAppointmentVideo(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -80,8 +81,8 @@ const Contact = () => {
       }
 
       setIsSubmitted(true);
+      setShowAppointmentVideo(true); // show the success video overlay
       setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
-      setTimeout(() => setIsSubmitted(false), 5000);
     } catch (err: any) {
       console.error(err);
       setError(err?.message || "Something went wrong. Please try again in a moment.");
@@ -294,7 +295,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-
                 <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
                   <h4 className="text-xl font-bold mb-6 flex items-center gap-3">
                     <Clock className="w-5 h-5 text-primary" />
@@ -338,42 +338,42 @@ const Contact = () => {
                            md:max-w-6xl md:shadow-lg md:ring-1 md:ring-white/10"
               >
                 <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(600px_200px_at_10%_10%,rgba(255,255,255,0.08),transparent),radial-gradient(600px_200px_at_90%_60%,rgba(255,255,255,0.06),transparent)]" />
-                  <div className="relative text-center">
-                    <h3 className="text-2xl font-semibold mb-4">Prefer to talk?</h3>
-                    <p className="text-white/90 max-w-2xl mx-auto">
-                      Call us during business hours or email anytime. We’ll reply within 1–2 business days.
-                    </p>
-                    <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-                      <Button
-                        size="lg"
-                        className="bg-gradient-primary text-primary-foreground hover:opacity-90"
-                        asChild
-                      >
-                        <a href="tel:+97141234567" className="inline-flex items-center gap-2" aria-label="Call Now">
-                          <Phone className="h-4 w-4" />
-                          Call Now
-                        </a>
-                      </Button>
+                <div className="relative text-center">
+                  <h3 className="text-2xl font-semibold mb-4">Prefer to talk?</h3>
+                  <p className="text-white/90 max-w-2xl mx-auto">
+                    Call us during business hours or email anytime. We’ll reply within 1–2 business days.
+                  </p>
+                  <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <Button
+                      size="lg"
+                      className="bg-gradient-primary text-primary-foreground hover:opacity-90"
+                      asChild
+                    >
+                      <a href="tel:+971526372821" className="inline-flex items-center gap-2" aria-label="Call Now">
+                        <Phone className="h-4 w-4" />
+                        Call Now
+                      </a>
+                    </Button>
 
-                      <Button
-                        size="lg"
-                        variant="outline"
-                        asChild
-                        className="text-[#25D366] hover:bg-[#25D366] hover:border-none"
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      asChild
+                      className="text-[#25D366] hover:bg-[#25D366] hover:border-none"
+                    >
+                      <a
+                        href="https://wa.me/971526372821"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2"
+                        aria-label="Message on WhatsApp"
                       >
-                        <a
-                          href="https://wa.me/971526372821"  /* <-- update to your real number */
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2"
-                          aria-label="Message on WhatsApp"
-                        >
-                          <FaWhatsapp className="h-5 w-5 transition-transform duration-200 ease-out group-hover:scale-110" />
-                          Message on WhatsApp
-                        </a>
-                      </Button>
-                    </div>
+                        <FaWhatsapp className="h-5 w-5 transition-transform duration-200 ease-out group-hover:scale-110" />
+                        Message on WhatsApp
+                      </a>
+                    </Button>
                   </div>
+                </div>
               </div>
             </div>
           </div>
@@ -521,7 +521,6 @@ const Contact = () => {
         </div>
       </section>
 
-
       {/* LOCATION */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -604,6 +603,64 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Success video overlay */}
+      {showAppointmentVideo && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center"
+          onClick={closeVideo}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="appointment-video-title"
+        >
+          <div
+            className="w-full max-w-3xl mx-auto bg-background/95 border-0 rounded-xl shadow-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header — gradient like PromoPopup */}
+            <div className="relative text-white bg-gradient-to-br from-blue-950 via-blue-900 to-red-900 isolation-isolate p-4 sm:p-6">
+              <div className="absolute inset-0 z-0 opacity-40 pointer-events-none bg-[radial-gradient(600px_200px_at_10%_10%,rgba(255,255,255,0.08),transparent),radial-gradient(600px_200px_at_90%_60%,rgba(255,255,255,0.06),transparent)]" />
+              <div className="relative z-10">
+                <h3 id="appointment-video-title" className="text-lg sm:text-xl font-bold leading-tight">
+                  What to Expect at Your Appointment
+                </h3>
+                <p className="text-white/80 text-sm mt-1">A quick walkthrough of your first visit.</p>
+              </div>
+            </div>
+
+            {/* Video */}
+            <div className="p-4 sm:p-6">
+              <div className="aspect-video w-full overflow-hidden rounded-xl bg-black">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/rj345qojCL8?si=nDxHD1Ucz2J35xJz"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+
+              {/* Footer actions */}
+              <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-2 sm:gap-3 justify-end">
+                <Button
+                  variant="outline"
+                  className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
+                  asChild
+                >
+                  <a href="tel:+971526372821" aria-label="Call the clinic">
+                    Call Us
+                  </a>
+                </Button>
+                <Button className="bg-gradient-primary text-primary-foreground hover:opacity-90" onClick={closeVideo}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

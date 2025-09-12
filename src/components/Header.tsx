@@ -79,13 +79,17 @@ const Header = () => {
               asChild
               className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
             >
-              <Link to="/contact" className="flex items-center space-x-2">
+              <a
+                href="tel:+971526372821"
+                className="flex items-center space-x-2"
+                aria-label="Call us now"
+              >
                 <Phone className="h-4 w-4" />
                 <span>Call Us</span>
-              </Link>
+              </a>
             </Button>
             <Button size="sm" className="bg-gradient-primary text-primary-foreground hover:opacity-90" asChild>
-              <Link to="/appointment">Book Appointment</Link>
+              <Link to="/contact">Book Appointment</Link>
             </Button>
           </div>
 
@@ -125,13 +129,17 @@ const Header = () => {
 
                 <div className="flex flex-col space-y-3 pt-6 border-t border-border">
                   <Button variant="outline" asChild onClick={() => setIsOpen(false)}>
-                    <Link to="/contact" className="flex items-center justify-center space-x-2">
+                    <a
+                      href="tel:+971526372821"
+                      className="flex items-center justify-center space-x-2 border-primary text-blue-500 hover:bg-blue-500 hover:text-white w-full"
+                      aria-label="Call us now"
+                    >
                       <Phone className="h-4 w-4" />
                       <span>Call Us</span>
-                    </Link>
+                    </a>
                   </Button>
                   <Button className="bg-gradient-primary text-primary-foreground" asChild onClick={() => setIsOpen(false)}>
-                    <Link to="/appointment">Book Appointment</Link>
+                    <Link to="/contact">Book Appointment</Link>
                   </Button>
                 </div>
               </div>

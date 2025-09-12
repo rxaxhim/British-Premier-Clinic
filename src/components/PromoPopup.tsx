@@ -20,7 +20,7 @@ const PromoPopup = ({ isOpen, onClose }: PromoPopupProps) => {
   };
 
   const handleAppointmentRedirect = () => {
-    navigate("/appointment");
+    navigate("/contact");
     onClose();
   };
 
@@ -124,12 +124,19 @@ const PromoPopup = ({ isOpen, onClose }: PromoPopupProps) => {
 
               <Button
                 variant="outline"
-                onClick={handleContactRedirect}
-                className="flex-1 border border-border hover:border-border/80
-                           h-11 sm:h-12 text-sm sm:text-base"
+                asChild
+                className="flex-1 h-11 sm:h-12 text-sm sm:text-base
+                          border-blue-500 text-blue-500
+                          hover:bg-blue-500 hover:text-white hover:border-blue-500"
               >
-                <Phone className="h-4 w-4 mr-2" />
-                Contact Us
+                <a
+                  href="tel:+971526372821"
+                  className="flex items-center justify-center"
+                  aria-label="Call us now"
+                >
+                  <Phone className="h-4 w-4 mr-2" />
+                  Call Now
+                </a>
               </Button>
             </div>
 

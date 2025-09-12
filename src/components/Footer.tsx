@@ -48,7 +48,6 @@ const Footer = () => {
     { name: "Meet Our Team", href: "/doctors" },
     { name: "Blog & Resources", href: "/blog" },
     { name: "Contact Us", href: "/contact" },
-    // { name: "Book Appointment", href: "/appointment" },
   ];
 
   return (

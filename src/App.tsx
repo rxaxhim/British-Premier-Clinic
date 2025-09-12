@@ -10,7 +10,6 @@ import Services from "./pages/Services";
 import Doctors from "./pages/Doctors";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
-import Appointment from "./pages/Appointment";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import BlogPost from "./pages/BlogPost";
@@ -33,7 +32,6 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/appointment" element={<Appointment />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -27,6 +27,35 @@ type HeroBannerProps = {
   secondaryCta?: Cta;
 };
 
+const isExternalHref = (href?: string) =>
+  !!href &&
+  /^(https?:)?\/\//i.test(href) || // http(s) or protocol-relative
+  /^mailto:|^tel:|^#/.test(href); // mailto/tel/hash
+
+// Normalize an absolute path href to a router-relative `to` (so basename is applied)
+const normalizeTo = (href: string) => {
+  if (!href.startsWith("/")) return href;
+
+  // Prefer Vite base if available
+  const baseUrl = (import.meta as any)?.env?.BASE_URL || "";
+  const baseTrim = baseUrl.endsWith("/") ? baseUrl.slice(0, -1) : baseUrl;
+
+  if (baseTrim && href.startsWith(baseTrim + "/")) {
+    return href.slice(baseTrim.length); // remove duplicated base
+  }
+
+  // Heuristic for GH Pages subpath (first path segment)
+  if (typeof window !== "undefined") {
+    const firstSeg = "/" + (window.location.pathname.split("/")[1] || "");
+    if (firstSeg !== "/" && href.startsWith(firstSeg + "/")) {
+      return href.slice(firstSeg.length);
+    }
+  }
+
+  // Already router-relative (e.g. "/contact")
+  return href;
+};
+
 export default function HeroBanner({
   eyebrow,
   title,
@@ -58,13 +87,26 @@ export default function HeroBanner({
         </Link>
       );
     }
+
     if (cta?.href) {
+      // Treat app-absolute paths as internal links so basename is applied
+      if (!isExternalHref(cta.href) && cta.href.startsWith("/")) {
+        const to = normalizeTo(cta.href);
+        return (
+          <Link to={to} target={cta.target} rel={cta.rel} className={classes}>
+            {cta.label}
+          </Link>
+        );
+      }
+
+      // External or special schemes -> plain anchor
       return (
         <a href={cta.href} target={cta.target} rel={cta.rel} className={classes}>
           {cta.label}
         </a>
       );
     }
+
     return (
       <button onClick={cta?.onClick} className={classes} type="button">
         {cta?.label}

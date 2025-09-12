@@ -72,22 +72,22 @@ const About = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <HeroBanner
-      eyebrow="About"
-      title="About Us"
-      description="Dedicated psychiatry & psychology care grounded in science and compassion."
-      badges={["Multidisciplinary team", "Evidence-based care"]}
-      primaryCta={{
-        label: "Schedule Consultation",
-        href: "/British-Premier-Clinic/contact",
-        className:
-          "bg-gradient-primary text-primary-foreground hover:opacity-90 border-0 hover:text-primary-foreground",
-      }}
-      secondaryCta={{
-        label: "Our Services",
-        href: "/British-Premier-Clinic/services",
-        className:
-          "bg-transparent border border-white text-white hover:bg-white hover:text-primary transition-all",
-      }}
+        eyebrow="About"
+        title="About Us"
+        description="Dedicated psychiatry & psychology care grounded in science and compassion."
+        badges={["Multidisciplinary team", "Evidence-based care"]}
+        primaryCta={{
+          label: "Schedule Consultation",
+          to: "/contact",
+          className:
+            "bg-gradient-primary text-primary-foreground hover:opacity-90 border-0 hover:text-primary-foreground",
+        }}
+        secondaryCta={{
+          label: "Our Services",
+          to: "/services",
+          className:
+            "bg-transparent border border-white text-white hover:bg-white hover:text-primary transition-all",
+        }}
       />
 
       {/* Stats Section */}

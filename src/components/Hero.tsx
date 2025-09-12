@@ -8,7 +8,8 @@ import {
   Shield,
   Heart,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  ClipboardPlus
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -117,9 +118,9 @@ const Hero = () => {
                 className="border-white/30 text-white bg-white/10 backdrop-blur-sm font-semibold"
                 asChild
               >
-                <Link to="/contact" className="flex items-center space-x-2">
-                  <Phone className="h-5 w-5" />
-                  <span>Call +971 4 321 9494</span>
+                <Link to="/services" className="flex items-center space-x-2">
+                  <ClipboardPlus className="h-5 w-5" />
+                  <span>Explore Services</span>
                 </Link>
               </Button>
             </div>
@@ -174,7 +175,7 @@ const Hero = () => {
                 className="w-full mt-4 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
                 asChild
               >
-                <Link to="/contact">Get Help Now</Link>
+                <a href="tel:+971526372821">Get Help Now</a>
               </Button>
             </div>
           </div>

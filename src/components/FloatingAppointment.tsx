@@ -63,7 +63,7 @@ const FloatingAppointment = () => {
               </Link>
             </Button>
             <Button variant="outline" size="sm" asChild className="border-black/30">
-              <Link to="/contact">Call Us</Link>
+              <a href="tel:+971526372821">Get Help Now</a>
             </Button>
             {/* WhatsApp button */}
             <Button

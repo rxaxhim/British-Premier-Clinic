@@ -84,7 +84,7 @@ const About = () => {
       }}
       secondaryCta={{
         label: "Our Services",
-        href: "/services",
+        href: "/British-Premier-Clinic/services",
         className:
           "bg-transparent border border-white text-white hover:bg-white hover:text-primary transition-all",
       }}
@@ -843,7 +843,7 @@ const About = () => {
                 asChild
                 className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
               >
-                <Link to="/contact">Contact Us</Link>
+                <a href="tel:+971526372821">Get Help Now</a>
               </Button>
             </div>
           </div>

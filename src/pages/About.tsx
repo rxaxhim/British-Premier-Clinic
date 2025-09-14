@@ -94,7 +94,7 @@ const About = () => {
       <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <Card
                   key={index}
@@ -104,7 +104,7 @@ const About = () => {
                     <div className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-blue-700 via-blue-600 to-red-700 bg-clip-text text-transparent mb-3">
                       {stat.number}
                     </div>
-                    <div className="font-medium text-sm bg-gradient-to-br from-blue-700 via-blue-600 to-red-700 bg-clip-text text-transparent">
+                    <div className="font-medium text-sm bg-gradient-to-br from-blue-700 via-blue-600 to-red-700 bg-clip-text text-transparent break-words">
                       {stat.label}
                     </div>
                   </CardContent>
@@ -114,6 +114,7 @@ const About = () => {
           </div>
         </div>
       </section>
+
 
       {/* Our Story Section */}
       <section className="py-20">

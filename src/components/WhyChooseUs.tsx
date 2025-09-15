@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
     {
       icon: Globe,
       title: "Multilingual Care",
-      description: "Services available in English, Arabic, Hindi, Urdu, and French to serve our diverse community.",
+      description: "Services available in English, Arabic, Hindi, and Urdu to serve our diverse community.",
       stats: "5+ Languages"
     },
     {

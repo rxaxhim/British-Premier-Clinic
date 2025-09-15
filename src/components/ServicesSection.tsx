@@ -18,6 +18,14 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Brain,
+      title: "Child & Adolescent Psychiatry",
+      description: "Specialized psychiatric care for children and teens, focusing on early diagnosis, emotional regulation, and family-centered treatment to support healthy development.",
+      features: ["Early Intervention", "Developmental Assessments", "Collaborative Care Planning"],
+      color: "secondary",
+      featured: true
+    },
+    {
+      icon: Brain,
       title: "Adult Psychiatry",
       description: "Comprehensive mental health assessment and treatment for adults dealing with depression, anxiety, bipolar disorder, and other psychiatric conditions.",
       features: ["Medication Management", "Psychotherapy", "Crisis Intervention"],
@@ -109,32 +117,34 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <Card 
+      {/* Services Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {services.map((service, index) => {
+          const isLast = index === services.length - 1;
+          const isOdd = services.length % 2 === 1; // odd number of cards
+
+          return (
+            <Card
               key={service.title}
-              className={`relative group hover:shadow-large transition-all duration-300 hover:-translate-y-2 animate-scale-in ${
-                service.featured 
-                  ? "ring-2 ring-primary/20 shadow-medium" 
-                  : "hover:shadow-medium"
-              }`}
+              className={`relative group hover:shadow-large transition-all duration-300 hover:-translate-y-2 animate-scale-in
+                ${service.featured ? "ring-2 ring-primary/20 shadow-medium" : "hover:shadow-medium"}
+                ${isLast && isOdd ? "lg:col-span-3 lg:mx-auto max-w-md" : ""}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {service.featured && (
-                <Badge 
-                  className="absolute -top-3 left-4 bg-gradient-primary text-primary-foreground"
-                >
+                <Badge className="absolute -top-3 left-4 bg-gradient-primary text-primary-foreground">
                   <Award className="h-3 w-3 mr-1" />
                   Popular
                 </Badge>
               )}
-              
+
               <CardHeader className="space-y-4">
-                <div className={`w-12 h-12 rounded-lg bg-${service.color}/10 flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                <div
+                  className={`w-12 h-12 rounded-lg bg-${service.color}/10 flex items-center justify-center group-hover:scale-110 transition-transform`}
+                >
                   <service.icon className={`h-6 w-6 text-${service.color}`} />
                 </div>
-                
+
                 <div className="space-y-2">
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
                     {service.title}
@@ -150,7 +160,10 @@ const ServicesSection = () => {
                   <h4 className="font-medium text-foreground text-sm">Treatment Includes:</h4>
                   <ul className="space-y-1">
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center space-x-2 text-sm text-muted-foreground">
+                      <li
+                        key={feature}
+                        className="flex items-center space-x-2 text-sm text-muted-foreground"
+                      >
                         <div className={`w-1.5 h-1.5 rounded-full bg-${service.color}`} />
                         <span>{feature}</span>
                       </li>
@@ -158,8 +171,8 @@ const ServicesSection = () => {
                   </ul>
                 </div>
 
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
                   asChild
                 >
@@ -170,8 +183,11 @@ const ServicesSection = () => {
                 </Button>
               </CardContent>
             </Card>
-          ))}
-        </div>
+          );
+        })}
+      </div>
+
+
 
         {/* Call to Action */}
         <div className="text-center space-y-6 animate-fade-in">

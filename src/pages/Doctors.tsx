@@ -35,7 +35,7 @@ const clinicians: Clinician[] = [
     bio: "Dr. Sarah Mitchell is a dedicated clinical psychologist with over 12 years of experience in treating anxiety disorders and depression. She specializes in Cognitive Behavioral Therapy and has helped hundreds of patients overcome their mental health challenges. Dr. Mitchell believes in a collaborative approach to therapy, working closely with her patients to develop personalized treatment plans.",
     email: "s.mitchell@britishpremier.com",
     phone: "(416) 555-0123",
-    image: "/placeholder.svg",
+    image: "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg",
     availability: "Monday - Friday, 9:00 AM - 5:00 PM"
   },
   {
@@ -49,7 +49,7 @@ const clinicians: Clinician[] = [
     bio: "Dr. Michael Chen is a board-certified psychiatrist with extensive experience in treating mood disorders and ADHD. He takes a comprehensive approach to mental health care, combining medication management with therapeutic interventions. Dr. Chen is known for his patient-centered approach and his ability to help patients find the right treatment balance.",
     email: "m.chen@britishpremier.com",
     phone: "(416) 555-0124",
-    image: "/placeholder.svg",
+    image: "https://images.pexels.com/photos/29995617/pexels-photo-29995617.jpeg",
     availability: "Tuesday - Saturday, 8:00 AM - 4:00 PM"
   },
   {
@@ -63,7 +63,7 @@ const clinicians: Clinician[] = [
     bio: "Dr. Emily Rodriguez is a compassionate clinical social worker who specializes in family therapy and trauma counseling. She has extensive experience working with individuals and families affected by trauma and addiction. Dr. Rodriguez uses evidence-based practices to help her clients heal and build stronger relationships.",
     email: "e.rodriguez@britishpremier.com",
     phone: "(416) 555-0125",
-    image: "/placeholder.svg",
+    image: "https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg",
     availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
   {
@@ -77,7 +77,7 @@ const clinicians: Clinician[] = [
     bio: "Dr. James Thompson specializes in working with children and adolescents, particularly those on the autism spectrum. He uses play therapy and behavioral interventions to help young clients develop important life skills. Dr. Thompson works closely with families to create supportive environments for children's growth and development.",
     email: "j.thompson@britishpremier.com",
     phone: "(416) 555-0126",
-    image: "/placeholder.svg",
+    image: "https://images.pexels.com/photos/4173239/pexels-photo-4173239.jpeg",
     availability: "Monday - Friday, 9:00 AM - 3:00 PM"
   },
   {
@@ -91,7 +91,7 @@ const clinicians: Clinician[] = [
     bio: "Dr. Lisa Park is a skilled neuropsychologist who specializes in cognitive assessment and rehabilitation. She works with patients who have experienced brain injuries, memory disorders, and other neurological conditions. Dr. Park uses comprehensive testing and evidence-based interventions to help patients optimize their cognitive functioning.",
     email: "l.park@britishpremier.com",
     phone: "(416) 555-0127",
-    image: "/placeholder.svg",
+    image: "https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg",
     availability: "Wednesday - Sunday, 8:00 AM - 4:00 PM"
   },
   {
@@ -105,7 +105,7 @@ const clinicians: Clinician[] = [
     bio: "Dr. Robert Kumar is an experienced counseling psychologist who helps individuals and couples navigate life's challenges. He specializes in relationship counseling, grief therapy, and stress management. Dr. Kumar believes in creating a safe, non-judgmental space where clients can explore their feelings and develop healthy coping strategies.",
     email: "r.kumar@britishpremier.com",
     phone: "(416) 555-0128",
-    image: "/placeholder.svg",
+    image: "https://images.pexels.com/photos/4270371/pexels-photo-4270371.jpeg",
     availability: "Tuesday - Saturday, 11:00 AM - 7:00 PM"
   }
 ];
@@ -115,7 +115,7 @@ const Doctors = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Use current HeroBanner */}
+      {/* HeroBanner */}
       <HeroBanner
         eyebrow="Clinicians"
         title="Our Doctors"
@@ -124,67 +124,97 @@ const Doctors = () => {
       />
 
       {/* Clinicians Grid */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {clinicians.map((clinician) => (
-              <Card key={clinician.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center pb-4">
-                  <Avatar className="w-24 h-24 mx-auto mb-4">
-                    <AvatarImage src={clinician.image} alt={clinician.name} />
-                    <AvatarFallback className="text-xl font-bold">
-                      {clinician.name.split(" ").map((n) => n[0]).join("")}
-                    </AvatarFallback>
-                  </Avatar>
-                  <h3 className="text-xl font-bold text-card-foreground">{clinician.name}</h3>
-                  <p className="text-primary font-semibold">{clinician.title}</p>
-                  <Badge variant="secondary" className="mt-2">
-                    {clinician.experience} Experience
-                  </Badge>
-                </CardHeader>
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch ${
+            clinicians.length % 3 === 1 ? "justify-items-center" : ""
+          }`}
+        >
+          {clinicians.map((clinician, index) => (
+            <Card
+              key={clinician.id}
+              className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 
+                flex flex-col h-full
+                ${
+                  clinicians.length % 3 === 1 && index === clinicians.length - 1
+                    ? "lg:col-span-3 lg:max-w-md lg:mx-auto"
+                    : ""
+                }`}
+            >
+              <CardHeader className="text-center pb-4">
+                <Avatar className="w-24 h-24 mx-auto mb-4">
+                  <AvatarImage
+                    src={clinician.image}
+                    alt={clinician.name}
+                    className="object-cover w-full h-full"
+                  />
+                  <AvatarFallback className="text-xl font-bold">
+                    {clinician.name.split(" ").map((n) => n[0]).join("")}
+                  </AvatarFallback>
+                </Avatar>
+                <h3 className="text-xl font-bold text-card-foreground">{clinician.name}</h3>
+                <p className="text-primary font-semibold">{clinician.title}</p>
+                <Badge variant="secondary" className="mt-2">
+                  {clinician.experience} Experience
+                </Badge>
+              </CardHeader>
 
-                <CardContent className="space-y-4">
+              {/* 👇 CardContent grows to fill height, button pinned bottom */}
+              <CardContent className="space-y-4 flex flex-col flex-grow">
                   <div>
                     <h4 className="font-semibold text-card-foreground mb-2">Specializations:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {clinician.specializations.slice(0, 2).map((spec, index) => (
-                        <Badge key={index} variant="outline" className="text-xs">
+                      {clinician.specializations.slice(0, 2).map((spec, idx) => (
+                        <Badge key={idx} variant="outline" className="text-xs">
                           {spec}
                         </Badge>
                       ))}
+
                       {clinician.specializations.length > 2 && (
-                        <Badge variant="outline" className="text-xs">
-                          +{clinician.specializations.length - 2} more
-                        </Badge>
+                        <div className="w-full">
+                          <Badge variant="outline" className="text-xs">
+                            +{clinician.specializations.length - 2} more
+                          </Badge>
+                        </div>
                       )}
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar className="w-4 h-4" />
-                    <span>{clinician.availability}</span>
-                  </div>
 
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Calendar className="w-4 h-4" />
+                  <span>{clinician.availability}</span>
+                </div>
+
+                {/* 👇 pinned to bottom */}
+                <div className="mt-auto">
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button
-                        className="w-full mt-4 border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
+                        className="w-full border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
                         variant="outline"
                         onClick={() => setSelectedClinician(clinician)}
                       >
                         Read More
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-                      <DialogHeader>
-                        <DialogTitle className="text-2xl font-bold">{clinician.name}</DialogTitle>
-                      </DialogHeader>
 
+                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                      {/* <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold">{clinician.name}</DialogTitle>
+                      </DialogHeader> */}
+
+                      {/* --- dialog body unchanged --- */}
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Profile Image and Basic Info */}
                         <div className="md:col-span-1 space-y-4">
                           <Avatar className="w-32 h-32 mx-auto">
-                            <AvatarImage src={clinician.image} alt={clinician.name} />
+                            <AvatarImage
+                              src={clinician.image}
+                              alt={clinician.name}
+                              className="object-cover w-full h-full"
+                            />
                             <AvatarFallback className="text-2xl font-bold">
                               {clinician.name.split(" ").map((n) => n[0]).join("")}
                             </AvatarFallback>
@@ -218,7 +248,7 @@ const Doctors = () => {
                           </div>
                         </div>
 
-                        {/* Detailed Information */}
+                        {/* Detailed Info */}
                         <div className="md:col-span-2 space-y-6">
                           {/* Bio */}
                           <div>
@@ -236,8 +266,8 @@ const Doctors = () => {
                               Specializations
                             </h4>
                             <div className="flex flex-wrap gap-2">
-                              {clinician.specializations.map((spec, index) => (
-                                <Badge key={index} variant="secondary">
+                              {clinician.specializations.map((spec, idx) => (
+                                <Badge key={idx} variant="secondary">
                                   {spec}
                                 </Badge>
                               ))}
@@ -251,8 +281,8 @@ const Doctors = () => {
                               Education
                             </h4>
                             <ul className="space-y-2">
-                              {clinician.education.map((edu, index) => (
-                                <li key={index} className="text-muted-foreground">
+                              {clinician.education.map((edu, idx) => (
+                                <li key={idx} className="text-muted-foreground">
                                   • {edu}
                                 </li>
                               ))}
@@ -266,8 +296,8 @@ const Doctors = () => {
                               Certifications
                             </h4>
                             <ul className="space-y-2">
-                              {clinician.certifications.map((cert, index) => (
-                                <li key={index} className="text-muted-foreground">
+                              {clinician.certifications.map((cert, idx) => (
+                                <li key={idx} className="text-muted-foreground">
                                   • {cert}
                                 </li>
                               ))}
@@ -280,64 +310,24 @@ const Doctors = () => {
                         <Button className="flex-1" asChild>
                           <Link to="/contact">Book Appointment</Link>
                         </Button>
-                        <Button variant="outline" className="flex-1 border-primary text-blue-500 hover:bg-blue-500 hover:text-white" asChild>
+                        <Button
+                          variant="outline"
+                          className="flex-1 border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
+                          asChild
+                        >
                           <a href={`mailto:${clinician.email}`}>Send Email</a>
                         </Button>
                       </div>
                     </DialogContent>
                   </Dialog>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* How to Choose Your Doctor */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Choosing the Right Doctor for You
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Finding the right mental health professional is crucial to your healing journey. Here's how to make the best choice.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-6">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Consider Your Needs</h3>
-              <p className="text-muted-foreground">
-                Think about your specific concerns, whether you prefer individual or group therapy, and any particular treatment approaches that interest you.
-              </p>
-            </Card>
-
-            <Card className="p-6">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <BookOpen className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Review Specializations</h3>
-              <p className="text-muted-foreground">
-                Look at each doctor's areas of expertise to find someone who specializes in treating your specific condition or concerns.
-              </p>
-            </Card>
-
-            <Card className="p-6">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Calendar className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Check Availability</h3>
-              <p className="text-muted-foreground">
-                Consider scheduling preferences and availability that works with your lifestyle and commitments.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Our Approach */}
       <section className="py-16">

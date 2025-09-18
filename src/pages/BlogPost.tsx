@@ -40,7 +40,7 @@ const BlogPost = () => {
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Post Not Found</h1>
           <p className="text-muted-foreground mb-6">The blog post you're looking for doesn't exist.</p>
-          <Button asChild>
+          <Button asChild className="hover:bg-blue-500 hover:text-white">
             <Link to="/blog">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Blog
@@ -81,7 +81,7 @@ const BlogPost = () => {
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
         <div className="mb-8">
-          <Button variant="ghost" asChild>
+          <Button asChild className="hover:bg-blue-500 hover:text-white">
             <Link to="/blog">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Blog

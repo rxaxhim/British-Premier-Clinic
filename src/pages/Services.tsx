@@ -311,13 +311,22 @@ const ServiceModal = ({ service }: { service: Service }) => {
           <DialogDescription className="text-left">{service.fullDescription}</DialogDescription>
         </DialogHeader>
         <div className="flex flex-col sm:flex-row gap-3 mt-6">
-          <Button className="flex items-center gap-2">
-            <Calendar className="h-4 w-4 text-white" />
-            Book Appointment
+          <Button asChild className="flex items-center gap-2">
+            <Link to="/contact">
+              <Calendar className="h-4 w-4 text-white" />
+              Book Appointment
+            </Link>
           </Button>
-          <Button variant="outline" className="flex items-center gap-2 border-blue-500  text-blue-500 hover:bg-blue-500 hover:text-white hover:border-none">
-            <Phone className="h-4 w-4" />
-            Call Now
+
+          <Button
+            variant="outline"
+            asChild
+            className="flex items-center gap-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white hover:border-none"
+          >
+            <a href="tel:+971526372821" aria-label="Call Now">
+              <Phone className="h-4 w-4" />
+              Call Now
+            </a>
           </Button>
         </div>
       </DialogContent>

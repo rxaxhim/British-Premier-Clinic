@@ -52,7 +52,7 @@ const ServicesSection = () => {
       description: "Specialized care for children and teenagers, addressing behavioral issues, learning difficulties, ADHD, and developmental challenges.",
       features: ["Family Therapy", "Behavioral Interventions", "School Consultation"],
       color: "secondary",
-      featured: false,
+      featured: true,
       tabTrigger: "children"
     },
     {
@@ -61,7 +61,7 @@ const ServicesSection = () => {
       description: "Strengthen family relationships and improve communication through evidence-based family therapy approaches.",
       features: ["Couples Counseling", "Parent Training", "Conflict Resolution"],
       color: "accent",
-      featured: false,
+      featured: true,
       tabTrigger: "couples"
     },
     {
@@ -79,7 +79,7 @@ const ServicesSection = () => {
       description: "Comprehensive treatment for various anxiety disorders including GAD, panic disorder, phobias, and social anxiety.",
       features: ["CBT Techniques", "Mindfulness Training", "Exposure Therapy"],
       color: "medical-calm",
-      featured: false,
+      featured: true,
       tabTrigger: "adults"
     },
     {
@@ -88,7 +88,7 @@ const ServicesSection = () => {
       description: "Complete ADHD evaluation and personalized treatment plans for children, adolescents, and adults.",
       features: ["Comprehensive Testing", "Medication Management", "Behavioral Strategies"],
       color: "medical-warm",
-      featured: false,
+      featured: true,
       tabTrigger: "children"
     },
     {
@@ -97,7 +97,7 @@ const ServicesSection = () => {
       description: "Evidence-based counseling to improve communication, rebuild trust, and strengthen connection.",
       features: ["Emotionally Focused Therapy (EFT)", "Gottman-informed strategies", "Conflict & repair skills"],
       color: "relationship-calm",
-      featured: false,
+      featured: true,
       tabTrigger: "couples"
     },
     {
@@ -106,7 +106,7 @@ const ServicesSection = () => {
       description: "Specialized care across PMS/PMDD, perinatal/postpartum, and menopause-related mental health.",
       features: ["Hormone-informed care", "Perinatal & postpartum support", "Trauma- & culture-sensitive"],
       color: "women-care",
-      featured: false,
+      featured: true,
       tabTrigger: "adults"
     }
   ];
@@ -255,7 +255,7 @@ const ServicesSection = () => {
 
           <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
             <Shield className="h-4 w-4" />
-            <span>Confidential & Secure • DHA Licensed</span>
+            <span>Confidential & Secure • DHA/CDA Licensed</span>
           </div>
         </div>
       </div>

@@ -309,21 +309,6 @@ const Contact = () => {
                     ))}
                   </div>
                 </div>
-
-                <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
-                  <h4 className="text-xl font-bold mb-6 flex items-center gap-3">
-                    <Shield className="w-5 h-5 text-primary" />
-                    Emergency Support
-                  </h4>
-                  <p className="text-muted-foreground mb-4">
-                    If you're experiencing a mental health emergency, please contact:
-                  </p>
-                  <div className="space-y-2">
-                    <div className="font-semibold">• Emergency Services: 999</div>
-                    <div className="font-semibold">• Dubai Crisis Line: 800-HELP</div>
-                    <div className="font-semibold">• Our 24/7 Support: +971 50 xxx xxxx</div>
-                  </div>
-                </div>
               </div>
             </div>
 

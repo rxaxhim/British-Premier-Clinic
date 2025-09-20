@@ -118,7 +118,7 @@ const Doctors = () => {
       {/* HeroBanner */}
       <HeroBanner
         eyebrow="Clinicians"
-        title="Our Doctors"
+        title="Our Clinicians"
         description="Meet our team of psychiatrists, psychologists, and therapists."
         badges={["Board-certified", "Evidence-based care"]}
       />

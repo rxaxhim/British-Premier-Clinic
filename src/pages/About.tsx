@@ -33,10 +33,10 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "15+", label: "Years of Experience" },
-    { number: "5,000+", label: "Patients Helped" },
-    { number: "98%", label: "Patient Satisfaction" },
-    { number: "24/7", label: "Support Available" }
+    { number: "35+", label: "Years of Combined Experience" },
+    { number: "6+", label: "Clinicians & Care Team" },
+    { number: "15+",  label: "Specialist Services" },
+    { number: "12hr", label: "Response Time (Mon-Sat)" }
   ];
 
   const teamMembers = [
@@ -584,7 +584,7 @@ const About = () => {
                 Want to learn more about our doctors and their expertise?
               </p>
               <Button className="bg-gradient-primary text-primary-foreground hover:opacity-90" size="lg" asChild>
-                <Link to="/doctors">View All Doctor Profiles</Link>
+                <Link to="/clinicians">View All Doctor Profiles</Link>
               </Button>
             </div>
           </div>

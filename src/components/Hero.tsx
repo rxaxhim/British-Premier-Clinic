@@ -15,19 +15,20 @@ import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
 import brandLogo from "@/assets/BP-logo.png"; // big logo at the top
+import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
   const stats = [
-    { icon: Award, label: "Years of Excellence", value: "15+", color: "text-amber-300" },
-    { icon: Heart, label: "Patients Treated", value: "10K+", color: "text-rose-400" },
-    { icon: Shield, label: "Success Rate", value: "95%", color: "text-emerald-300" },
-    { icon: Star, label: "Patient Rating", value: "4.9/5", color: "text-yellow-300" }
+    { icon: Award, label: "Years of Experience Internationally", value: "35+", color: "text-amber-300" },
+    { icon: Heart, label: "Patients Treated by Our Clinicians", value: "10K+", color: "text-rose-400" },
+    // { icon: Shield, label: "Success Rate", value: "95%", color: "text-emerald-300" },
+    // { icon: Star, label: "Patient Rating", value: "4.9/5", color: "text-yellow-300" }
   ];
 
   const features = [
-    "Expert Psychiatrists & Psychologists",
+    "Experienced Psychiatrists & Psychologists",
     "Evidence-Based Treatment Methods",
-    "Multilingual Support Available",
+    "DHA/CDA Licensed & Regulated",
     "Flexible Appointment Scheduling"
   ];
 
@@ -80,7 +81,7 @@ const Hero = () => {
 
               <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
                 Professional psychiatric and psychological services providing compassionate,
-                evidence-based treatment for individuals and families across the UAE.
+                evidence-based treatment for Children, Adolescents, Adults, and Families across the UAE.
               </p>
             </div>
 
@@ -115,7 +116,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white/30 text-white bg-white/10 backdrop-blur-sm font-semibold"
+                className="border-white/30 text-white bg-white/10 backdrop-blur-sm font-semibold hover:bg-blue-500 hover:border-blue-500 hover:text-white transition-colors"
                 asChild
               >
                 <Link to="/services" className="flex items-center space-x-2">
@@ -126,7 +127,7 @@ const Hero = () => {
             </div>
 
             {/* Trust */}
-            <div className="flex flex-wrap items-center gap-6 pt-2">
+            {/* <div className="flex flex-wrap items-center gap-6 pt-2">
               <div className="flex items-center space-x-2">
                 <div className="flex">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -136,7 +137,7 @@ const Hero = () => {
                 <span className="text-white/90 text-sm">4.9/5 Patient Rating</span>
               </div>
               <div className="text-white/90 text-sm">✓ DHA Licensed &amp; Regulated</div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column */}
@@ -160,22 +161,33 @@ const Hero = () => {
 
             {/* Quick Contact Card */}
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <h3 className="text-white font-semibold mb-4 tracking-tight">Need Immediate Support?</h3>
+              <h3 className="text-white font-semibold mb-4 tracking-tight">Need Assistance?</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Phone className="h-4 w-4 text-accent-light" />
-                  <span className="text-white/90">24/7 Crisis Helpline</span>
+                  <span className="text-white/90">Confidential enquiries (non-emergency)</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Calendar className="h-4 w-4 text-accent-light" />
-                  <span className="text-white/90">Same-day Appointments Available</span>
+                  <span className="text-white/90">Flexible appointments available</span>
                 </div>
               </div>
+
               <Button
-                className="w-full mt-4 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+                variant="outline"
                 asChild
+                className="w-full mt-4 text-[#25D366] hover:bg-[#25D366] hover:text-white hover:border-none"
               >
-                <a href="tel:+971526372821">Get Help Now</a>
+                <a
+                  href="https://wa.me/971526372821"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2"
+                  aria-label="Message on WhatsApp"
+                >
+                  <FaWhatsapp className="h-5 w-5 transition-transform duration-200 ease-out group-hover:scale-110" />
+                  Message on WhatsApp
+                </a>
               </Button>
             </div>
           </div>

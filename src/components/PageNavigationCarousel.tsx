@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Badge } from "./ui/badge";
 
 const PageNavigationCarousel = () => {
   const navigationItems = [
@@ -30,7 +31,7 @@ const PageNavigationCarousel = () => {
       title: "Meet Our Doctors",
       description:
         "Discover our team of experienced mental health professionals dedicated to your wellbeing and recovery.",
-      link: "/doctors",
+      link: "/clinicians",
       icon: Users,
       gradient: "from-green-500 to-teal-600",
     },
@@ -39,8 +40,9 @@ const PageNavigationCarousel = () => {
   return (
     <section className="py-16 bg-background overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 space-y-4">
+          <Badge variant="secondary">Discover British Premier</Badge>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Discover More About Us
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

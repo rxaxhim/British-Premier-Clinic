@@ -70,7 +70,7 @@ const FloatingAppointment = () => {
               variant="outline"
               size="sm"
               asChild
-              className="group border-[#25D366] text-[#25D366] hover:bg-[#25D366]/5 hover:text-[#25D366]"
+              className="group border-[#25D366] bg-[#25D366] text-white hover:bg-[#1ebe57]"
             >
               <a
                 href="https://wa.me/971XXXXXXXXX" // <-- your number

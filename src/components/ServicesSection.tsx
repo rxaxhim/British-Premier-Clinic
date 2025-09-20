@@ -10,7 +10,9 @@ import {
   Target,
   ArrowRight,
   Clock,
-  Award
+  Award,
+  HeartHandshake,
+  HeartPulse,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -71,6 +73,22 @@ const ServicesSection = () => {
       features: ["Comprehensive Testing", "Medication Management", "Behavioral Strategies"],
       color: "medical-warm",
       featured: false
+    },
+    {
+      icon: HeartHandshake,
+      title: "Couples Therapy",
+      description: "Evidence-based counseling to improve communication, rebuild trust, and strengthen connection.",
+      features: ["Emotionally Focused Therapy (EFT)", "Gottman-informed strategies", "Conflict & repair skills"],
+      color: "relationship-calm",
+      featured: false
+    },
+    {
+      icon: HeartPulse,
+      title: "Women’s Mental Health",
+      description: "Specialized care across PMS/PMDD, perinatal/postpartum, and menopause-related mental health.",
+      features: ["Hormone-informed care", "Perinatal & postpartum support", "Trauma- & culture-sensitive"],
+      color: "women-care",
+      featured: false
     }
   ];
 
@@ -127,8 +145,7 @@ const ServicesSection = () => {
             <Card
               key={service.title}
               className={`relative group hover:shadow-large transition-all duration-300 hover:-translate-y-2 animate-scale-in
-                ${service.featured ? "ring-2 ring-primary/20 shadow-medium" : "hover:shadow-medium"}
-                ${isLast && isOdd ? "lg:col-span-3 lg:mx-auto max-w-md" : ""}`}
+                ${service.featured ? "ring-2 ring-primary/20 shadow-medium" : "hover:shadow-medium"}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {service.featured && (

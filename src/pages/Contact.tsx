@@ -116,9 +116,8 @@ const Contact = () => {
   ];
 
   const businessHours = [
-    { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
-    { day: "Sunday", hours: "Emergency only" },
+    { day: "Monday - Saturday", hours: "9:00 AM - 6:00 PM" },
+    { day: "Sunday", hours: "Closed" },
   ];
 
   return (

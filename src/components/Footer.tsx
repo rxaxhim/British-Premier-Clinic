@@ -257,6 +257,8 @@ const Footer = () => {
                   <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-muted-foreground">
+                      Sheikh Zayed Rd
+                      <br />
                       Kia Flagship Building
                       <br />
                       1st Floor, Unit 110

@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
   const features = [
     {
       icon: Award,
-      title: "15+ Years Excellence",
+      title: "35+ Years Experience",
       description: "Over a decade of providing premier mental health services in the UAE with outstanding patient outcomes.",
       stats: "95% Success Rate"
     },
@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
     {
       icon: Clock,
       title: "Flexible Scheduling",
-      description: "Same-day appointments available with evening and weekend hours to fit your busy lifestyle.",
+      description: "Flexible appointments available with evening and weekend hours to fit your busy lifestyle.",
       stats: "24/7 Support"
     },
     {
@@ -53,8 +53,8 @@ const WhyChooseUs = () => {
 
   const certifications = [
     "DHA Licensed",
+    "CDA Licensed",
     "MOH Approved", 
-    "ISO Certified",
     "International Standards"
   ];
 
@@ -115,74 +115,41 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-in">
-          {/* Left - Certifications */}
-          <div className="space-y-6">
-            {/* Center this block on mobile */}
-            <div className="space-y-4 text-center md:text-left max-w-prose mx-auto md:mx-0">
-              <h3 className="text-2xl font-bold text-foreground">
-                Accredited & Certified
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Our clinic meets the highest international standards for mental health care, 
-                ensuring you receive safe, effective, and ethical treatment.
-              </p>
-            </div>
+        <div className="animate-fade-in">
+          {/* full-bleed on mobile, normal within container from md+ */}
+          <div className="-mx-4 sm:-mx-6 md:mx-0">
+            <div
+              className="relative overflow-hidden text-white
+                        bg-gradient-to-br from-blue-950 via-blue-900 to-red-900
+                        rounded-none md:rounded-2xl
+                        px-4 sm:px-6 md:p-10 py-8
+                        md:shadow-lg md:ring-1 md:ring-white/10"
+            >
+              {/* subtle highlights like HeroBanner */}
+              <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(600px_200px_at_10%_10%,rgba(255,255,255,0.08),transparent),radial-gradient(600px_200px_at_90%_60%,rgba(255,255,255,0.06),transparent)]" />
 
-            <div className="grid grid-cols-2 gap-4">
-              {certifications.map((cert, index) => (
-                <div 
-                  key={cert}
-                  className="flex items-center space-x-3 p-4 rounded-lg bg-muted/30 animate-slide-in-left"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <Shield className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="font-medium text-foreground">{cert}</span>
+              <div className="relative text-center max-w-3xl mx-auto space-y-3">
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1">
+                  <Shield className="h-4 w-4 text-white" />
+                  <span className="text-sm font-medium">Accredited &amp; Certified</span>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right - Patient Testimonial */}
-          <div className="space-y-6">
-            <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
-              <CardContent className="p-0 space-y-6">
-                <div className="flex items-center space-x-1">
-                  {[1,2,3,4,5].map((star) => (
-                    <Star key={star} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
-                
-                <blockquote className="text-lg text-foreground leading-relaxed">
-                  "The care I received at British Premier was exceptional. The team's 
-                  compassion and expertise helped me through my most challenging times. 
-                  I highly recommend their services to anyone seeking mental health support."
-                </blockquote>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">Sarah M.</p>
-                    <p className="text-sm text-muted-foreground">Verified Patient</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="space-y-2">
-                <p className="text-2xl font-bold text-primary">10K+</p>
-                <p className="text-sm text-muted-foreground">Patients Served</p>
+                <h3 className="text-2xl font-bold">Trusted Standards of Care</h3>
+                <p className="text-white/90 leading-relaxed">
+                  We adhere to rigorous regulatory and quality benchmarks to ensure safe, effective, and ethical care.
+                </p>
               </div>
-              <div className="space-y-2">
-                <p className="text-2xl font-bold text-secondary">4.9</p>
-                <p className="text-sm text-muted-foreground">Average Rating</p>
-              </div>
-              <div className="space-y-2">
-                <p className="text-2xl font-bold text-accent">95%</p>
-                <p className="text-sm text-muted-foreground">Success Rate</p>
+
+              <div className="relative mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mx-auto max-w-3xl">
+                {certifications.map((cert, index) => (
+                  <div
+                    key={cert}
+                    className="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-white/10 px-3 ring-1 ring-white/15"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <Shield className="h-5 w-5 text-white shrink-0" />
+                    <span className="font-medium">{cert}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

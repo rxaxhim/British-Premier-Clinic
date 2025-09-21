@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import HeroBanner from "@/components/HeroBanner";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -335,7 +335,22 @@ const ServiceModal = ({ service }: { service: Service }) => {
 };
 
 const Services = () => {
+  const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState("adults");
+
+  useEffect(() => {
+    const tabParam = searchParams.get("tab");
+    if (tabParam) {
+      setActiveTab(tabParam);
+      // Scroll to services section after a short delay to ensure content is rendered
+      setTimeout(() => {
+        const servicesSection = document.getElementById("services-section");
+        if (servicesSection) {
+          servicesSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [searchParams]);
 
   const getServicesByCategory = (category: string) => {
     return services.filter((service) => service.category === category);
@@ -419,7 +434,7 @@ const Services = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16">
+      <section id="services-section" className="py-16">
         <div className="container mx-auto px-4">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             {/* ===== Filter bar ===== */}

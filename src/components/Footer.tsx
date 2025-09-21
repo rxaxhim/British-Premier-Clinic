@@ -45,7 +45,7 @@ const Footer = () => {
   const quickLinks = [
     { name: "About Us", href: "/about" },
     { name: "Our Services", href: "/services" },
-    { name: "Meet Our Team", href: "/doctors" },
+    { name: "Meet Our Team", href: "/clinicians" },
     { name: "Blog & Resources", href: "/blog" },
     { name: "Contact Us", href: "/contact" },
   ];
@@ -257,6 +257,8 @@ const Footer = () => {
                   <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-muted-foreground">
+                      Sheikh Zayed Rd
+                      <br />
                       Kia Flagship Building
                       <br />
                       1st Floor, Unit 110
@@ -286,8 +288,8 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div className="text-muted-foreground">
-                    <p>Mon - Fri: 8:00 AM - 8:00 PM</p>
-                    <p>Sat - Sun: 9:00 AM - 6:00 PM</p>
+                    <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                    <p>Sun: Closed</p>
                   </div>
                 </div>
               </div>

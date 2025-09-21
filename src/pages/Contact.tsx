@@ -109,16 +109,15 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Dubai Healthcare City, UAE",
+      details: "Al Quoz 1",
       action: "https://maps.google.com",
-      description: "Premium healthcare district",
+      description: "Sheikh Zayed Rd, Kia Flagship Building 1st Floor, Unit 110",
     },
   ];
 
   const businessHours = [
-    { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
-    { day: "Sunday", hours: "Emergency only" },
+    { day: "Monday - Saturday", hours: "9:00 AM - 6:00 PM" },
+    { day: "Sunday", hours: "Closed" },
   ];
 
   return (
@@ -307,21 +306,6 @@ const Contact = () => {
                         <span className="text-muted-foreground">{schedule.hours}</span>
                       </div>
                     ))}
-                  </div>
-                </div>
-
-                <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
-                  <h4 className="text-xl font-bold mb-6 flex items-center gap-3">
-                    <Shield className="w-5 h-5 text-primary" />
-                    Emergency Support
-                  </h4>
-                  <p className="text-muted-foreground mb-4">
-                    If you're experiencing a mental health emergency, please contact:
-                  </p>
-                  <div className="space-y-2">
-                    <div className="font-semibold">• Emergency Services: 999</div>
-                    <div className="font-semibold">• Dubai Crisis Line: 800-HELP</div>
-                    <div className="font-semibold">• Our 24/7 Support: +971 50 xxx xxxx</div>
                   </div>
                 </div>
               </div>
@@ -529,9 +513,9 @@ const Contact = () => {
               <Badge variant="secondary" className="mb-4">
                 Our Location
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Find Us in Dubai Healthcare City</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Find Us in Al Quoz 1</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Located in the heart of Dubai's premier medical district, easily accessible by public transport
+                Located in the heart of Dubai. Easily accessible by public transport
                 and major highways.
               </p>
             </div>
@@ -549,9 +533,8 @@ const Contact = () => {
                         <MapPin className="w-4 h-4 text-primary" />
                       </div>
                       <div>
-                        <div className="font-semibold">British Premier Psychiatry</div>
-                        <div className="text-muted-foreground">Building 64, Dubai Healthcare City</div>
-                        <div className="text-muted-foreground">Dubai, United Arab Emirates</div>
+                        <div className="font-semibold">British Premier Psychiatry & Psychology</div>
+                        <div className="text-muted-foreground">Sheikh Zayed Rd, Kia Flagship Building 1st Floor, Unit 110</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -589,7 +572,7 @@ const Contact = () => {
 
               <div className="bg-background rounded-2xl p-2 border border-border shadow-sm overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.6087947855823!2d55.33213097537324!3d25.22819253280618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5cd84eb8a9f7%3A0x3a37e6a83db2f9b8!2sDubai%20Healthcare%20City!5e0!3m2!1sen!2sae!4v1699000000000!5m2!1sen!2sae"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8191.986107027252!2d55.23633267586803!3d25.169765067842985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69007b1597e1%3A0x917a80784576b3a!2sKia%20flagship%20building!5e0!3m2!1sen!2sca!4v1758477710427!5m2!1sen!2scaealthcare%20City!5e0!3m2!1sen!2sae!4v1699000000000!5m2!1sen!2sae"
                   width="100%"
                   height="500"
                   style={{ border: 0, borderRadius: "1rem" }}

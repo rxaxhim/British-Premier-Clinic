@@ -40,11 +40,14 @@ const Hero = () => {
         <img
           src={heroBgMobile}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="hidden md:block absolute inset-0 h-full w-full object-cover object-center"
           loading="eager"
           fetchPriority="high"
         />
       </picture>
+{/* Mobile background gradient */}
+      <div className="absolute inset-0 block md:hidden bg-gradient-to-b from-emerald-100 via-purple-300 to-pink-400" />
+
       {/* <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" /> */}
 
       {/* Content (logo is its own row, in flow) */}

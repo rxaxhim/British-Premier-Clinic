@@ -102,15 +102,15 @@ const services: Service[] = [
     icon: <School className="h-6 w-6 text-amber-600" />,
     category: "children",
   },
-  {
-    id: "adhd-management-child",
-    title: "ADHD Management",
-    description: "Comprehensive assessment, behavioral strategies, and parent coaching.",
-    fullDescription:
-      "Our ADHD management program includes comprehensive assessment, evidence-based behavioral strategies, parent coaching, and medication management when appropriate. We provide ongoing support to help children and families develop effective strategies for managing ADHD symptoms at home and school.",
-    icon: <Brain className="h-6 w-6 text-orange-600" />,
-    category: "children",
-  },
+  // {
+  //   id: "adhd-management-child",
+  //   title: "ADHD Management",
+  //   description: "Comprehensive assessment, behavioral strategies, and parent coaching.",
+  //   fullDescription:
+  //     "Our ADHD management program includes comprehensive assessment, evidence-based behavioral strategies, parent coaching, and medication management when appropriate. We provide ongoing support to help children and families develop effective strategies for managing ADHD symptoms at home and school.",
+  //   icon: <Brain className="h-6 w-6 text-orange-600" />,
+  //   category: "children",
+  // },
   {
     id: "social-skills-training",
     title: "Social Skills Training",
@@ -122,7 +122,7 @@ const services: Service[] = [
   },
   {
     id: "developmental-assessments",
-    title: "Psychoeducational & Developmental Assessments",
+    title: "Neurodevelopmental Assessments & Treatments including ADHD & Autism",
     description: "Testing for learning differences, giftedness, autism, and developmental delays.",
     fullDescription:
       "Comprehensive testing and assessment services to identify learning differences, giftedness, autism spectrum conditions, and developmental delays. These assessments provide valuable insights that guide educational planning and therapeutic interventions to support each child's unique strengths and needs.",
@@ -512,7 +512,6 @@ const Services = () => {
                       {getServicesByCategory(category).length} Services Available
                     </Badge>
                   </div>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {getServicesByCategory(category).map((service) => (
                       <Card key={service.id} className="h-full hover:shadow-lg transition-shadow">

@@ -31,8 +31,8 @@ const ServicesSection = () => {
     {
       icon: Brain,
       title: "Child & Adolescent Psychiatry",
-      description: "Specialized psychiatric care for children and teens, focusing on early diagnosis, emotional regulation, and family-centered treatment to support healthy development.",
-      features: ["Early Intervention", "Developmental Assessments", "Collaborative Care Planning"],
+      description: "Specialised psychiatric care for children and teens, focusing on early diagnosis, emotional regulation, and family-centred treatment to support healthy development.",
+      features: ["Early Intervention & Collaborative Care", "Neurodevelopmental Assessments", "Medication Management & Psychotherapy"],
       color: "secondary",
       featured: true,
       tabTrigger: "children"
@@ -49,7 +49,7 @@ const ServicesSection = () => {
     {
       icon: Heart,
       title: "Child & Adolescent Psychology",
-      description: "Specialized care for children and teenagers, addressing behavioral issues, learning difficulties, ADHD, and developmental challenges.",
+      description: "Specialised care for children and teenagers, addressing behavioral issues, learning difficulties, ADHD, and developmental challenges.",
       features: ["Family Therapy", "Behavioral Interventions", "School Consultation"],
       color: "secondary",
       featured: true,
@@ -67,7 +67,7 @@ const ServicesSection = () => {
     {
       icon: Shield,
       title: "Trauma & PTSD Treatment",
-      description: "Specialized treatment for trauma survivors using EMDR, CBT, and other evidence-based approaches for healing.",
+      description: "Specialised treatment for trauma survivors using EMDR, CBT, and other evidence-based approaches for healing.",
       features: ["EMDR Therapy", "Cognitive Processing", "Exposure Therapy"],
       color: "medical-trust",
       featured: true,
@@ -103,7 +103,7 @@ const ServicesSection = () => {
     {
       icon: HeartPulse,
       title: "Women’s Mental Health",
-      description: "Specialized care across PMS/PMDD, perinatal/postpartum, and menopause-related mental health.",
+      description: "Specialised care across PMS/PMDD, perinatal/postpartum, and menopause-related mental health.",
       features: ["Hormone-informed care", "Perinatal & postpartum support", "Trauma- & culture-sensitive"],
       color: "women-care",
       featured: true,

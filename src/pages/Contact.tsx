@@ -102,8 +102,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+971 52 637 2821",
-      action: "tel:+971526372821",
+      details: "+971 52 305 2680",
+      action: "tel:+971523052680",
       description: "Mon-Fri, 9AM-6PM GST",
     },
     {
@@ -333,7 +333,7 @@ const Contact = () => {
                       className="bg-gradient-primary text-primary-foreground hover:opacity-90"
                       asChild
                     >
-                      <a href="tel:+971526372821" className="inline-flex items-center gap-2" aria-label="Call Now">
+                      <a href="tel:+971523052680" className="inline-flex items-center gap-2" aria-label="Call Now">
                         <Phone className="h-4 w-4" />
                         Call Now
                       </a>
@@ -632,7 +632,7 @@ const Contact = () => {
                   className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
                   asChild
                 >
-                  <a href="tel:+971526372821" aria-label="Call the clinic">
+                  <a href="tel:+971523052680" aria-label="Call the clinic">
                     Call Us
                   </a>
                 </Button>

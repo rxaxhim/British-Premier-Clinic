@@ -159,8 +159,8 @@ const Footer = () => {
                       info@britishpremier.ae
                     </a>{" "}
                     or call{" "}
-                    <a className="text-primary underline underline-offset-2" href="tel:+971526372821">
-                      +971 52 637 2821
+                    <a className="text-primary underline underline-offset-2" href="tel:+971523052680">
+                      +971 52 305 2680
                     </a>
                     .
                   </p>
@@ -270,8 +270,8 @@ const Footer = () => {
 
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                  <a href="tel:+97143219494" className="text-muted-foreground hover:text-primary transition-colors">
-                    +971 52 637 2821
+                  <a href="tel:+971523052680" className="text-muted-foreground hover:text-primary transition-colors">
+                    +971 52 305 2680
                   </a>
                 </div>
 

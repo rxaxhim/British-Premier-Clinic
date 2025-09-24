@@ -323,7 +323,7 @@ const ServiceModal = ({ service }: { service: Service }) => {
             asChild
             className="flex items-center gap-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white hover:border-none"
           >
-            <a href="tel:+971526372821" aria-label="Call Now">
+            <a href="tel:+971523052680" aria-label="Call Now">
               <Phone className="h-4 w-4" />
               Call Now
             </a>
@@ -632,7 +632,7 @@ const Services = () => {
                     className="border-none text-blue-500 border-primary-foreground hover:bg-blue-500 hover:text-white hover:border-none"
                     asChild
                   >
-                    <a href="tel:+971526372821" className="flex items-center justify-center gap-2" aria-label="Call us now">
+                    <a href="tel:+971523052680" className="flex items-center justify-center gap-2" aria-label="Call us now">
                       <Phone className="h-4 w-4" />
                       <span>Call Us</span>
                     </a>

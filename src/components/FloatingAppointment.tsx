@@ -63,7 +63,7 @@ const FloatingAppointment = () => {
               </Link>
             </Button>
             <Button variant="outline" size="sm" asChild className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white">
-              <a href="tel:+971526372821">Call Now</a>
+              <a href="tel:+971523052680">Call Now</a>
             </Button>
             {/* WhatsApp button */}
             <Button
@@ -73,7 +73,7 @@ const FloatingAppointment = () => {
               className="group border-[#25D366] bg-[#25D366] text-white hover:bg-[#1ebe57]"
             >
               <a
-                href="https://wa.me/971XXXXXXXXX" // <-- your number
+                href="https://wa.me/+971523052680" // <-- your number
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat on WhatsApp"

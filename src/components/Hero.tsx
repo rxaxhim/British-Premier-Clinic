@@ -72,7 +72,7 @@ const Hero = () => {
       </picture>
 
       {/* Mobile background gradient */}
-      <div className="absolute inset-0 block md:hidden bg-gradient-to-b from-emerald-100 via-purple-300 to-pink-400" />
+      <div className="absolute inset-0 block md:hidden bg-gradient-to-b from-emerald-100 via-blue-300 to-red-400" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-4 sm:pt-6 md:pt-8 pb-16 md:pb-18">

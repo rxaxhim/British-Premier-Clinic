@@ -99,7 +99,7 @@ const PromoPopup = ({ isOpen, onClose }: PromoPopupProps) => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 p-2.5 sm:p-3 bg-background rounded-lg border">
+                {/* <div className="flex items-center gap-3 p-2.5 sm:p-3 bg-background rounded-lg border">
                   <div className="bg-primary/10 p-1.5 sm:p-2 rounded-full">
                     <Phone className="h-4 w-4 text-primary" />
                   </div>
@@ -107,7 +107,7 @@ const PromoPopup = ({ isOpen, onClose }: PromoPopupProps) => {
                     <p className="font-medium text-[13px] sm:text-sm leading-tight">24/7 Emergency Support</p>
                     <p className="text-[12px] sm:text-xs text-muted-foreground">Round-the-clock care when you need it most</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 

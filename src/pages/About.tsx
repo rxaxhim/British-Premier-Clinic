@@ -378,8 +378,9 @@ const About = () => {
       </section>
 
       {/* Patient Testimonials */}
-      <section className="py-20 relative overflow-hidden text-white bg-gradient-to-br from-blue-950 via-blue-900 to-red-900">
-        {/* subtle hero-style highlights */}
+
+      {/* <section className="py-20 relative overflow-hidden text-white bg-gradient-to-br from-blue-950 via-blue-900 to-red-900">
+    
         <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(600px_200px_at_10%_10%,rgba(255,255,255,0.08),transparent),radial-gradient(600px_200px_at_90%_60%,rgba(255,255,255,0.06),transparent)]" />
 
         <div className="relative container mx-auto px-4">
@@ -439,7 +440,8 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> 
+      */}
 
 
       {/* Community Involvement */}
@@ -523,18 +525,25 @@ const About = () => {
 
 
       {/* Team Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+    <section className="py-20 relative">
+      <div className="container mx-auto px-4 relative">
+        <div className="max-w-6xl mx-auto relative">
+
+          {/* 🔒 Blurred Team Content */}
+          <div className="pointer-events-none select-none blur-lg">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Our experienced professionals are dedicated to providing you with the highest quality care.
               </p>
             </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <Card
+                  key={index}
+                  className="overflow-hidden transition-shadow"
+                >
                   <div className="relative aspect-[4/5] bg-muted">
                     {member.photo ? (
                       <>
@@ -546,7 +555,6 @@ const About = () => {
                           className="absolute inset-0 h-full w-full object-cover"
                           sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
                         />
-                        {/* subtle top gradient for text separation if needed later */}
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
                       </>
                     ) : (
@@ -555,14 +563,21 @@ const About = () => {
                       </div>
                     )}
                   </div>
+
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
                     <p className="text-primary font-medium mb-2">{member.role}</p>
-                    <p className="text-sm text-muted-foreground mb-3">{member.credentials}</p>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {member.credentials}
+                    </p>
+
                     <div className="flex items-center gap-2 mb-3">
                       <Clock className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">{member.experience}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {member.experience}
+                      </span>
                     </div>
+
                     <div className="space-y-1">
                       <p className="text-sm font-medium">Specialties:</p>
                       <div className="flex flex-wrap gap-1">
@@ -577,19 +592,35 @@ const About = () => {
                 </Card>
               ))}
             </div>
-            
-            {/* Link to Full Doctor Profiles */}
+
+            {/* 🔗 Disabled CTA */}
             <div className="text-center mt-12">
               <p className="text-muted-foreground mb-6">
                 Want to learn more about our doctors and their expertise?
               </p>
-              <Button className="bg-gradient-primary text-primary-foreground hover:opacity-90" size="lg" asChild>
-                <Link to="/clinicians">View All Doctor Profiles</Link>
+              <Button
+                className="bg-gradient-primary text-primary-foreground"
+                size="lg"
+              >
+                View All Doctor Profiles
               </Button>
             </div>
           </div>
+
+          {/* 🌫️ Coming Soon Overlay */}
+          <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <div className="bg-background/80 backdrop-blur-md px-10 py-8 rounded-2xl shadow-xl border text-center">
+              <h2 className="text-3xl font-bold">Coming Soon!</h2>
+              <p className="text-muted-foreground mt-2">
+                Our team profiles will be available shortly
+              </p>
+            </div>
+          </div>
+
         </div>
-      </section>
+      </div>
+    </section>
+
 
       {/* Patient Success Metrics Section */}
       <section className="py-20 bg-muted/30">

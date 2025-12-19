@@ -73,7 +73,7 @@ const FloatingAppointment = () => {
               className="group border-[#25D366] bg-[#25D366] text-white hover:bg-[#1ebe57]"
             >
               <a
-                href="https://wa.me/+971523052680" // <-- your number
+                href="https://wa.me/+971502739020" // <-- your number
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat on WhatsApp"

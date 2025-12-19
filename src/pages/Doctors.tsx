@@ -124,8 +124,11 @@ const Doctors = () => {
       />
 
       {/* Clinicians Grid */}
-    <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section className="py-16 relative">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      {/* 🔒 Blurred Clinicians Content */}
+      <div className="pointer-events-none select-none blur-lg">
         <div
           className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch ${
             clinicians.length % 3 === 1 ? "justify-items-center" : ""
@@ -134,8 +137,7 @@ const Doctors = () => {
           {clinicians.map((clinician, index) => (
             <Card
               key={clinician.id}
-              className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 
-                flex flex-col h-full
+              className={`group flex flex-col h-full transition-all duration-300
                 ${
                   clinicians.length % 3 === 1 && index === clinicians.length - 1
                     ? "lg:col-span-3 lg:max-w-md lg:mx-auto"
@@ -153,180 +155,72 @@ const Doctors = () => {
                     {clinician.name.split(" ").map((n) => n[0]).join("")}
                   </AvatarFallback>
                 </Avatar>
-                <h3 className="text-xl font-bold text-card-foreground">{clinician.name}</h3>
+
+                <h3 className="text-xl font-bold text-card-foreground">
+                  {clinician.name}
+                </h3>
+
                 <p className="text-primary font-semibold">{clinician.title}</p>
+
                 <Badge variant="secondary" className="mt-2">
                   {clinician.experience} Experience
                 </Badge>
               </CardHeader>
 
-              {/* 👇 CardContent grows to fill height, button pinned bottom */}
               <CardContent className="space-y-4 flex flex-col flex-grow">
-                  <div>
-                    <h4 className="font-semibold text-card-foreground mb-2">Specializations:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {clinician.specializations.slice(0, 2).map((spec, idx) => (
-                        <Badge key={idx} variant="outline" className="text-xs">
-                          {spec}
+                <div>
+                  <h4 className="font-semibold text-card-foreground mb-2">
+                    Specializations:
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {clinician.specializations.slice(0, 2).map((spec, idx) => (
+                      <Badge key={idx} variant="outline" className="text-xs">
+                        {spec}
+                      </Badge>
+                    ))}
+
+                    {clinician.specializations.length > 2 && (
+                      <div className="w-full">
+                        <Badge variant="outline" className="text-xs">
+                          +{clinician.specializations.length - 2} more
                         </Badge>
-                      ))}
-
-                      {clinician.specializations.length > 2 && (
-                        <div className="w-full">
-                          <Badge variant="outline" className="text-xs">
-                            +{clinician.specializations.length - 2} more
-                          </Badge>
-                        </div>
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </div>
-
+                </div>
 
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Calendar className="w-4 h-4" />
                   <span>{clinician.availability}</span>
                 </div>
 
-                {/* 👇 pinned to bottom */}
                 <div className="mt-auto">
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button
-                        className="w-full border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
-                        variant="outline"
-                        onClick={() => setSelectedClinician(clinician)}
-                      >
-                        Read More
-                      </Button>
-                    </DialogTrigger>
-
-                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-                      {/* <DialogHeader>
-                        <DialogTitle className="text-2xl font-bold">{clinician.name}</DialogTitle>
-                      </DialogHeader> */}
-
-                      {/* --- dialog body unchanged --- */}
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {/* Profile Image and Basic Info */}
-                        <div className="md:col-span-1 space-y-4">
-                          <Avatar className="w-32 h-32 mx-auto">
-                            <AvatarImage
-                              src={clinician.image}
-                              alt={clinician.name}
-                              className="object-cover w-full h-full"
-                            />
-                            <AvatarFallback className="text-2xl font-bold">
-                              {clinician.name.split(" ").map((n) => n[0]).join("")}
-                            </AvatarFallback>
-                          </Avatar>
-
-                          <div className="text-center">
-                            <h3 className="text-xl font-bold">{clinician.name}</h3>
-                            <p className="text-primary font-semibold">{clinician.title}</p>
-                            <Badge variant="secondary" className="mt-2">
-                              {clinician.experience} Experience
-                            </Badge>
-                          </div>
-
-                          <div className="space-y-3">
-                            <div className="flex items-center gap-2 text-sm">
-                              <Mail className="w-4 h-4 text-primary" />
-                              <a href={`mailto:${clinician.email}`} className="hover:text-primary">
-                                {clinician.email}
-                              </a>
-                            </div>
-                            <div className="flex items-center gap-2 text-sm">
-                              <Phone className="w-4 h-4 text-primary" />
-                              <a href={`tel:${clinician.phone}`} className="hover:text-primary">
-                                {clinician.phone}
-                              </a>
-                            </div>
-                            <div className="flex items-center gap-2 text-sm">
-                              <Calendar className="w-4 h-4 text-primary" />
-                              <span>{clinician.availability}</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Detailed Info */}
-                        <div className="md:col-span-2 space-y-6">
-                          {/* Bio */}
-                          <div>
-                            <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                              <Users className="w-5 h-5 text-primary" />
-                              About
-                            </h4>
-                            <p className="text-muted-foreground leading-relaxed">{clinician.bio}</p>
-                          </div>
-
-                          {/* Specializations */}
-                          <div>
-                            <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                              <Award className="w-5 h-5 text-primary" />
-                              Specializations
-                            </h4>
-                            <div className="flex flex-wrap gap-2">
-                              {clinician.specializations.map((spec, idx) => (
-                                <Badge key={idx} variant="secondary">
-                                  {spec}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* Education */}
-                          <div>
-                            <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                              <BookOpen className="w-5 h-5 text-primary" />
-                              Education
-                            </h4>
-                            <ul className="space-y-2">
-                              {clinician.education.map((edu, idx) => (
-                                <li key={idx} className="text-muted-foreground">
-                                  • {edu}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          {/* Certifications */}
-                          <div>
-                            <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                              <Award className="w-5 h-5 text-primary" />
-                              Certifications
-                            </h4>
-                            <ul className="space-y-2">
-                              {clinician.certifications.map((cert, idx) => (
-                                <li key={idx} className="text-muted-foreground">
-                                  • {cert}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="flex gap-4 mt-6">
-                        <Button className="flex-1" asChild>
-                          <Link to="/contact">Book Appointment</Link>
-                        </Button>
-                        <Button
-                          variant="outline"
-                          className="flex-1 border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
-                          asChild
-                        >
-                          <a href={`mailto:${clinician.email}`}>Send Email</a>
-                        </Button>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
+                  <Button
+                    className="w-full border-primary text-blue-500"
+                    variant="outline"
+                  >
+                    Read More
+                  </Button>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
-    </section>
+
+      {/* 🌫️ Coming Soon Overlay */}
+          <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <div className="bg-background/80 backdrop-blur-md px-10 py-8 rounded-2xl shadow-xl border text-center">
+              <h2 className="text-3xl font-bold">Coming Soon!</h2>
+              <p className="text-muted-foreground mt-2">
+                Our team profiles will be available shortly
+              </p>
+            </div>
+          </div>
+
+    </div>
+  </section>
+
 
 
       {/* Our Approach */}

@@ -113,9 +113,9 @@ const Footer = () => {
                     privacy requests, please contact{" "}
                     <a
                       className="text-primary underline underline-offset-2"
-                      href="mailto:info@britishpremier.ae"
+                      href="mailto:info.britishpremier@gmail.com"
                     >
-                      info@britishpremier.ae
+                      info.britishpremier@gmail.com
                     </a>
                     .
                   </p>
@@ -154,7 +154,7 @@ const Footer = () => {
                     If you encounter accessibility barriers, please contact us at{" "}
                     <a
                       className="text-primary underline underline-offset-2"
-                      href="mailto:info@britishpremier.ae"
+                      href="mailto:info.britishpremier@gmail.com"
                     >
                       info@britishpremier.ae
                     </a>{" "}
@@ -278,10 +278,10 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                   <a
-                    href="mailto:info@britishpremier.ae"
+                    href="mailto:info.britishpremier@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    info@britishpremier.com
+                    info.britishpremier@gmail.com
                   </a>
                 </div>
 

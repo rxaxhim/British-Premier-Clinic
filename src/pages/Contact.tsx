@@ -95,8 +95,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@britishpremierpsychiatry.com",
-      action: "mailto:info@britishpremierpsychiatry.com",
+      details: "info.britishpremier@gmail.com",
+      action: "mailto:info.britishpremier@gmail.com",
       description: "Get a response within 24 hours",
     },
     {
@@ -365,6 +365,7 @@ const Contact = () => {
       </section>
 
       {/* PARKING */}
+      {/* 
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -381,7 +382,7 @@ const Contact = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4 md:scale-105 lg:scale-110 md:origin-center">
-              {/* On Site Parking */}
+
               <div className="group">
                 <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border transition-all hover:shadow-xl hover:-translate-y-1">
                   <div className="relative overflow-hidden">
@@ -421,7 +422,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Street Parking */}
+ 
               <div className="group">
                 <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border transition-all hover:shadow-xl hover:-translate-y-1">
                   <div className="relative overflow-hidden">
@@ -461,7 +462,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Mall Parking */}
+
               <div className="group">
                 <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border transition-all hover:shadow-xl hover:-translate-y-1">
                   <div className="relative overflow-hidden">
@@ -503,8 +504,9 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
-
+        
+      </section> 
+*/}
       {/* LOCATION */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">

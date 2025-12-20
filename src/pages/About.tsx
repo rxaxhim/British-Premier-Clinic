@@ -89,8 +89,16 @@ const About = () => {
             "bg-transparent border border-white text-white hover:bg-white hover:text-primary transition-all",
         }}
       />
-
-      {/* Stats Section */}
+      <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <div className="bg-background/80 backdrop-blur-md px-10 py-8 rounded-2xl shadow-xl border text-center">
+          <h2 className="text-3xl font-bold">Coming Soon!</h2>
+            <p className="text-muted-foreground mt-2">
+              Our about page details will be available shortly.
+            </p>
+          </div>
+      </div>
+      
+      {/* Stats Section
       <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -116,7 +124,6 @@ const About = () => {
       </section>
 
 
-      {/* Our Story Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -143,17 +150,17 @@ const About = () => {
               </div>
               <div className="relative">
                 <div className="aspect-square relative rounded-2xl overflow-hidden flex items-center justify-center">
-                  {/* Background image */}
+             
                   <img
                     src="https://plus.unsplash.com/premium_photo-1679429321023-dff2ea455b0c?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Background"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
 
-                  {/* Blurred overlay */}
+            
                   <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
-                  {/* Foreground content */}
+                
                   <div className="relative text-center text-white">
                     <Heart className="h-16 w-16 text-primary mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
@@ -168,7 +175,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+
       <section className="py-20 bg-muted/30 overflow-x-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -191,8 +198,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        
-        {/* Link to Full Doctor Profiles */}
+
+
         <div className="mt-12 md:mt-16">
           <div
             className="relative overflow-hidden text-white
@@ -202,7 +209,7 @@ const About = () => {
                       px-4 sm:px-6 md:p-8 py-8
                       md:max-w-6xl md:shadow-lg md:ring-1 md:ring-white/10"
           >
-            {/* subtle highlights like HeroBanner */}
+          
             <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(600px_200px_at_10%_10%,rgba(255,255,255,0.08),transparent),radial-gradient(600px_200px_at_90%_60%,rgba(255,255,255,0.06),transparent)]" />
 
             <div className="relative text-center">
@@ -218,25 +225,25 @@ const About = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
+   
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Card with background image */}
+      
               <div className="order-2 md:order-1">
                 <div className="aspect-square relative rounded-2xl overflow-hidden flex items-center justify-center">
-                  {/* Background image */}
+             
                   <img
                     src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg"
                     alt="Holistic approach background"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
 
-                  {/* Blurred overlay */}
+                 
                   <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
-                  {/* Foreground content */}
+            
                   <div className="relative text-center text-white">
                     <Star className="h-16 w-16 text-secondary mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Holistic Approach</h3>
@@ -247,7 +254,7 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Text content */}
+        
               <div className="order-1 md:order-2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Philosophy</h2>
                 <div className="space-y-4 text-muted-foreground">
@@ -274,12 +281,12 @@ const About = () => {
         </div>
       </section>
 
-      {/* Cultural Sensitivity Section */}
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Text content */}
+        
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Cultural Sensitivity</h2>
                 <div className="space-y-4 text-muted-foreground">
@@ -309,20 +316,20 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Card with background image */}
+        
               <div className="relative">
                 <div className="aspect-square relative rounded-2xl overflow-hidden flex items-center justify-center">
-                  {/* Background image */}
+               
                   <img
                     src="https://images.unsplash.com/photo-1651421479704-470a78eef530?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Culturally inclusive care background"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
 
-                  {/* Blurred overlay */}
+              
                   <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
-                  {/* Foreground content */}
+           
                   <div className="relative text-center text-white">
                     <Users className="h-20 w-20 text-accent mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Culturally Inclusive Care</h3>
@@ -338,7 +345,7 @@ const About = () => {
       </section>
 
 
-      {/* Awards & Recognition */}
+    
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -375,7 +382,8 @@ const About = () => {
               </div>
           </div>
         </div>
-      </section>
+      </section> 
+      */}
 
       {/* Patient Testimonials */}
 
@@ -441,10 +449,10 @@ const About = () => {
           </div>
         </div>
       </section> 
-      */}
+    
 
 
-      {/* Community Involvement */}
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -455,7 +463,7 @@ const About = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Text content */}
+     
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Our Initiatives</h3>
                 <div className="space-y-6">
@@ -495,20 +503,20 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Card with background image */}
+          
               <div className="relative">
                 <div className="aspect-square relative rounded-2xl overflow-hidden flex items-center justify-center">
-                  {/* Background image */}
+                
                   <img
                     src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Community background"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
 
-                  {/* Blurred overlay */}
+                
                   <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
-                  {/* Foreground content */}
+              
                   <div className="relative text-center text-white">
                     <Users className="h-20 w-20 text-primary mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Community First</h3>
@@ -524,12 +532,12 @@ const About = () => {
       </section>
 
 
-      {/* Team Section */}
+  
     <section className="py-20 relative">
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto relative">
 
-          {/* 🔒 Blurred Team Content */}
+      
           <div className="pointer-events-none select-none blur-lg">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
@@ -593,7 +601,6 @@ const About = () => {
               ))}
             </div>
 
-            {/* 🔗 Disabled CTA */}
             <div className="text-center mt-12">
               <p className="text-muted-foreground mb-6">
                 Want to learn more about our doctors and their expertise?
@@ -607,7 +614,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* 🌫️ Coming Soon Overlay */}
+    
           <div className="absolute inset-0 z-10 flex items-center justify-center">
             <div className="bg-background/80 backdrop-blur-md px-10 py-8 rounded-2xl shadow-xl border text-center">
               <h2 className="text-3xl font-bold">Coming Soon!</h2>
@@ -622,7 +629,7 @@ const About = () => {
     </section>
 
 
-      {/* Patient Success Metrics Section */}
+      
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -695,7 +702,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Detailed Accreditations & Certifications */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -706,7 +712,7 @@ const About = () => {
               </p>
             </div>
             
-            {/* Medical Certifications */}
+         
             <div className="mb-16">
               <h3 className="text-2xl font-semibold mb-8 text-center">Medical Certifications</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -746,7 +752,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* UAE Healthcare Licenses */}
+         
             <div className="mb-16">
               <h3 className="text-2xl font-semibold mb-8 text-center">UAE Healthcare Licenses</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -786,7 +792,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* Quality & Cultural Certifications */}
+           
             <div className="mb-12">
               <h3 className="text-2xl font-semibold mb-8 text-center">Quality & Cultural Certifications</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -826,7 +832,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* Verification Summary */}
+        
             <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-semibold mb-6">Verified & Trusted</h3>
               <p className="text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -857,7 +863,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -881,6 +887,7 @@ const About = () => {
           </div>
         </div>
       </section>
+        */}
     </div>
   );
 };

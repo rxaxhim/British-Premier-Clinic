@@ -89,7 +89,7 @@ const PromoPopup = ({ isOpen, onClose }: PromoPopupProps) => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 p-2.5 sm:p-3 bg-background rounded-lg border">
+                {/* <div className="flex items-center gap-3 p-2.5 sm:p-3 bg-background rounded-lg border">
                   <div className="bg-secondary/10 p-1.5 sm:p-2 rounded-full">
                     <MapPin className="h-4 w-4 text-secondary" />
                   </div>
@@ -97,7 +97,7 @@ const PromoPopup = ({ isOpen, onClose }: PromoPopupProps) => {
                     <p className="font-medium text-[13px] sm:text-sm leading-tight">15+ Languages Supported</p>
                     <p className="text-[12px] sm:text-xs text-muted-foreground">Culturally competent care in your language</p>
                   </div>
-                </div>
+                </div> */}
 
                 {/* <div className="flex items-center gap-3 p-2.5 sm:p-3 bg-background rounded-lg border">
                   <div className="bg-primary/10 p-1.5 sm:p-2 rounded-full">

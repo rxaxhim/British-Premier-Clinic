@@ -156,7 +156,7 @@ const Footer = () => {
                       className="text-primary underline underline-offset-2"
                       href="mailto:info.britishpremier@gmail.com"
                     >
-                      info@britishpremier.ae
+                      info.britishpremier@gmail.com
                     </a>{" "}
                     or call{" "}
                     <a className="text-primary underline underline-offset-2" href="tel:+971523052680">

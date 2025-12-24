@@ -25,7 +25,7 @@ export default defineConfig(() => ({
     }),
     react(),
   ],
-  base: "/British-Premier-Clinic/",
+  base: "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

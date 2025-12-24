@@ -115,7 +115,7 @@ const Footer = () => {
                       className="text-primary underline underline-offset-2"
                       href="mailto:info.britishpremier@gmail.com"
                     >
-                      info.britishpremier@gmail.com
+                      us by clicking here
                     </a>
                     .
                   </p>
@@ -156,7 +156,7 @@ const Footer = () => {
                       className="text-primary underline underline-offset-2"
                       href="mailto:info.britishpremier@gmail.com"
                     >
-                      info.britishpremier@gmail.com
+                      Email Us
                     </a>{" "}
                     or call{" "}
                     <a className="text-primary underline underline-offset-2" href="tel:+971523052680">
@@ -281,7 +281,7 @@ const Footer = () => {
                     href="mailto:info.britishpremier@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    info.britishpremier@gmail.com
+                    Email Us
                   </a>
                 </div>
 

@@ -51,7 +51,7 @@ const Hero = () => {
   const features = [
     "Experienced Psychiatrists & Psychologists",
     "Evidence-Based Specialised Treatment & Intervention",
-    "DHA/CDA Licensed & Regulated",
+    "DHA Licensed & Regulated",
     "Flexible Appointment Scheduling",
     "Safe and Confidential environment you can trust",
     "Paitent and Family Centred Service"

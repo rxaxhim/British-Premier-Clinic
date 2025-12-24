@@ -255,7 +255,7 @@ const ServicesSection = () => {
 
           <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
             <Shield className="h-4 w-4" />
-            <span>Confidential & Secure • DHA/CDA Licensed</span>
+            <span>Confidential & Secure • DHA Licensed</span>
           </div>
         </div>
       </div>

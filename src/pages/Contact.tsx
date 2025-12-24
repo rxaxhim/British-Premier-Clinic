@@ -95,7 +95,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "info.britishpremier@gmail.com",
+      details: "Click Here to Email Us",
       action: "mailto:info.britishpremier@gmail.com",
       description: "Get a response within 24 hours",
     },
@@ -109,8 +109,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Al Quoz 1",
-      action: "https://maps.google.com",
+      details: "Kia Flagship Building",
+      action: "https://maps.app.goo.gl/WNaYyuEZY4tFmsqNA",
       description: "Sheikh Zayed Rd, Kia Flagship Building 1st Floor, Unit 110",
     },
   ];
@@ -515,7 +515,7 @@ const Contact = () => {
               <Badge variant="secondary" className="mb-4">
                 Our Location
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Find Us in Al Quoz 1</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Find Us in Kia flagship building</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Located in the heart of Dubai. Easily accessible by public transport
                 and major highways.

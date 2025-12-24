@@ -53,7 +53,6 @@ const WhyChooseUs = () => {
 
   const certifications = [
     "DHA Licensed",
-    "CDA Licensed",
     "MOH Approved", 
     "International Standards"
   ];

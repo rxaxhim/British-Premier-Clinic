@@ -7,107 +7,191 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Mail, Phone, Calendar, Award, Users, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
+import YaraPFP from "@/assets/yara-profile-photo.png";
+import AnvitaPFP from "@/assets/anvita-profile-photo.png";
+import AnnabelPFP from "@/assets/annabel-profile-photo.png";
+import ImranPFP from "@/assets/imran-profile-photo.png";
 
 interface Clinician {
   id: string;
   name: string;
   title: string;
   specializations: string[];
-  experience: string;
+  experience?: string;
   education: string[];
   certifications: string[];
   bio: string;
-  email: string;
-  phone: string;
+  email?: string;
+  phone?: string;
   image: string;
-  availability: string;
+  availability?: string;
 }
 
 const clinicians: Clinician[] = [
+
   {
     id: "1",
-    name: "Dr. Sarah Mitchell",
-    title: "Clinical Psychologist",
-    specializations: ["Anxiety Disorders", "Depression", "Cognitive Behavioral Therapy"],
-    experience: "12+ years",
-    education: ["PhD in Clinical Psychology - University of Toronto", "MSc in Psychology - McGill University"],
-    certifications: ["Licensed Clinical Psychologist", "CBT Specialist Certification"],
-    bio: "Dr. Sarah Mitchell is a dedicated clinical psychologist with over 12 years of experience in treating anxiety disorders and depression. She specializes in Cognitive Behavioral Therapy and has helped hundreds of patients overcome their mental health challenges. Dr. Mitchell believes in a collaborative approach to therapy, working closely with her patients to develop personalized treatment plans.",
-    email: "s.mitchell@britishpremier.com",
-    phone: "(416) 555-0123",
-    image: "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg",
-    availability: "Monday - Friday, 9:00 AM - 5:00 PM"
+    name: "Dr.  Imran Mushtaq",
+    title: "Consultant Psychiatrist",
+    specializations: [
+      "Child & Adolescent Psychiatry",
+      "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+      "Autism Spectrum Disorder (ASD)",
+      "Learning Difficulties & Learning Disabilities",
+      "Behavioral & Oppositional Disorders",
+      "Depression",
+      "Anxiety Disorders",
+      "Psychiatric Assessment & Diagnosis",
+      "Systemic Therapy",
+      "Cognitive Behavioural Therapy (CBT)",
+      "Adult Psychiatry (Limited Referrals)"
+    ],
+    experience: "20+ years",
+    education: [
+      "Medical Training in the United Kingdom",
+      "Specialty Training in Psychiatry",
+      "Background Training in Paediatrics"
+    ],
+    certifications: [
+      "Consultant Psychiatrist",
+      "Licensed by Dubai Health Authority (UAE)",
+      "Licensed by General Medical Council (UK)",
+      "Licensed by Irish Medical Council (Ireland)",
+      "Fellow of the Royal College of Psychiatrists (UK)",
+      "Fellow of the Royal College of Paediatrics and Child Health (UK)",
+      "Fellow of the European Board of Psychiatry (FEBP)"
+    ],
+    bio: `Dr Imran Mushtaq is a UK-trained Consultant Psychiatrist with over 20 years of expertise in the psychiatry field. He is licensed by the Dubai Health Authority (UAE), General Medical Council (UK) and Irish Medical Council (Ireland). 
+    
+    He specialises in child and adolescent mental health and is known for his calm, gentle, and composed approach to patient care. With extensive experience in assessing, diagnosing, and treating mental health conditions, he is particularly skilled in working with children and young people facing various psychological challenges and disorders. Dr. Mushtaq's primary focus is on children and adolescents, though he also accepts referrals for adults. 
+    
+    He started out his career as a paediatrician and then he gained experience in the area of psychiatry. He has worked as a consultant psychiatrist in the UK, Australia and Ireland. He has been awarded Fellowships by the Royal College of Psychiatrists (UK), the Royal College of Paediatrics and Child Health (UK), as well as the European Board of Psychiatry (FEBP). He has been involved in teaching, training and supervision of medical students, junior doctors, nurses and higher trainees in child and adolescent psychiatry in the UK, Ireland and Australia. He has an honorary position with a medical university in Africa. 
+    
+    Although Dr Mushtaq can treat any psychiatry-related disorders, he specialises in ADHD, ASD, Learning Difficulties/Learning Disabilities, Behavioural Problems/Oppositional Behaviours, Depression, and Anxiety Disorders. He is particularly interested in Systemic and Cognitive Behavioural Therapy (CBT). 
+    
+    His therapies include a variety of holistic approaches in supporting a person to overcome their difficulties and problems. He can support patients who speak English, Urdu, Punjabi and Hindi. Dr Mushtaq is unable to provide medico-legal opinions or reports or provide care for clients with substance use disorders.
+    
+    Dr Mushtaq has published more than 40 articles in peer-reviewed scientific journals. He has presented at national and international conferences in the UK, Europe, Asia and Australia. He reviews journals' articles related to child and adolescent mental health. He is a children's writer and writes in the Urdu language. He has published many award-winning children's books and is also the chief editor of an Urdu Children's monthly magazine.`,
+    // email: "j.thompson@britishpremier.com",
+    // phone: "(416) 555-0126",
+    image: ImranPFP,
+    // availability: "Monday - Friday, 9:00 AM - 3:00 PM"
   },
   {
     id: "2",
-    name: "Dr. Michael Chen",
-    title: "Psychiatrist",
-    specializations: ["Bipolar Disorder", "ADHD", "Medication Management"],
-    experience: "15+ years",
-    education: ["MD - University of British Columbia", "Psychiatry Residency - Toronto General Hospital"],
-    certifications: ["Royal College of Physicians and Surgeons of Canada", "ADHD Specialist"],
-    bio: "Dr. Michael Chen is a board-certified psychiatrist with extensive experience in treating mood disorders and ADHD. He takes a comprehensive approach to mental health care, combining medication management with therapeutic interventions. Dr. Chen is known for his patient-centered approach and his ability to help patients find the right treatment balance.",
-    email: "m.chen@britishpremier.com",
-    phone: "(416) 555-0124",
-    image: "https://images.pexels.com/photos/29995617/pexels-photo-29995617.jpeg",
-    availability: "Tuesday - Saturday, 8:00 AM - 4:00 PM"
+    name: "Anvita",
+    title: "Psychologist",
+    specializations: [
+      "Child & Adolescent Psychology",
+      "Young Adult Mental Health",
+      "Autism Spectrum Disorder (ASD)",
+      "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+      "Learning Difficulties",
+      "Mood Disorders",
+      "Anxiety Disorders",
+      "Behavioral Issues",
+      "Trauma",
+      "Grief & Loss"
+    ],
+    // experience: "15+ years",
+    education: [
+      "Master of Arts in Clinical Psychology - Eastern Illinois University"
+    ],
+    certifications: [
+    "Licensed Psychologist - Illinois Department of Financial and Professional Regulation (IDFPR)",
+    "Licensed Psychologist - Community Development Authority (CDA), Dubai"
+  ],
+    bio: `Anvita brings with her a deep cultural relatability and sensitivity, and is dedicated to understanding and supporting the subjective cultural experiences and challenges that shape her clients’ lifestyle. She integrates evidence-based therapies like CBT, DBT, and mindfulness along with a person-centered approach to therapy. 
+
+    Currently supporting clients within the UAE, Anvita works with children, adolescents and adults experiencing a wide range of emotional, behavioral, and developmental challenges. She also utilizes diverse neuropsychological/psychological assessments to accurately identify developmental and social-emotional concerns and create individualized treatment plans. She further aims to empower the adults in a child’s life and facilitates parent guidance workshops to help create a thriving environment for the child.`,
+    // email: "test@gmail.com",
+    // phone: "(416) 555-0124",
+    image: AnvitaPFP,
+    // availability: "Tuesday - Saturday, 8:00 AM - 4:00 PM"
   },
-  {
-    id: "3",
-    name: "Dr. Emily Rodriguez",
-    title: "Clinical Social Worker",
-    specializations: ["Family Therapy", "Trauma Counseling", "Addiction Recovery"],
-    experience: "10+ years",
-    education: ["MSW - University of Toronto", "BSW - York University"],
-    certifications: ["Registered Social Worker (RSW)", "Trauma-Informed Care Specialist"],
-    bio: "Dr. Emily Rodriguez is a compassionate clinical social worker who specializes in family therapy and trauma counseling. She has extensive experience working with individuals and families affected by trauma and addiction. Dr. Rodriguez uses evidence-based practices to help her clients heal and build stronger relationships.",
-    email: "e.rodriguez@britishpremier.com",
-    phone: "(416) 555-0125",
-    image: "https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg",
-    availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
-  },
-  {
-    id: "4",
-    name: "Dr. James Thompson",
-    title: "Child & Adolescent Psychologist",
-    specializations: ["Child Psychology", "Autism Spectrum Disorders", "Behavioral Therapy"],
-    experience: "8+ years",
-    education: ["PhD in Developmental Psychology - McMaster University", "MA in Child Psychology - University of Waterloo"],
-    certifications: ["Licensed Child Psychologist", "Applied Behavior Analysis (ABA) Certified"],
-    bio: "Dr. James Thompson specializes in working with children and adolescents, particularly those on the autism spectrum. He uses play therapy and behavioral interventions to help young clients develop important life skills. Dr. Thompson works closely with families to create supportive environments for children's growth and development.",
-    email: "j.thompson@britishpremier.com",
-    phone: "(416) 555-0126",
-    image: "https://images.pexels.com/photos/4173239/pexels-photo-4173239.jpeg",
-    availability: "Monday - Friday, 9:00 AM - 3:00 PM"
-  },
-  {
-    id: "5",
-    name: "Dr. Lisa Park",
-    title: "Neuropsychologist",
-    specializations: ["Memory Disorders", "Cognitive Assessment", "Brain Injury Recovery"],
-    experience: "14+ years",
-    education: ["PhD in Neuropsychology - University of Western Ontario", "MSc in Neuroscience - Queen's University"],
-    certifications: ["Board Certified Neuropsychologist", "Cognitive Rehabilitation Specialist"],
-    bio: "Dr. Lisa Park is a skilled neuropsychologist who specializes in cognitive assessment and rehabilitation. She works with patients who have experienced brain injuries, memory disorders, and other neurological conditions. Dr. Park uses comprehensive testing and evidence-based interventions to help patients optimize their cognitive functioning.",
-    email: "l.park@britishpremier.com",
-    phone: "(416) 555-0127",
-    image: "https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg",
-    availability: "Wednesday - Sunday, 8:00 AM - 4:00 PM"
-  },
-  {
-    id: "6",
-    name: "Dr. Robert Kumar",
-    title: "Counseling Psychologist",
-    specializations: ["Couples Therapy", "Grief Counseling", "Stress Management"],
-    experience: "11+ years",
-    education: ["PhD in Counseling Psychology - University of Calgary", "MA in Clinical Psychology - Carleton University"],
-    certifications: ["Licensed Counseling Psychologist", "Gottman Method Couples Therapy"],
-    bio: "Dr. Robert Kumar is an experienced counseling psychologist who helps individuals and couples navigate life's challenges. He specializes in relationship counseling, grief therapy, and stress management. Dr. Kumar believes in creating a safe, non-judgmental space where clients can explore their feelings and develop healthy coping strategies.",
-    email: "r.kumar@britishpremier.com",
-    phone: "(416) 555-0128",
-    image: "https://images.pexels.com/photos/4270371/pexels-photo-4270371.jpeg",
-    availability: "Tuesday - Saturday, 11:00 AM - 7:00 PM"
-  }
+  // {
+  //   id: "3",
+  //   name: "Yara",
+  //   title: "Psychotherapist",
+  //   specializations: [
+  //     "Emotional Regulation Difficulties",
+  //     "Mood-Related Concerns",
+  //     "Trauma & Trauma Recovery",
+  //     "Relationship Challenges",
+  //     "Identity Exploration",
+  //     "Life Transitions & Adjustment Issues",
+  //     "Adolescent Mental Health",
+  //     "Adult Mental Health",
+  //     "Couples Counseling",
+  //     "Family Therapy"
+  //   ],
+  //   // experience: "12+ years",
+  //   education: [
+  //     "Master's Degree in Professional Clinical Counseling (PCC)"
+  //   ],
+  //   certifications: [
+  //     "Licensed Associate Professional Counselor (LAPC) - Pennsylvania",
+  //     "Child Development Associate (CDA) - Pennsylvania",
+  //     "Licensed Psychotherapist - Dubai, Pennsylvania"
+  //   ],
+  //   bio: `My name is Yara. I am a bilingual psychotherapist fluent in Arabic and English, with education and clinical training in the United States. I hold a master’s degree in Professional Clinical Counseling (PCC) and am currently licensed in Dubai and in Pennsylvania (LAPC, CDA). I work with adolescents and adults, including individuals, couples, and families, navigating emotional regulation difficulties, mood related concerns, trauma, relationship challenges, identity exploration, and major life transitions.
+    
+  //   My aim is to provide a warm, nonjudgmental, and culturally sensitive space where you feel supported, understood, and respected. My approach is collaborative and grounded in curiosity, supporting insight, agency, and meaningful change by building on your strengths. 
+    
+  //   My work is trauma informed and integrative, drawing from both depth oriented and evidence based approaches. I am trained in Acceptance and Commitment Therapy (ACT), Cognitive Behavioural Therapy (CBT), Dialectical Behaviour Therapy (DBT), emotion focused and solution focused approaches, while also integrating psychodynamic and humanistic perspectives. Together, we focus on developing practical tools, deepening self awareness, strengthening relationships, and fostering resilience, self compassion, and sustainable growth.`,
+  //   // email:"test@gmail.com",
+  //   // phone: "(416) 555-0123",
+  //   image: YaraPFP,
+  //   // availability: "Monday - Friday, 9:00 AM - 5:00 PM"
+  // },
+  // {
+  //   id: "4",
+  //   name: "Ms. Annabel George",
+  //   title: "Psychologist",
+  //   specializations: [
+  //     "Self-Improvement & Personal Growth",
+  //     "Stress Management",
+  //     "Academic & Career Concerns",
+  //     "Anxiety Disorders",
+  //     "Phobias",
+  //     "Mood Disorders",
+  //     "Family Concerns",
+  //     "Relationship Issues",
+  //     "Procrastination",
+  //     "Behavioral Issues",
+  //     "Self-Harm",
+  //     "Abuse & Trauma",
+  //     "Student & Young Adult Mental Health",
+  //     "Corporate & Workplace Mental Health",
+  //     "Group Therapy & Workshops"
+  //   ],
+  //   // experience: "10+ years",
+  //   education: [
+  //     "Master's Degree in Counselling Psychology - University of Mumbai (Distinction)"
+  //   ],
+  //   certifications: [
+  //     "Psychologist - India",
+  //     "Psychologist - United Arab Emirates",
+  //     "Consultant Psychologist (Online Platforms)"
+  //   ],
+  //   bio : `Ms. Annabel George is a Psychologist with a master's in counselling psychology from University of Mumbai, India where she earned her degree with distinction. 
+    
+  //   She has worked as a psychologist at various schools and centres  back in India and the UAE. She is also a consultant psychologist on several online platform. 
+    
+  //   She works with clients from a wide variety of age-groups and backgrounds - students, parents, young adults, as well as people in the corporate sector. She has been successful in assisting them as they deal with several different issues such as stress, anxiety, phobias, academic concern or career related issues, mood disorders, family concerns, relationships, procrastination, behavioural issues, self-harm, abuse and has also worked with clients focused on self-improvement. 
+    
+  //   Apart from individual sessions she also held group sessions and several workshops on confidence building, communication skills, non-judgmental listening, and career growth. 
+    
+  //   She makes use of Cognitive behavioural therapy, art and play therapy, interpersonal psychotherapy and solution-focused brief therapy in her sessions depending on what is relevant for the client. 
+    
+  //   She wants to help people deal with the challenges and concerns they are faced with. To help them grow as individuals and live their lives to the fullest. Additionally, she wants people to understand the importance of mental health and wellbeing and freely seek help when it's required.
+    
+  //   “In my sessions, the aim is on identifying the client's concerns and working through it together. I believe that people know the path that they are on… and when their car breaks down along the way… I'd like to be the one who provides them with the right tools so that they know how to fix it and deal with it should such a situation arise again”.`,
+  //   // email: "e.rodriguez@britishpremier.com",
+  //   // phone: "(416) 555-0125",
+  //   image: AnnabelPFP,
+  //   // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
+  // },
 ];
 
 const Doctors = () => {
@@ -124,20 +208,19 @@ const Doctors = () => {
       />
 
       {/* Clinicians Grid */}
-  <section className="py-16 relative">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-
-      {/* 🔒 Blurred Clinicians Content */}
-      <div className="pointer-events-none select-none blur-lg">
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch ${
-            clinicians.length % 3 === 1 ? "justify-items-center" : ""
-          }`}
+          className="grid gap-8 justify-center items-stretch"
+          style={{
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          }}
         >
           {clinicians.map((clinician, index) => (
             <Card
               key={clinician.id}
-              className={`group flex flex-col h-full transition-all duration-300
+              className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 
+                flex flex-col h-full
                 ${
                   clinicians.length % 3 === 1 && index === clinicians.length - 1
                     ? "lg:col-span-3 lg:max-w-md lg:mx-auto"
@@ -155,72 +238,202 @@ const Doctors = () => {
                     {clinician.name.split(" ").map((n) => n[0]).join("")}
                   </AvatarFallback>
                 </Avatar>
-
-                <h3 className="text-xl font-bold text-card-foreground">
-                  {clinician.name}
-                </h3>
-
+                <h3 className="text-xl font-bold text-card-foreground">{clinician.name}</h3>
                 <p className="text-primary font-semibold">{clinician.title}</p>
-
-                <Badge variant="secondary" className="mt-2">
-                  {clinician.experience} Experience
-                </Badge>
+                  <Badge
+                    variant="secondary"
+                    className={`mt-2 ${!clinician.experience ? "invisible" : ""}`}
+                  >
+                    {clinician.experience ? `${clinician.experience} Experience` : "\u00A0"}
+                  </Badge>
               </CardHeader>
 
+              {/* 👇 CardContent grows to fill height, button pinned bottom */}
               <CardContent className="space-y-4 flex flex-col flex-grow">
-                <div>
-                  <h4 className="font-semibold text-card-foreground mb-2">
-                    Specializations:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {clinician.specializations.slice(0, 2).map((spec, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs">
-                        {spec}
-                      </Badge>
-                    ))}
-
-                    {clinician.specializations.length > 2 && (
-                      <div className="w-full">
-                        <Badge variant="outline" className="text-xs">
-                          +{clinician.specializations.length - 2} more
+                  <div>
+                    <h4 className="font-semibold text-card-foreground mb-2">Specializations:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {clinician.specializations.slice(0, 2).map((spec, idx) => (
+                        <Badge key={idx} variant="outline" className="text-xs">
+                          {spec}
                         </Badge>
-                      </div>
-                    )}
+                      ))}
+
+                      {clinician.specializations.length > 2 && (
+                        <div className="w-full">
+                          <Badge variant="outline" className="text-xs">
+                            +{clinician.specializations.length - 2} more
+                          </Badge>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Calendar className="w-4 h-4" />
-                  <span>{clinician.availability}</span>
-                </div>
+                {clinician.availability && (
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Calendar className="w-4 h-4" />
+                    <span>{clinician.availability}</span>
+                  </div>
+                )}
 
+
+                {/* 👇 pinned to bottom */}
                 <div className="mt-auto">
-                  <Button
-                    className="w-full border-primary text-blue-500"
-                    variant="outline"
-                  >
-                    Read More
-                  </Button>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button
+                        className="w-full border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
+                        variant="outline"
+                        onClick={() => setSelectedClinician(clinician)}
+                      >
+                        Read More
+                      </Button>
+                    </DialogTrigger>
+
+                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                      {/* <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold">{clinician.name}</DialogTitle>
+                      </DialogHeader> */}
+
+                      {/* --- dialog body unchanged --- */}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {/* Profile Image and Basic Info */}
+                        <div className="md:col-span-1 space-y-4">
+                          <Avatar className="w-32 h-32 mx-auto">
+                            <AvatarImage
+                              src={clinician.image}
+                              alt={clinician.name}
+                              className="object-cover w-full h-full"
+                            />
+                            <AvatarFallback className="text-2xl font-bold">
+                              {clinician.name.split(" ").map((n) => n[0]).join("")}
+                            </AvatarFallback>
+                          </Avatar>
+
+                          <div className="text-center">
+                            <h3 className="text-xl font-bold">{clinician.name}</h3>
+                            <p className="text-primary font-semibold">{clinician.title}</p>
+                              {clinician.experience && (
+                                <Badge variant="secondary" className="mt-2">
+                                  {clinician.experience} Experience
+                                </Badge>
+                              )}
+                          </div>
+                          <div className="space-y-3">
+                            {clinician.email && (
+                              <div className="flex items-center gap-2 text-sm">
+                                <Mail className="w-4 h-4 text-primary" />
+                                <a
+                                  href={`mailto:${clinician.email}`}
+                                  className="hover:text-primary"
+                                >
+                                  {clinician.email}
+                                </a>
+                              </div>
+                            )}
+
+                            {clinician.phone && (
+                              <div className="flex items-center gap-2 text-sm">
+                                <Phone className="w-4 h-4 text-primary" />
+                                <a
+                                  href={`tel:${clinician.phone}`}
+                                  className="hover:text-primary"
+                                >
+                                  {clinician.phone}
+                                </a>
+                              </div>
+                            )}
+
+                            {clinician.availability && (
+                              <div className="flex items-center gap-2 text-sm">
+                                <Calendar className="w-4 h-4 text-primary" />
+                                <span>{clinician.availability}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Detailed Info */}
+                        <div className="md:col-span-2 space-y-6">
+                          {/* Bio */}
+                          <div>
+                            <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                              <Users className="w-5 h-5 text-primary" />
+                              About
+                            </h4>
+                            <p className="text-muted-foreground leading-relaxed whitespace-pre-line">{clinician.bio}</p>
+                          </div>
+
+                          {/* Specializations */}
+                          <div>
+                            <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                              <Award className="w-5 h-5 text-primary" />
+                              Specializations
+                            </h4>
+                            <div className="flex flex-wrap gap-2">
+                              {clinician.specializations.map((spec, idx) => (
+                                <Badge key={idx} variant="secondary">
+                                  {spec}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Education */}
+                          <div>
+                            <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                              <BookOpen className="w-5 h-5 text-primary" />
+                              Education
+                            </h4>
+                            <ul className="space-y-2">
+                              {clinician.education.map((edu, idx) => (
+                                <li key={idx} className="text-muted-foreground">
+                                  • {edu}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          {/* Certifications */}
+                          <div>
+                            <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                              <Award className="w-5 h-5 text-primary" />
+                              Certifications
+                            </h4>
+                            <ul className="space-y-2">
+                              {clinician.certifications.map((cert, idx) => (
+                                <li key={idx} className="text-muted-foreground">
+                                  • {cert}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-4 mt-6">
+                        <Button className="flex-1" asChild>
+                          <Link to="/contact">Book Appointment</Link>
+                        </Button>
+                          {clinician.email && (
+                            <Button
+                              variant="outline"
+                              className="flex-1 border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
+                              asChild
+                            >
+                              <a href={`mailto:${clinician.email}`}>Send Email</a>
+                            </Button>
+                          )}
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
-
-      {/* 🌫️ Coming Soon Overlay */}
-          <div className="absolute inset-0 z-10 flex items-center justify-center">
-            <div className="bg-background/80 backdrop-blur-md px-10 py-8 rounded-2xl shadow-xl border text-center">
-              <h2 className="text-3xl font-bold">Coming Soon!</h2>
-              <p className="text-muted-foreground mt-2">
-                Our team profiles will be available shortly
-              </p>
-            </div>
-          </div>
-
-    </div>
-  </section>
-
+    </section>
 
 
       {/* Our Approach */}

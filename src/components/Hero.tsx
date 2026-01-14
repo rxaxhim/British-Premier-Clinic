@@ -35,7 +35,7 @@ const Hero = () => {
       icon: Mars,
       secondaryIcon: Venus,
       label: "Years of Experience Internationally",
-      value: "35+",
+      value: "20+",
       color: "text-amber-300",
     },
     {
@@ -51,7 +51,7 @@ const Hero = () => {
   const features = [
     "Experienced Psychiatrists & Psychologists",
     "Evidence-Based Specialised Treatment & Intervention",
-    "DHA Licensed & Regulated",
+    "DHA/CDA Licensed & Regulated",
     "Flexible Appointment Scheduling",
     "Safe and Confidential environment you can trust",
     "Paitent and Family Centred Service"

@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
   const features = [
     {
       icon: Award,
-      title: "35+ Years Experience",
+      title: "20+ Years Experience",
       description: "Over a decade of providing premier mental health services in the UAE with outstanding patient outcomes.",
       stats: "95% Success Rate"
     },
@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
       icon: Users,
       title: "Expert Team",
       description: "Board-certified psychiatrists and licensed psychologists with international training and experience.",
-      stats: "20+ Specialists"
+      stats: "3+ Specialists"
     },
     {
       icon: Clock,
@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
       icon: Globe,
       title: "Multilingual Care",
       description: "Services available in English, Arabic, Hindi, and Urdu to serve our diverse community.",
-      stats: "5+ Languages"
+      stats: "3+ Languages"
     },
     {
       icon: Shield,
@@ -53,6 +53,7 @@ const WhyChooseUs = () => {
 
   const certifications = [
     "DHA Licensed",
+    "CDA Approved",
     "MOH Approved", 
     "International Standards"
   ];

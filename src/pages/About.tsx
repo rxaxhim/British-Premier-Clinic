@@ -1,4 +1,5 @@
 import HeroBanner from "@/components/HeroBanner";
+import ClinicCarousel from "@/components/ClinicCarousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -33,8 +34,8 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "35+", label: "Years of Combined Experience" },
-    { number: "6+", label: "Clinicians & Care Team" },
+    { number: "20+", label: "Years of Combined Experience" },
+    { number: "4", label: "Clinicians" },
     { number: "15+",  label: "Specialist Services" },
     { number: "12hr", label: "Response Time (Mon-Sat)" }
   ];
@@ -89,7 +90,7 @@ const About = () => {
             "bg-transparent border border-white text-white hover:bg-white hover:text-primary transition-all",
         }}
       />
-      <div className="absolute inset-0 z-10 flex items-center justify-center">
+      {/* <div className="absolute inset-0 z-10 flex items-center justify-center">
           <div className="bg-background/80 backdrop-blur-md px-10 py-8 rounded-2xl shadow-xl border text-center">
           <h2 className="text-3xl font-bold">Coming Soon!</h2>
             <p className="text-muted-foreground mt-2">
@@ -97,8 +98,11 @@ const About = () => {
             </p>
           </div>
       </div>
-      
-      {/* Stats Section
+       */}
+
+      <ClinicCarousel />
+
+      {/* Stats Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -132,9 +136,8 @@ const About = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Founded in 2009, our practice began with a simple mission: to make quality mental health care 
-                    accessible and approachable for everyone in our community. What started as a small clinic has 
-                    grown into a comprehensive mental health center.
+                    Founded in 2025, our practice began with a simple mission: to make quality mental health care 
+                    accessible and approachable for everyone in our community.
                   </p>
                   <p>
                     We believe that mental health is just as important as physical health, and everyone deserves 
@@ -142,7 +145,7 @@ const About = () => {
                     with the latest research-based treatments.
                   </p>
                   <p>
-                    Today, we're proud to serve thousands of patients, offering everything from individual therapy 
+                    Today, we're proud to offer everything from individual therapy 
                     to specialized treatment programs, all while maintaining the personal touch that has defined 
                     our practice from the beginning.
                   </p>
@@ -307,7 +310,7 @@ const About = () => {
                 </div>
                 <div className="mt-8 p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-primary mb-2">15+</div>
+                    <div className="text-4xl font-bold text-primary mb-2">4+</div>
                     <div className="text-muted-foreground font-medium">Languages Spoken</div>
                     <p className="text-sm text-muted-foreground mt-2">
                       Ensuring effective communication across diverse communities
@@ -346,7 +349,7 @@ const About = () => {
 
 
     
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -382,8 +385,8 @@ const About = () => {
               </div>
           </div>
         </div>
-      </section> 
-      */}
+      </section>  */}
+   
 
       {/* Patient Testimonials */}
 
@@ -448,12 +451,12 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section> 
+      </section>  */}
     
 
 
 
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -529,11 +532,11 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
   
-    <section className="py-20 relative">
+    {/* <section className="py-20 relative">
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto relative">
 
@@ -541,7 +544,7 @@ const About = () => {
           <div className="pointer-events-none select-none blur-lg">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl max-w-2xl mx-auto">
                 Our experienced professionals are dedicated to providing you with the highest quality care.
               </p>
             </div>
@@ -612,7 +615,7 @@ const About = () => {
                 View All Doctor Profiles
               </Button>
             </div>
-          </div>
+          </div> 
 
     
           <div className="absolute inset-0 z-10 flex items-center justify-center">
@@ -626,11 +629,11 @@ const About = () => {
 
         </div>
       </div>
-    </section>
+    </section> */}
 
 
       
-      <section className="py-20 bg-muted/30">
+      {/* <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -700,166 +703,194 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Accreditations & Certifications</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Accreditations & Professional Registrations
+              </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Our commitment to excellence is validated by prestigious certifications from leading medical institutions across the UK and UAE.
+                Our clinicians are licensed and accredited by recognised medical and psychological authorities
+                across the UK, UAE, Europe, Ireland, India, and the United States.
               </p>
             </div>
-            
-         
+
+            {/* UK & International Medical Bodies */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold mb-8 text-center">Medical Certifications</h3>
+              <h3 className="text-2xl font-semibold mb-8 text-center">
+                UK & International Medical Authorities
+              </h3>
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <Award className="h-8 w-8 text-primary" />
-                      <Badge variant="outline" className={YEAR_PILL}>2018</Badge>
                     </div>
-                    <h4 className="font-semibold mb-2">Royal College of Psychiatrists</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Full membership and certification in psychiatric practice</p>
+                    <h4 className="font-semibold mb-2">General Medical Council (UK)</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Specialist registration for Consultant Psychiatrist
+                    </p>
                     <Badge variant="outline" className="text-xs">Active</Badge>
                   </CardContent>
                 </Card>
+
                 <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <Shield className="h-8 w-8 text-primary" />
-                      <Badge variant="outline" className={YEAR_PILL}>2015</Badge>
                     </div>
-                    <h4 className="font-semibold mb-2">General Medical Council (UK)</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Licensed medical practitioner with specialist registration</p>
+                    <h4 className="font-semibold mb-2">Irish Medical Council</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Full medical licensure for psychiatric practice
+                    </p>
                     <Badge variant="outline" className="text-xs">Active</Badge>
                   </CardContent>
                 </Card>
+
                 <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <Star className="h-8 w-8 text-primary" />
-                      <Badge variant="outline" className={YEAR_PILL}>2017</Badge>
                     </div>
-                    <h4 className="font-semibold mb-2">British Psychological Society</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Chartered psychologist status and continuing professional development</p>
+                    <h4 className="font-semibold mb-2">Illinois Department of Financial & Professional Regulation (USA)</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Licensed Clinical Psychologist
+                    </p>
                     <Badge variant="outline" className="text-xs">Active</Badge>
                   </CardContent>
                 </Card>
               </div>
             </div>
 
-         
+            {/* UAE Licenses */}
             <div className="mb-16">
-              <h3 className="text-2xl font-semibold mb-8 text-center">UAE Healthcare Licenses</h3>
+              <h3 className="text-2xl font-semibold mb-8 text-center">
+                United Arab Emirates Healthcare Licenses
+              </h3>
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <Heart className="h-8 w-8 text-secondary" />
-                      <Badge variant="outline" className={YEAR_PILL}>2018</Badge>
                     </div>
-                    <h4 className="font-semibold mb-2">Dubai Health Authority</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Licensed healthcare provider in Dubai with full practice authorization</p>
+                    <h4 className="font-semibold mb-2">Dubai Health Authority (DHA)</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Licensed Consultant Psychiatrist & Psychotherapists
+                    </p>
                     <Badge variant="outline" className="text-xs">Active</Badge>
                   </CardContent>
                 </Card>
-                <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
-                      <Shield className="h-8 w-8 text-secondary" />
-                      <Badge variant="outline" className={YEAR_PILL}>2018</Badge>
-                    </div>
-                    <h4 className="font-semibold mb-2">UAE Ministry of Health</h4>
-                    <p className="text-sm text-muted-foreground mb-2">National healthcare provider license with specialist endorsement</p>
-                    <Badge variant="outline" className="text-xs">Active</Badge>
-                  </CardContent>
-                </Card>
+
                 <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <Users className="h-8 w-8 text-secondary" />
-                      <Badge variant="outline" className={YEAR_PILL}>2019</Badge>
                     </div>
-                    <h4 className="font-semibold mb-2">Dubai Healthcare City</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Authorized healthcare facility within premium medical district</p>
+                    <h4 className="font-semibold mb-2">Community Development Authority (CDA)</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Licensed Psychologist for child, adolescent & adult therapy
+                    </p>
+                    <Badge variant="outline" className="text-xs">Active</Badge>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <Shield className="h-8 w-8 text-secondary" />
+                    </div>
+                    <h4 className="font-semibold mb-2">UAE Licensed Psychologists</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Clinical psychologists authorised to practice across UAE
+                    </p>
                     <Badge variant="outline" className="text-xs">Active</Badge>
                   </CardContent>
                 </Card>
               </div>
             </div>
 
-           
+            {/* Fellowships & Professional Recognition */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold mb-8 text-center">Quality & Cultural Certifications</h3>
+              <h3 className="text-2xl font-semibold mb-8 text-center">
+                Fellowships & Professional Recognition
+              </h3>
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <Award className="h-8 w-8 text-accent" />
-                      <Badge variant="outline" className={YEAR_PILL}>2020</Badge>
                     </div>
-                    <h4 className="font-semibold mb-2">ISO 9001:2015</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Quality management systems certification for healthcare services</p>
-                    <Badge variant="outline" className="text-xs">Active</Badge>
+                    <h4 className="font-semibold mb-2">Royal College of Psychiatrists (UK)</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Fellowship awarded for excellence in psychiatric practice
+                    </p>
+                    <Badge variant="outline" className="text-xs">Fellow</Badge>
                   </CardContent>
                 </Card>
-                <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
-                      <Users className="h-8 w-8 text-accent" />
-                      <Badge variant="outline" className={YEAR_PILL}>2019</Badge>
-                    </div>
-                    <h4 className="font-semibold mb-2">Cultural Competency Institute</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Advanced certification in cross-cultural healthcare delivery</p>
-                    <Badge variant="outline" className="text-xs">Active</Badge>
-                  </CardContent>
-                </Card>
+
                 <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <Star className="h-8 w-8 text-accent" />
-                      <Badge variant="outline" className={YEAR_PILL}>2021</Badge>
                     </div>
-                    <h4 className="font-semibold mb-2">Joint Commission International</h4>
-                    <p className="text-sm text-muted-foreground mb-2">International healthcare quality and patient safety standards</p>
-                    <Badge variant="outline" className="text-xs">Active</Badge>
+                    <h4 className="font-semibold mb-2">Royal College of Paediatrics & Child Health (UK)</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Fellowship recognising paediatric and child mental health expertise
+                    </p>
+                    <Badge variant="outline" className="text-xs">Fellow</Badge>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <Users className="h-8 w-8 text-accent" />
+                    </div>
+                    <h4 className="font-semibold mb-2">European Board of Psychiatry (FEBP)</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      European specialist recognition in psychiatry
+                    </p>
+                    <Badge variant="outline" className="text-xs">Fellow</Badge>
                   </CardContent>
                 </Card>
               </div>
             </div>
 
-        
+            {/* Trust Footer */}
             <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-semibold mb-6">Verified & Trusted</h3>
+              <h3 className="text-2xl font-semibold mb-6">Licensed, Verified & Trusted</h3>
               <p className="text-muted-foreground mb-8 max-w-3xl mx-auto">
-                All our certifications and licenses are current, verified, and publicly accessible. We maintain the highest 
-                standards of transparency and accountability in our practice, ensuring patients receive care that meets both 
-                British medical excellence and UAE healthcare standards.
+                All clinicians are fully licensed, accredited, and compliant with the regulatory
+                authorities of the countries in which they practice.
               </p>
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-2">9</div>
-                  <div className="text-sm text-muted-foreground">Active Certifications</div>
+                  <div className="text-3xl font-bold text-primary mb-2">10+</div>
+                  <div className="text-sm text-muted-foreground">Active Licenses</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-secondary mb-2">100%</div>
-                  <div className="text-sm text-muted-foreground">Compliance Rate</div>
+                  <div className="text-sm text-muted-foreground">Regulatory Compliance</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-accent mb-2">7</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-3xl font-bold text-accent mb-2">20+</div>
+                  <div className="text-sm text-muted-foreground">Years Clinical Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-2">2</div>
-                  <div className="text-sm text-muted-foreground">Countries Licensed</div>
+                  <div className="text-3xl font-bold text-primary mb-2">5</div>
+                  <div className="text-sm text-muted-foreground">Countries Represented</div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -887,7 +918,7 @@ const About = () => {
           </div>
         </div>
       </section>
-        */}
+       
     </div>
   );
 };

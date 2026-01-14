@@ -92,6 +92,19 @@ const ServicesSection = () => {
       tabTrigger: "children"
     },
     {
+      icon: Brain,
+      title: "Autism Assessment & Behavioural Management",
+      description: "Comprehensive autism assessments with personalized behavioural support to improve daily functioning.",
+      features: [
+        "Standardized Autism Assessments",
+        "Individualized Behavioural Plans",
+        "Parent & Caregiver Support"
+      ],
+      color: "medical-trust",
+      featured: true,
+      tabTrigger: "children"
+    },
+    {
       icon: HeartHandshake,
       title: "Couples Therapy",
       description: "Evidence-based counseling to improve communication, rebuild trust, and strengthen connection.",
@@ -102,7 +115,7 @@ const ServicesSection = () => {
     },
     {
       icon: HeartPulse,
-      title: "Women’s Mental Health",
+      title: "Women's Mental Health",
       description: "Specialised care across PMS/PMDD, perinatal/postpartum, and menopause-related mental health.",
       features: ["Hormone-informed care", "Perinatal & postpartum support", "Trauma- & culture-sensitive"],
       color: "women-care",
@@ -164,7 +177,12 @@ const ServicesSection = () => {
               <Card
                 key={service.title}
                 className={`relative group hover:shadow-large transition-all duration-300 hover:-translate-y-2 animate-scale-in
-                ${service.featured ? "ring-2 ring-primary/20 shadow-medium" : "hover:shadow-medium"}`}
+                  ${service.featured ? "ring-2 ring-primary/20 shadow-medium" : "hover:shadow-medium"}
+                  ${isLast && services.length % 3 === 1
+                    ? "lg:col-start-2"
+                    : ""
+                  }
+                `}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {service.featured && (

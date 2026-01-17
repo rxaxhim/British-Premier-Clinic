@@ -8,6 +8,9 @@ const images = [
   "/interior_img4.jpeg",
   "/interior_img5.jpeg",
   "/interior_img6.jpeg",
+  "/interior_img7.jpeg",
+  "/interior_img8.jpeg",
+  "/interior_img9.jpeg",
 ];
 
 const ClinicCarousel = () => {

@@ -38,7 +38,7 @@ const clinicians: Clinician[] = [
       "Attention-Deficit/Hyperactivity Disorder (ADHD)",
       "Autism Spectrum Disorder (ASD)",
       "Learning Difficulties & Learning Disabilities",
-      "Behavioral & Oppositional Disorders",
+      "Behavioural & Oppositional Disorders",
       "Depression",
       "Anxiety Disorders",
       "Psychiatric Assessment & Diagnosis",
@@ -79,7 +79,7 @@ const clinicians: Clinician[] = [
   },
   {
     id: "2",
-    name: "Anvita",
+    name: "Ms. Anvita Kamath",
     title: "Psychologist",
     specializations: [
       "Child & Adolescent Psychology",
@@ -89,21 +89,26 @@ const clinicians: Clinician[] = [
       "Learning Difficulties",
       "Mood Disorders",
       "Anxiety Disorders",
-      "Behavioral Issues",
+      "Behavioural Issues",
       "Trauma",
-      "Grief & Loss"
+      "Grief & Loss",
+      "Comprehensive Psychoeducational Assessments"
     ],
     // experience: "15+ years",
     education: [
       "Master of Arts in Clinical Psychology - Eastern Illinois University"
     ],
     certifications: [
-      "Licensed Psychologist - Illinois Department of Financial and Professional Regulation (IDFPR)",
+      "Licensed Professional Counselor (LPC) - Illinois Department of Financial and Professional Regulation (IDFPR)",
       "Licensed Psychologist - Community Development Authority (CDA), Dubai"
     ],
-    bio: `Anvita brings with her a deep cultural relatability and sensitivity, and is dedicated to understanding and supporting the subjective cultural experiences and challenges that shape her clients’ lifestyle. She integrates evidence-based therapies like CBT, DBT, and mindfulness along with a person-centered approach to therapy. 
+    bio: `Anvita Kamath is a US-trained and certified Psychologist with a Master of Arts in Clinical Psychology from Eastern Illinois University. She is licensed in the US in the State of Illinois and by the Community Development Authority (CDA) in Dubai.
 
-    Currently supporting clients within the UAE, Anvita works with children, adolescents and adults experiencing a wide range of emotional, behavioral, and developmental challenges. She also utilizes diverse neuropsychological/psychological assessments to accurately identify developmental and social-emotional concerns and create individualized treatment plans. She further aims to empower the adults in a child’s life and facilitates parent guidance workshops to help create a thriving environment for the child.`,
+    Her clinical experience spans care homes, private clinics, schools, and community settings in both the US and Dubai. She specializes in working with individuals facing challenges such as Autism, ADHD, learning difficulties, mood disorders, anxiety, interpersonal challenges, behavioural issues, trauma, and grief
+    
+    Anvita brings with her a deep cultural relatability and sensitivity, and is dedicated to understanding and supporting the subjective cultural experiences and challenges that shape her clients’ lifestyle. She integrates evidence-based therapies like CBT, DBT, and mindfulness along with a person-centered approach to therapy. 
+
+    Currently supporting clients within the UAE, Anvita works with children, adolescents and adults experiencing a wide range of emotional, behavioural, and developmental challenges. She also utilizes diverse neuropsychological/psychological assessments to accurately identify developmental and social-emotional concerns and create individualized treatment plans. She further aims to empower the adults in a child’s life and facilitates parent guidance workshops to help create a thriving environment for the child.`,
     // email: "test@gmail.com",
     // phone: "(416) 555-0124",
     image: AnvitaPFP,
@@ -111,17 +116,17 @@ const clinicians: Clinician[] = [
   },
   {
     id: "3",
-    name: "Yara",
+    name: "Ms. Yara",
     title: "Psychotherapist",
     specializations: [
-      "Emotional Regulation Difficulties",
-      "Mood-Related Concerns",
-      "Trauma & Trauma Recovery",
-      "Relationship Challenges",
-      "Identity Exploration",
-      "Life Transitions & Adjustment Issues",
-      "Adolescent Mental Health",
-      "Adult Mental Health",
+      "Trauma and PTSD",
+      "Sexual Trauma",
+      "Emotional Regulation",
+      "Mood and Anxiety",
+      "Relationships and Attachment",
+      "Identity and Self-Esteem",
+      "Life Transitions and Grief",
+      "Women's and Multicultural Issues",
       "Couples Counseling",
       "Family Therapy"
     ],
@@ -130,15 +135,23 @@ const clinicians: Clinician[] = [
       "Master's Degree in Professional Clinical Counseling (PCC)"
     ],
     certifications: [
-      "Licensed Associate Professional Counselor (LAPC) - Pennsylvania",
-      "Child Development Associate (CDA) - Pennsylvania",
-      "Licensed Psychotherapist - Dubai, Pennsylvania"
+      "CDA-Licensed Psychotherapist in Dubai, UAE",
+      "Licensed Associate Professional Counselor (LAPC), Pennsylvania, U.S",
+      "National Certified Counselor (NCC)",
+      "Certificate in Traumatic Stress Studies, Trauma Research Foundation",
+      "Acceptance and Commitment Therapy (ACT) - Specialized Clinical Training"
     ],
-    bio: `My name is Yara. I am a bilingual psychotherapist fluent in Arabic and English, with education and clinical training in the United States. I hold a master’s degree in Professional Clinical Counseling (PCC) and am currently licensed in Dubai and in Pennsylvania (LAPC, CDA). I work with adolescents and adults, including individuals, couples, and families, navigating emotional regulation difficulties, mood related concerns, trauma, relationship challenges, identity exploration, and major life transitions.
+    bio: `Yara Abu Hussein is a bilingual psychotherapist fluent in Arabic and English, with education and clinical training in the United States. She holds a master's degree in Professional Clinical Counseling (PCC) and is CDA-licensed in Dubai.
     
-    My aim is to provide a warm, nonjudgmental, and culturally sensitive space where you feel supported, understood, and respected. My approach is collaborative and grounded in curiosity, supporting insight, agency, and meaningful change by building on your strengths. 
+    Yara's work is rooted in compassion and resilience. She sees therapy not as a process of “fixing” people, but as a space to help them feel more like themselves and more connected to what matters to them.
+
+    She works with adolescents (14+), adults, couples, and families who are navigating emotional regulation difficulties, mood and anxiety concerns, trauma, relationship challenges, identity exploration, and major life transitions.
     
-    My work is trauma informed and integrative, drawing from both depth oriented and evidence based approaches. I am trained in Acceptance and Commitment Therapy (ACT), Cognitive Behavioural Therapy (CBT), Dialectical Behaviour Therapy (DBT), emotion focused and solution focused approaches, while also integrating psychodynamic and humanistic perspectives. Together, we focus on developing practical tools, deepening self awareness, strengthening relationships, and fostering resilience, self compassion, and sustainable growth.`,
+    She aims to create a warm, nonjudgmental, and culturally sensitive space where clients feel supported, understood, and respected. Her style is collaborative and grounded in curiosity, with the belief that you are the expert in your own life. She helps clients build insight, reconnect with their strengths, and move toward meaningful, sustainable change.
+
+    Her work is trauma-informed and integrative, drawing from both depth-oriented and evidence-based approaches. She is trained in Acceptance and Commitment Therapy (ACT), Cognitive Behavioural Therapy (CBT), Dialectical Behaviour Therapy (DBT), emotion-focused (EFT), and solution-focused approaches, while also integrating psychodynamic perspectives.
+
+    She brings a strong multicultural, holistic, and trauma-informed lens to her work, with particular sensitivity to identity, cultural context, and relational and sexual trauma.`,
     // email:"test@gmail.com",
     // phone: "(416) 555-0123",
     image: YaraPFP,
@@ -158,7 +171,7 @@ const clinicians: Clinician[] = [
       "Family Concerns",
       "Relationship Issues",
       "Procrastination",
-      "Behavioral Issues",
+      "Behavioural Issues",
       "Self-Harm",
       "Abuse & Trauma",
       "Student & Young Adult Mental Health",

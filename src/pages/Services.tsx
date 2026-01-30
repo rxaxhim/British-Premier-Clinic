@@ -56,15 +56,6 @@ const services: Service[] = [
     category: "adults",
   },
   {
-    id: "tms-therapy",
-    title: "Transcranial Magnetic Stimulation (TMS)",
-    description: "Non-invasive brain stimulation for treatment-resistant depression.",
-    fullDescription:
-      "TMS is a non-invasive brain stimulation treatment option for treatment-resistant depression and other mental health conditions. Delivered by our trained clinicians, TMS therapy uses magnetic fields to stimulate nerve cells in the brain, offering hope for those who haven't responded to traditional treatments.",
-    icon: <Brain className="h-6 w-6 text-indigo-600" />,
-    category: "adults",
-  },
-  {
     id: "couples-therapy-adult",
     title: "Couples Therapy",
     description: "Structured sessions to rebuild trust and enhance communication.",

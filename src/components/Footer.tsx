@@ -199,7 +199,7 @@ const Footer = () => {
               </p>
 
               {/* Social Links */}
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 {[
                   { icon: Facebook, href: "#", label: "Facebook" },
                   { icon: Twitter, href: "#", label: "Twitter" },
@@ -218,7 +218,7 @@ const Footer = () => {
                     </a>
                   </Button>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Services */}

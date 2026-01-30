@@ -104,7 +104,7 @@ const Contact = () => {
       title: "Call Us",
       details: "+971 52 305 2680",
       action: "tel:+971523052680",
-      description: "Mon-Fri, 9AM-6PM GST",
+      description: "Mon-Sat, 9AM-6PM GST",
     },
     {
       icon: MapPin,
@@ -546,8 +546,6 @@ const Contact = () => {
                       <div>
                         <div className="font-semibold">Getting Here</div>
                         <div className="text-muted-foreground">
-                          • Metro: Healthcare City Station (5-min walk)
-                          <br />
                           • By Car: Exit 44 from Sheikh Zayed Road
                           <br />
                           • Taxi: Available 24/7 at Dubai Healthcare City

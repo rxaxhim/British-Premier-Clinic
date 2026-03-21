@@ -54,7 +54,7 @@ const Hero = () => {
     "DHA/CDA Licensed & Regulated",
     "Flexible Appointment Scheduling",
     "Safe and Confidential environment you can trust",
-    "Paitent and Family Centred Service"
+    "Patient and Family Centred Service"
   ];
 
   return (
@@ -226,7 +226,7 @@ const Hero = () => {
                 className="w-full mt-4 text-[#25D366] hover:bg-[#25D366] hover:text-white hover:border-none"
               >
                 <a
-                  href="https://wa.me/971526372821"
+                  href="https://wa.me/971502739020"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2"

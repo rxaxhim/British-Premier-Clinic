@@ -102,8 +102,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+971 52 305 2680",
-      action: "tel:+971523052680",
+      details: "+00 971 43 35 7477",
+      action: "tel:+0097143357477",
       description: "Mon-Sat, 9AM-6PM GST",
     },
     {
@@ -220,7 +220,7 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleInputChange}
                           className="w-full px-4 py-4 rounded-xl border border-border focus:ring-2 focus:ring-primary focus:border-transparent transition-all bg-background"
-                          placeholder="+971 50 xxx xxxx"
+                          placeholder="+971 14 xxx xxxx"
                         />
                       </div>
 
@@ -333,7 +333,7 @@ const Contact = () => {
                       className="bg-gradient-primary text-primary-foreground hover:opacity-90"
                       asChild
                     >
-                      <a href="tel:+971523052680" className="inline-flex items-center gap-2" aria-label="Call Now">
+                      <a href="tel:+0097143357477" className="inline-flex items-center gap-2" aria-label="Call Now">
                         <Phone className="h-4 w-4" />
                         Call Now
                       </a>
@@ -346,7 +346,7 @@ const Contact = () => {
                       className="text-[#25D366] hover:bg-[#25D366] hover:border-none"
                     >
                       <a
-                        href="https://wa.me/971526372821"
+                        href="https://wa.me/971502739020"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2"
@@ -547,8 +547,6 @@ const Contact = () => {
                         <div className="font-semibold">Getting Here</div>
                         <div className="text-muted-foreground">
                           • By Car: Exit 44 from Sheikh Zayed Road
-                          <br />
-                          • Taxi: Available 24/7 at Dubai Healthcare City
                         </div>
                       </div>
                     </div>
@@ -632,7 +630,7 @@ const Contact = () => {
                   className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
                   asChild
                 >
-                  <a href="tel:+971523052680" aria-label="Call the clinic">
+                  <a href="tel:+0097143357477" aria-label="Call the clinic">
                     Call Us
                   </a>
                 </Button>

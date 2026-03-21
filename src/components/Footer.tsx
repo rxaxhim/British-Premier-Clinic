@@ -243,8 +243,8 @@ const Footer = () => {
                       Email us here
                     </a><br />
                     Phone:{" "}
-                    <a className="text-primary underline underline-offset-2" href="tel:+971523052680">
-                      +971 52 305 2680
+                    <a className="text-primary underline underline-offset-2" href="tel:+0097143357477">
+                      +00 971 4 335 7477
                     </a>
                   </p>
                 </>
@@ -315,8 +315,8 @@ const Footer = () => {
                       email us here
                     </a>{" "}
                     or call{" "}
-                    <a className="text-primary underline underline-offset-2" href="tel:+971523052680">
-                      +971 52 305 2680
+                    <a className="text-primary underline underline-offset-2" href="tel:+0097143357477 ">
+                      +00 971 4 335 7477 
                     </a>.
                   </p>
 
@@ -376,8 +376,8 @@ const Footer = () => {
                       Email us here
                     </a><br />
                     Phone:{" "}
-                    <a className="text-primary underline underline-offset-2" href="tel:+971523052680">
-                      +971 52 305 2680
+                    <a className="text-primary underline underline-offset-2" href="tel:+0097143357477 ">
+                      +00 971 4 335 7477 
                     </a>
                   </p>
                 </>
@@ -400,8 +400,8 @@ const Footer = () => {
                       Email Us
                     </a>{" "}
                     or call{" "}
-                    <a className="text-primary underline underline-offset-2" href="tel:+971523052680">
-                      +971 52 305 2680
+                    <a className="text-primary underline underline-offset-2" href="tel:+0097143357477">
+                      +00 971 4 335 7477
                     </a>
                     .
                   </p>
@@ -511,8 +511,8 @@ const Footer = () => {
 
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                  <a href="tel:+971523052680" className="text-muted-foreground hover:text-primary transition-colors">
-                    +971 52 305 2680
+                  <a href="tel:+0097143357477" className="text-muted-foreground hover:text-primary transition-colors">
+                    +00 971 4 335 7477
                   </a>
                 </div>
 

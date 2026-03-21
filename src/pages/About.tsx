@@ -912,7 +912,7 @@ const About = () => {
                 asChild
                 className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
               >
-                <a href="tel:+971523052680">Call Now</a>
+                <a href="tel:+0097143357477">Call Now</a>
               </Button>
             </div>
           </div>

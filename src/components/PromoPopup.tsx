@@ -130,7 +130,7 @@ const PromoPopup = ({ isOpen, onClose }: PromoPopupProps) => {
                           hover:bg-blue-500 hover:text-white hover:border-blue-500"
               >
                 <a
-                  href="tel:+971523052680"
+                  href="tel:+0097143357477"
                   className="flex items-center justify-center"
                   aria-label="Call us now"
                 >

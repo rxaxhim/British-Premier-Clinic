@@ -544,7 +544,7 @@ const Doctors = () => {
                     asChild
                   >
                     <a
-                      href="tel:+971523052680"
+                      href="tel:+0097143357477"
                       className="flex items-center justify-center gap-2"
                       aria-label="Call us now"
                     >

@@ -80,7 +80,7 @@ const Header = () => {
               className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
             >
               <a
-                href="tel:+971523052680"
+                href="tel:+0097143357477"
                 className="flex items-center space-x-2"
                 aria-label="Call us now"
               >
@@ -130,7 +130,7 @@ const Header = () => {
                 <div className="flex flex-col space-y-3 pt-6 border-t border-border">
                   <Button variant="outline" asChild onClick={() => setIsOpen(false)}>
                     <a
-                      href="tel:+971523052680"
+                      href="tel:+0097143357477"
                       className="flex items-center justify-center space-x-2 border-primary text-blue-500 hover:bg-blue-500 hover:text-white w-full"
                       aria-label="Call us now"
                     >

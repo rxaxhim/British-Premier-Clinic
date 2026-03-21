@@ -11,6 +11,7 @@ import YaraPFP from "@/assets/yara-profile-photo.png";
 import AnvitaPFP from "@/assets/anvita-profile-photo.png";
 import AnnabelPFP from "@/assets/annabel-profile-photo.png";
 import ImranPFP from "@/assets/imran-profile-photo.png";
+import PriyankaPFP from "@/assets/priyanka-profile-photo.jpeg";
 
 interface Clinician {
   id: string;
@@ -203,6 +204,63 @@ const clinicians: Clinician[] = [
     // email: "e.rodriguez@britishpremier.com",
     // phone: "(416) 555-0125",
     image: AnnabelPFP,
+    // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
+  },
+  {
+    id: "5",
+    name: "Ms. Priyanka",
+    title: "Psychologist",
+    specializations: [
+      "Anxiety Disorders & Panic",
+      "Mood Disorders (Depression and Mood Dysregulation)",
+      "Trauma and PTSD",
+      "Personality Disorders & Relational Patterns",
+      "Emotional Regulation",
+      "Stress, Burnout & Emotional Exhaustion",
+      "Identity Development & Self-Esteem",
+      "Grief & Loss",
+      "Major Life Transitions",
+      "Relationship Difficulties",
+      "Attachment & Relational Patterns",
+      "Couples Counseling",
+      "Infertility, Maternal Mental Health & Family-Building Journeys",
+      "Adoption & Adoption-Related Experiences",
+      "Attachment-Focused Parenting"
+    ],
+    // experience: "10+ years",
+    education: [
+      "M.A. Counselling Psychology (Depth Psychology) Pacifica Graduate Institute (U.S.)",
+      "British Infertility Counselling Association",
+    ],
+    certifications: [
+      "M.A. Counselling Psychology (India) Certifications",
+      "Somatic experiencing Practitioner (In Progress)",
+      "Eating Disorder (In Progress)",
+      "Circle of Security (Parenting)",
+      "Acceptance & Commitment therapy",
+      "Brainspotting",
+      "Emotional Focused therapy for couples",
+      "Gottman therapy for couples",
+      "Certified Life Coach",
+    ],
+    bio: `Priyanka Bhatia Mahendru is a CDA-licensed psychologist with over a decade of experience supporting adolescents, adults, individuals in later stages of life, and couples navigating emotional challenges, relationship difficulties, and significant life transitions. Her work is grounded in a relational and trauma-informed approach, helping clients explore underlying emotional patterns, process difficult experiences, and develop greater resilience and self-understanding.
+    
+    Priyanka works with a wide range of psychological concerns, including trauma, personality disorders and related relational patterns, depression and other mood disorders, anxiety, stress and panic, eating disorders, infertility and maternal mental health challenges, adoption-related experiences, relationship and marital difficulties, separation or divorce, grief and loss, as well as burnout and emotional exhaustion. She also has particular experience supporting individuals and couples navigating the emotional complexities of fertility treatment, infertility, and family-building journeys.
+    
+    Her therapeutic approach is integrative and individualized. Drawing from person-centered therapy, psychodynamic perspectives, cognitive behavioral therapy (CBT), and acceptance and commitment therapy (ACT), Priyanka helps clients understand how past experiences, relational dynamics, and internal narratives shape present emotional experiences and relationships. 
+    
+    Alongside insight-oriented work, she incorporates nervous system-informed approaches, Brainspotting and Somatic Experiencing (a body-based approach to trauma healing) to support emotional regulation, deepen bodily awareness, and help clients process stress and trauma in ways that restore a greater sense of safety and balance.
+    
+    Priyanka is also a Certified Professional Coach and incorporates solution-focused coaching principles when appropriate to help clients move through periods of feeling stuck, clarify goals, and take meaningful steps toward change.
+    
+    In couples therapy, she integrates the Gottman Method and Emotionally Focused Therapy (EFT) to help partners strengthen emotional connection, improve communication, and build more secure and resilient relationships.
+    
+    Through her calm and reflective approach, Priyanka creates a therapeutic environment grounded in compassion, where clients feel safe exploring difficult emotions, deepening self-understanding, and working toward meaningful and lasting psychological change.
+    
+    Priyanka holds a double Master's degree in Counseling Psychology from Pacifica Graduate Institute in the United States and India. She works with clients from diverse cultural backgrounds and is fluent in English, Hindi, Urdu, and Punjabi.`,
+    // email: "e.rodriguez@britishpremier.com",
+    // phone: "(416) 555-0125",
+    image: PriyankaPFP,
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
 ];

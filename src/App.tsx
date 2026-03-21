@@ -7,12 +7,13 @@ import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Doctors from "./pages/Doctors";
+import Clinicians from "./pages/Clinicians";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import BlogPost from "./pages/BlogPost";
+import ClinicianProfilePage from "./pages/ClinicianProfilePage";
 
 const queryClient = new QueryClient();
 
@@ -28,13 +29,14 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/clinicians" element={<Doctors />} />
+            <Route path="/clinicians" element={<Clinicians />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Index />} />
             <Route path="/terms" element={<Index />} />
             <Route path="/accessibility" element={<Index />} />
+            <Route path="/clinicians/:id" element={<ClinicianProfilePage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

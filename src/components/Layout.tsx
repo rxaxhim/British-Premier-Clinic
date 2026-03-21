@@ -2,7 +2,7 @@ import { ReactNode, useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import FloatingAppointment from "./FloatingAppointment";
-import PromoPopup from "./PromoPopup";
+// import PromoPopup from "./PromoPopup";
 
 interface LayoutProps {
   children: ReactNode;
@@ -32,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
       </main>
       <Footer />
       <FloatingAppointment />
-      <PromoPopup isOpen={showPromoPopup} onClose={handleClosePopup} />
+      {/* <PromoPopup isOpen={showPromoPopup} onClose={handleClosePopup} /> */}
     </div>
   );
 };

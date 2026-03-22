@@ -126,9 +126,9 @@ export const clinicians: Clinician[] = [
     education: [
         "M.A. Counselling Psychology (Depth Psychology) Pacifica Graduate Institute (U.S.)",
         "British Infertility Counselling Association",
+        "M.A. Counselling Psychology (India)",
     ],
     certifications: [
-        "M.A. Counselling Psychology (India) Certifications",
         "Somatic experiencing Practitioner (In Progress)",
         "Eating Disorder (In Progress)",
         "Circle of Security (Parenting)",

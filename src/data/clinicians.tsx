@@ -58,7 +58,7 @@ export const clinicians: Clinician[] = [
   },
     {
     id: "2",
-    name: "Dr Graham Williams",
+    name: "Dr. Graham Williams",
     title: "Clinical Psychologist",
     specializations: [
     "Child & Adolescent Psychology",

@@ -58,7 +58,7 @@ export default function ClinicianDialog({
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
 
-      <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+      <DialogContent className="max-w-5xl max-h-[80vh] overflow-y-auto">
         <div className="flex justify-end gap-2 mb-2 mr-10">
             <Button
                 variant="outline"
@@ -99,25 +99,21 @@ export default function ClinicianDialog({
           
           {/* Profile Image and Basic Info */}
           <div className="md:col-span-1 space-y-4">
-            <Avatar className="w-32 h-32 mx-auto">
-              <AvatarImage
+            <div className="relative w-full h-80 rounded-xl overflow-hidden">
+              <img
                 src={clinician.image}
                 alt={clinician.name}
-                className="object-cover w-full h-full"
+                className="w-full h-full object-cover object-[center_top]"
               />
-              <AvatarFallback className="text-2xl font-bold">
-                {clinician.name.split(" ").map((n) => n[0]).join("")}
-              </AvatarFallback>
-            </Avatar>
 
-            <div className="text-center">
-              <h3 className="text-xl font-bold">{clinician.name}</h3>
-              <p className="text-primary font-semibold">{clinician.title}</p>
-              {clinician.experience && (
-                <Badge variant="secondary" className="mt-2">
-                  {clinician.experience} Experience
-                </Badge>
-              )}
+              {/* gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+              {/* text overlay */}
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <h3 className="text-xl font-bold">{clinician.name}</h3>
+                <p className="text-sm opacity-90">{clinician.title}</p>
+              </div>
             </div>
 
             <div className="space-y-3">

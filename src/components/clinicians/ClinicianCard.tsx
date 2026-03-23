@@ -24,11 +24,11 @@ export default function ClinicianCard({
         : ""}`}
     >
       <CardHeader className="text-center pb-4">
-        <Avatar className="w-24 h-24 mx-auto mb-4">
+        <Avatar className="w-40 h-40 mx-auto mb-4 ring-4 ring-primary/10 shadow-md">
           <AvatarImage
             src={clinician.image}
             alt={clinician.name}
-            className="object-cover w-full h-full"
+            className="object-cover object-[center_top] w-full h-full"
           />
           <AvatarFallback className="text-xl font-bold">
             {clinician.name.split(" ").map((n) => n[0]).join("")}

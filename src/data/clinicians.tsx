@@ -5,6 +5,7 @@ import AnnabelPFP from "@/assets/annabel-profile-photo.png";
 import ImranPFP from "@/assets/imran-profile-photo.png";
 import PriyankaPFP from "@/assets/priyanka-profile-photo.jpeg";
 import GhaniaPFP from "@/assets/ghania-profile-photo.jpeg"
+import GrahamPFP from "@/assets/graham-profile-photo.jpeg"
 export const clinicians: Clinician[] = [
 
   {
@@ -57,6 +58,62 @@ export const clinicians: Clinician[] = [
   },
     {
     id: "2",
+    name: "Dr Graham Williams",
+    title: "Clinical Psychologist",
+    specializations: [
+    "Child & Adolescent Psychology",
+    "Adult Mental Health",
+    "Family Therapy",
+    "Trauma",
+    "Post-Traumatic Stress Disorder (PTSD)",
+    "Anxiety Disorders",
+    "Depression / Low Mood",
+    "Behavioural Issues",
+    "Neurodevelopmental Disorders (ADHD)",
+    "Traumatic Brain Injury (TBI)",
+    "Paediatric Psychology",
+    "Maternity & Perinatal Psychology",
+    "Forensic Psychology",
+    "Psychological Assessments",
+    "Expert Witness Assessments (Family Courts)",
+    "Clinical Supervision & Training",
+    "Cognitive Behavioural Therapy (CBT)",
+    "Eye Movement Desensitisation and Reprocessing (EMDR)",
+    "Dialectical Behaviour Therapy (DBT)"
+    ],
+    experience: "+20 years",
+    education: [
+    "Doctorate in Clinical Psychology (DClinPsy) - University of Hertfordshire",
+    "Bachelor's Degree in Psychology with Clinical Psychology (Hons) - University of Kent, Canterbury"
+    ],
+    certifications: [
+    "Dubai Health Authority (DHA) Licensed Clinical Psychologist",
+    "Health and Care Professions Council (HCPC), UK Licensed Clinical Psychologist",
+    "Trained in Cognitive Behavioural Therapy (CBT)",
+    "Trained in Eye Movement Desensitisation and Reprocessing (EMDR)",
+    "Trained in Dialectical Behaviour Therapy (DBT)",
+    "Clinical Supervision Training - Oxford Doctorate in Clinical Psychology Programme"
+    ],
+    bio: `Born, raised and educated in Great Britain, Dr Graham Williams is a British Clinical Psychologist with over 20 years' experience in the field of mental health working with children, young people, adults and families. He brings to Dubai more than two decades of invaluable experience in mental health and specialist services in the British National Health Service and the highest standards of UK-trained clinical practice.  His clinical skills are regarded by peers, colleagues and patients as of a very high calibre in the assessment, treatment and management of the full spectrum of mental health problems and neurodevelopmental difficulties.  
+    
+    Dr. Graham earned his Doctorate in Clinical Psychology (DClinPsy) from the University of Hertfordshire and a bachelor's degree (Psychology with Clinical Psychology, Hons) from the University of Kent, Canterbury. He holds dual licensing for Dubai (Dubai Health Authority) and Great Britain (Health and Care Professions Council), reflecting his long-standing dedication to professional excellence and ethical care. Known for his grounded, methodical and thoughtful approach to therapy, he brings together scientific research, empathy, and practical understanding to help people find clarity and emotional balance in their lives. His doctoral research explored traumatic brain injury in children and young people, an experience that continues to guide his work with resilience and recovery. 
+
+    Before moving to Dubai, he spent many years working in the English NHS, where he supported children, young people, and families facing challenges such as anxiety, low mood, trauma, behavioural concerns, and developmental conditions like ADHD. His time in child and adolescent services saw him become the service lead for trauma. Over time, his expertise grew to include paediatric and specialist adult services, including maternity-related psychology.  
+    
+    A highly experienced and versatile clinician, Dr. Graham's therapeutic style blends structure, direction, and warmth. Trained in multiple evidence-based therapies (Cognitive Behaviour Therapy (CBT), Eye Movement Desensitisation and Reprocessing (EMDR), and Dialectical Behaviour Therapy (DBT)), Dr. Graham often works eclectically - a skill developed through experience - integrating different therapies that he adapts to each client's unique needs. His sessions are collaborative and reflective, helping people understand the contexts and patterns behind their struggles and develop tools and skills for lasting change. Whether working with children, adolescents, or adults, he focuses on building trust and creating an environment where clients can safely explore, understand, and heal. 
+
+    Trained in clinical supervision by the Oxford Doctorate in Clinical Psychology programme, Dr Graham is an active clinical supervisor and provides training and supervision to other psychologists - locally and internationally. His experience also extends to forensic and prison settings in the UK, and he has served as an Independent Expert Witness for Family Courts, providing psychological assessments for both children and adults. 
+
+    Outside of traditional clinical work, Dr. Graham took a career break to volunteer with an NGO supporting street children in Quito, Ecuador, a time that deepened his sense of compassion and cultural understanding. These experiences, combined with his calm and insightful personality, shape his ability to connect with people from all walks of life. 
+
+    Today, at British Premier Psychiatry and Psychology Centre in Dubai, Dr. Graham continues his dedication to helping others navigate life's challenges with integrity, sensitivity, and professionalism. His clients often describe him as someone who truly listens, who helps them make sense of their experiences and find a way forward, one step at a time. `,
+    // email:"test@gmail.com",
+    // phone: "(416) 555-0123",
+    image: GrahamPFP,
+    // availability: "Monday - Friday, 9:00 AM - 5:00 PM"
+  },
+    {
+    id: "3",
     name: "Ms. Ghania Kabbara",
     title: "Psychologist",
     specializations: [
@@ -102,7 +159,7 @@ export const clinicians: Clinician[] = [
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
     {
-    id: "3",
+    id: "4",
     name: "Ms. Priyanka Bhatia Mahendru",
     title: "Psychologist",
     specializations: [
@@ -160,7 +217,7 @@ export const clinicians: Clinician[] = [
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
   {
-    id: "4",
+    id: "5",
     name: "Ms. Anvita Kamath",
     title: "Psychologist",
     specializations: [
@@ -197,7 +254,7 @@ export const clinicians: Clinician[] = [
     // availability: "Tuesday - Saturday, 8:00 AM - 4:00 PM"
   },
   {
-    id: "5",
+    id: "6",
     name: "Ms. Yara",
     title: "Psychotherapist",
     specializations: [
@@ -240,7 +297,7 @@ export const clinicians: Clinician[] = [
     // availability: "Monday - Friday, 9:00 AM - 5:00 PM"
   },
 //   {
-//     id: "6",
+//     id: "7",
 //     name: "Ms. Annabel George",
 //     title: "Psychologist",
 //     specializations: [

@@ -63,7 +63,6 @@ export const clinicians: Clinician[] = [
     specializations: [
     "Child & Adolescent Psychology",
     "Adult Mental Health",
-    "Family Therapy",
     "Trauma",
     "Post-Traumatic Stress Disorder (PTSD)",
     "Anxiety Disorders",

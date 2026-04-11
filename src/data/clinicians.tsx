@@ -6,6 +6,7 @@ import ImranPFP from "@/assets/imran-profile-photo.png";
 import PriyankaPFP from "@/assets/priyanka-profile-photo.jpeg";
 import GhaniaPFP from "@/assets/ghania-profile-photo.jpeg"
 import GrahamPFP from "@/assets/graham-profile-photo.jpeg"
+import SadiaPFP from "@/assets/sadia-profile-photo.png"
 export const clinicians: Clinician[] = [
 
   {
@@ -113,6 +114,49 @@ export const clinicians: Clinician[] = [
   },
     {
     id: "3",
+    name: "Dr. Sadia Mohammed",
+    title: "Consultant Psychiatrist",
+    specializations: [
+      "Child & Adolescent Psychiatry",
+      "Attention Deficit Hyperactivity Disorder (ADHD)",
+      "Autism Spectrum Disorder (ASD)",
+      "Learning Difficulties / Learning Disabilities",
+      "Low Mood / Depression / Mood Disorders",
+      "Anxiety Disorders",
+      "Eating Disorders",
+      "Psychiatric Assessment & Diagnosis",
+    ],
+    experience: "+20 years",
+    education: [
+      "MBChB (UK)",
+      "MRCPsych (UK)",
+      "CCT in Child & Adolescent Psychiatry (UK)"
+    ],
+    certifications: [
+      "Consultant Child & Adolescent Psychiatrist",
+      "Licensed by Dubai Health Authority (UAE)",
+      "Licensed by General Medical Council (UK)"
+    ],
+    bio: `Dr Sadia Mohammed is a British born and trained Consultant Child and Adolescent Psychiatrist with over 20 years of experience in mental health. She is licensed by the Dubai Health Authority (DHA), UAE and General Medical Council (GMC), UK. 
+    
+    Dr Sadia trained and worked at Consultant Psychiatrist level in the largest NHS health board in the UK.  She is highly experienced in the assessment, diagnosis and treatment of the diverse range of mental health and neurodevelopmental conditions affecting children and young people.  Dr Sadia adopts a bio-psycho-social-spiritual model in her clinical work, involving families in the decision-making process, and working collaboratively with allied professionals to ensure a comprehensive treatment plan for each individual case.  Dr Sadia draws on a variety of therapeutic modalities (psychological, psychosocial, educational and medical) in line with best clinical practice, devising holistic treatment plans accordingly.  
+    
+    Dr Sadia has been involved in teaching, training and supervision of medical students, junior doctors, trainee psychiatrists and other healthcare professionals in the UK.  She has presented at national and international conferences, as well as educational programmes abroad.  Dr Sadia has been an examiner for medical school undergraduate examinations in the UK.  Recently, Dr Sadia co-authored a scientific paper on sexual side effects of antidepressant medication.  
+    
+    Dr Sadia has held positions on the executive board of medical and psychiatric organisations.  She has been engaged in mental health activism, addressing stigma and raising the profile of mental health and providing public education through community engagement activities and performances on radio, TV and social media. 
+    
+    Dr Sadia is fluent in English, Urdu, Punjabi and Hindi.  She is an amateur modern Urdu poet, exemplifying its role as a form of self-therapy and in developing emotional resilience.  Her work has been presented at art exhibitions and poetic events. 
+
+    Dr Sadia also has a strong interest in personal development and is a published author of the book titled “Secrets To Infinite Success”.  She is an aspiring life coach on a journey to accomplish the same. 
+    
+    At the time of moving to Dubai, Dr Sadia was awarded the ZYN Inspirational Professional Award (2024) and was a finalist in the Professional of the Year category at the Scottish Muslim Awards (2024), in recognition of her impact and achievements. `,
+    // email: "e.rodriguez@britishpremier.com",
+    // phone: "(416) 555-0125",
+    image: SadiaPFP,
+    // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
+  },
+    {
+    id: "4",
     name: "Ms. Ghania Kabbara",
     title: "Psychologist",
     specializations: [
@@ -158,7 +202,7 @@ export const clinicians: Clinician[] = [
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
     {
-    id: "4",
+    id: "5",
     name: "Ms. Priyanka Bhatia Mahendru",
     title: "Psychologist",
     specializations: [
@@ -216,7 +260,7 @@ export const clinicians: Clinician[] = [
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
   {
-    id: "5",
+    id: "6",
     name: "Ms. Anvita Kamath",
     title: "Psychologist",
     specializations: [
@@ -253,7 +297,7 @@ export const clinicians: Clinician[] = [
     // availability: "Tuesday - Saturday, 8:00 AM - 4:00 PM"
   },
   {
-    id: "6",
+    id: "7",
     name: "Ms. Yara",
     title: "Psychotherapist",
     specializations: [
@@ -296,7 +340,7 @@ export const clinicians: Clinician[] = [
     // availability: "Monday - Friday, 9:00 AM - 5:00 PM"
   },
 //   {
-//     id: "7",
+//     id: "8",
 //     name: "Ms. Annabel George",
 //     title: "Psychologist",
 //     specializations: [

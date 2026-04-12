@@ -29,17 +29,21 @@ export default function ClinicianProfilePage() {
           
           {/* LEFT SIDE */}
           <div className="space-y-4 text-center">
-            <Avatar className="w-40 h-40 mx-auto">
-              <AvatarImage
-                src={clinician.image}
-                alt={clinician.name}
-                className="object-cover w-full h-full"
-              />
-              <AvatarFallback className="text-2xl font-bold">
-                {clinician.name.split(" ").map((n) => n[0]).join("")}
-              </AvatarFallback>
-            </Avatar>
-
+            <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4">
+              {clinician.image ? (
+                <img
+                  src={clinician.image}
+                  alt={clinician.name}
+                  className="w-full h-full object-cover object-top"
+                />
+              ) : (
+                <div className="w-full h-full bg-muted flex items-center justify-center">
+                  <span className="text-3xl font-bold text-muted-foreground">
+                    {clinician.name.split(" ").map((n) => n[0]).join("")}
+                  </span>
+                </div>
+              )}
+            </div>
             <h1 className="text-2xl font-bold">{clinician.name}</h1>
             <p className="text-primary font-semibold">{clinician.title}</p>
 

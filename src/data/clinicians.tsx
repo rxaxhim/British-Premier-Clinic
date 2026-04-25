@@ -12,7 +12,7 @@ export const clinicians: Clinician[] = [
   {
     id: "1",
     name: "Dr.  Imran Mushtaq",
-    title: "Consultant Psychiatrist",
+    title: "Medical Director & Consultant Psychiatrist",
     specializations: [
         "Child & Adolescent Psychiatry",
         "Attention-Deficit/Hyperactivity Disorder (ADHD)",
@@ -115,7 +115,7 @@ export const clinicians: Clinician[] = [
     {
     id: "3",
     name: "Dr. Sadia Mohammed",
-    title: "Consultant Psychiatrist",
+    title: "Consultant Child & Adolescent Psychiatrist",
     specializations: [
       "Child & Adolescent Psychiatry",
       "Attention Deficit Hyperactivity Disorder (ADHD)",
@@ -158,7 +158,7 @@ export const clinicians: Clinician[] = [
     {
     id: "4",
     name: "Ms. Ghania Kabbara",
-    title: "Psychologist",
+    title: "Clinical Psychologist",
     specializations: [
         "Depression",
         "Bipolar Disorders",
@@ -204,7 +204,7 @@ export const clinicians: Clinician[] = [
     {
     id: "5",
     name: "Ms. Priyanka Bhatia Mahendru",
-    title: "Psychologist",
+    title: "Social Therapist - Psychologist",
     specializations: [
         "Anxiety Disorders & Panic",
         "Mood Disorders (Depression and Mood Dysregulation)",
@@ -262,7 +262,7 @@ export const clinicians: Clinician[] = [
   {
     id: "6",
     name: "Ms. Anvita Kamath",
-    title: "Psychologist",
+    title: "Social Therapist - Psychologist",
     specializations: [
         "Child & Adolescent Psychology",
         "Young Adult Mental Health",

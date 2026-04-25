@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 import drSarahImg from "@/assets/sarah.jpg";
 import drMichaelImg from "@/assets/michael.jpg";
 import drEmilyImg from "@/assets/emily.jpg";
+import { clinicians } from "@/data/clinicians";
+
+const numOfClinicians = clinicians.length;
 
 const About = () => {
   const values = [
@@ -35,7 +38,7 @@ const About = () => {
 
   const stats = [
     { number: "20+", label: "Years of Combined Experience" },
-    { number: "7", label: "Clinicians" },
+    { number: numOfClinicians, label: "Clinicians" },
     { number: "15+",  label: "Specialist Services" },
     { number: "12hr", label: "Response Time (Mon-Sat)" }
   ];

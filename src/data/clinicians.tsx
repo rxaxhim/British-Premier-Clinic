@@ -123,8 +123,9 @@ export const clinicians: Clinician[] = [
       "Learning Difficulties / Learning Disabilities",
       "Low Mood / Depression / Mood Disorders",
       "Anxiety Disorders",
+      "Obsessive-Compulsive Disorder",
       "Eating Disorders",
-      "Psychiatric Assessment & Diagnosis",
+      "Psychiatric Assessment, Diagnosis & Treatment",
     ],
     experience: "+20 years",
     education: [
@@ -135,19 +136,20 @@ export const clinicians: Clinician[] = [
     certifications: [
       "Consultant Child & Adolescent Psychiatrist",
       "Licensed by Dubai Health Authority (UAE)",
-      "Licensed by General Medical Council (UK)"
+      "Licensed by General Medical Council (UK)",
+      "Certified Professional Life Coach (ICF Accredited)"
     ],
-    bio: `Dr Sadia Mohammed is a British born and trained Consultant Child and Adolescent Psychiatrist with over 20 years of experience in mental health. She is licensed by the Dubai Health Authority (DHA), UAE and General Medical Council (GMC), UK.   
+    bio: `Dr Sadia Mohammed is a British born and trained Consultant Child and Adolescent Psychiatrist with over 20 years of experience in mental health. She is licensed by the Dubai Health Authority (DHA), UAE and General Medical Council (GMC), UK.
     
     Dr Sadia trained and worked at Consultant Psychiatrist level in the largest NHS health board in the UK.  She is highly experienced in the assessment, diagnosis and treatment of the diverse range of mental health and neurodevelopmental conditions affecting children and young people.  Dr Sadia adopts a bio-psycho-social-spiritual model in her clinical work, involving families in the decision-making process, and working collaboratively with allied professionals to ensure a comprehensive treatment plan for each individual case.  Dr Sadia draws on a variety of therapeutic modalities (psychological, psychosocial, educational and medical) in line with best clinical practice, devising holistic treatment plans accordingly. 
     
-    Dr Sadia has been involved in teaching, training and supervision of medical students, junior doctors, trainee psychiatrists and other healthcare professionals in the UK.  She has presented at national and international conferences, as well as educational programmes abroad.  Dr Sadia has been an examiner for medical school undergraduate examinations in the UK.  Recently, Dr Sadia co-authored a scientific paper on sexual side effects of antidepressant medication. 
-    
+    Dr Sadia has been involved in teaching, training and supervision of medical students, junior doctors, trainee psychiatrists and other healthcare professionals in the UK.  She has presented at national and international conferences, as well as educational programmes abroad.  Dr Sadia has been an examiner for medical school undergraduate examinations in the UK.  Recently, Dr Sadia co-authored a scientific paper on sexual side effects of antidepressant medication.
+
     Dr Sadia has held leadership positions on the executive board of medical and psychiatric organisations.  She has been engaged in mental health activism, addressing stigma and raising the profile of mental health and providing public education through community engagement initiatives and performances on radio, TV and social media.
-    
+
     Dr Sadia is fluent in English, Urdu, Punjabi and Hindi.  She is an amateur modern Urdu poet, exemplifying its role as a form of self-therapy and in developing emotional resilience.  Her work has been presented at art exhibitions and poetic events.
 
-    Dr Sadia has a strong interest in personal development and is a published author of the book “Secrets To Infinite Success”.  She is also an aspiring life coach, committed to empowering individuals to achieve personal growth and fulfilment. 
+    Dr Sadia has a passionate interest in personal development and is published author of the book “Secrets To Infinite Success”.  Dr Sadia is also a Certified Life Coach, committed to empowering individuals to achieve personal growth and fulfilment.  
 
     At the time of relocating to Dubai, Dr Sadia was awarded the ZYN Inspirational Professional Award (2024) and was a finalist in the Professional of the Year category at the Scottish Muslim Awards (2024), in recognition of her impact and achievements. `,
     // email: "e.rodriguez@britishpremier.com",
@@ -296,49 +298,49 @@ export const clinicians: Clinician[] = [
     image: AnvitaPFP,
     // availability: "Tuesday - Saturday, 8:00 AM - 4:00 PM"
   },
-  {
-    id: "7",
-    name: "Ms. Yara",
-    title: "Psychotherapist",
-    specializations: [
-        "Trauma and PTSD",
-        "Sexual Trauma",
-        "Emotional Regulation",
-        "Mood and Anxiety",
-        "Relationships and Attachment",
-        "Identity and Self-Esteem",
-        "Life Transitions and Grief",
-        "Women's and Multicultural Issues",
-        "Couples Counseling",
-        "Family Therapy"
-    ],
-    // experience: "12+ years",
-    education: [
-        "Master's Degree in Professional Clinical Counseling (PCC)"
-    ],
-    certifications: [
-        "CDA-Licensed Psychotherapist in Dubai, UAE",
-        "Licensed Associate Professional Counselor (LAPC), Pennsylvania, U.S",
-        "National Certified Counselor (NCC)",
-        "Certificate in Traumatic Stress Studies, Trauma Research Foundation",
-        "Acceptance and Commitment Therapy (ACT) - Specialized Clinical Training"
-    ],
-    bio: `Yara Abu Hussein is a bilingual psychotherapist fluent in Arabic and English, with education and clinical training in the United States. She holds a master's degree in Professional Clinical Counseling (PCC) and is CDA-licensed in Dubai.
+  // {
+  //   id: "7",
+  //   name: "Ms. Yara",
+  //   title: "Psychotherapist",
+  //   specializations: [
+  //       "Trauma and PTSD",
+  //       "Sexual Trauma",
+  //       "Emotional Regulation",
+  //       "Mood and Anxiety",
+  //       "Relationships and Attachment",
+  //       "Identity and Self-Esteem",
+  //       "Life Transitions and Grief",
+  //       "Women's and Multicultural Issues",
+  //       "Couples Counseling",
+  //       "Family Therapy"
+  //   ],
+  //   // experience: "12+ years",
+  //   education: [
+  //       "Master's Degree in Professional Clinical Counseling (PCC)"
+  //   ],
+  //   certifications: [
+  //       "CDA-Licensed Psychotherapist in Dubai, UAE",
+  //       "Licensed Associate Professional Counselor (LAPC), Pennsylvania, U.S",
+  //       "National Certified Counselor (NCC)",
+  //       "Certificate in Traumatic Stress Studies, Trauma Research Foundation",
+  //       "Acceptance and Commitment Therapy (ACT) - Specialized Clinical Training"
+  //   ],
+  //   bio: `Yara Abu Hussein is a bilingual psychotherapist fluent in Arabic and English, with education and clinical training in the United States. She holds a master's degree in Professional Clinical Counseling (PCC) and is CDA-licensed in Dubai.
     
-    Yara's work is rooted in compassion and resilience. She sees therapy not as a process of “fixing” people, but as a space to help them feel more like themselves and more connected to what matters to them.
+  //   Yara's work is rooted in compassion and resilience. She sees therapy not as a process of “fixing” people, but as a space to help them feel more like themselves and more connected to what matters to them.
 
-    She works with adolescents (14+), adults, couples, and families who are navigating emotional regulation difficulties, mood and anxiety concerns, trauma, relationship challenges, identity exploration, and major life transitions.
+  //   She works with adolescents (14+), adults, couples, and families who are navigating emotional regulation difficulties, mood and anxiety concerns, trauma, relationship challenges, identity exploration, and major life transitions.
     
-    She aims to create a warm, nonjudgmental, and culturally sensitive space where clients feel supported, understood, and respected. Her style is collaborative and grounded in curiosity, with the belief that you are the expert in your own life. She helps clients build insight, reconnect with their strengths, and move toward meaningful, sustainable change.
+  //   She aims to create a warm, nonjudgmental, and culturally sensitive space where clients feel supported, understood, and respected. Her style is collaborative and grounded in curiosity, with the belief that you are the expert in your own life. She helps clients build insight, reconnect with their strengths, and move toward meaningful, sustainable change.
 
-    Her work is trauma-informed and integrative, drawing from both depth-oriented and evidence-based approaches. She is trained in Acceptance and Commitment Therapy (ACT), Cognitive Behavioural Therapy (CBT), Dialectical Behaviour Therapy (DBT), emotion-focused (EFT), and solution-focused approaches, while also integrating psychodynamic perspectives.
+  //   Her work is trauma-informed and integrative, drawing from both depth-oriented and evidence-based approaches. She is trained in Acceptance and Commitment Therapy (ACT), Cognitive Behavioural Therapy (CBT), Dialectical Behaviour Therapy (DBT), emotion-focused (EFT), and solution-focused approaches, while also integrating psychodynamic perspectives.
 
-    She brings a strong multicultural, holistic, and trauma-informed lens to her work, with particular sensitivity to identity, cultural context, and relational and sexual trauma.`,
-    // email:"test@gmail.com",
-    // phone: "(416) 555-0123",
-    image: YaraPFP,
-    // availability: "Monday - Friday, 9:00 AM - 5:00 PM"
-  },
+  //   She brings a strong multicultural, holistic, and trauma-informed lens to her work, with particular sensitivity to identity, cultural context, and relational and sexual trauma.`,
+  //   // email:"test@gmail.com",
+  //   // phone: "(416) 555-0123",
+  //   image: YaraPFP,
+  //   // availability: "Monday - Friday, 9:00 AM - 5:00 PM"
+  // },
 //   {
 //     id: "8",
 //     name: "Ms. Annabel George",

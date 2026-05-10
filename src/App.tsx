@@ -14,6 +14,8 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import BlogPost from "./pages/BlogPost";
 import ClinicianProfilePage from "./pages/ClinicianProfilePage";
+import { TrackPageViews } from "@/hooks/TrackPageViews";
+
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter basename="/">
+      <TrackPageViews />
         <Layout>
           <ScrollToTop />
           <Routes>

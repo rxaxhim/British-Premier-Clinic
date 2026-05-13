@@ -10,7 +10,7 @@ import { routes } from "./routes";
 import MaintenancePage from "./components/MaintenancePage";
 
 // ⚠️ Set to false to bring the site back online
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 const queryClient = new QueryClient();
 

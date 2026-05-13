@@ -56,7 +56,7 @@ const MaintenancePage = () => {
               <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
             </div>
             <a
-              href="https://wa.me/971502739020"
+              href="https://wa.me/971523052680"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 text-gray-700 hover:text-[#25D366] transition-colors text-sm"

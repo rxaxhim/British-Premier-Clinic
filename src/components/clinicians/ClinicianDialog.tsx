@@ -85,7 +85,7 @@ export default function ClinicianDialog({
                 className="border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:border-none"
             >
                 <a
-                href="https://wa.me/971502739020"
+                href="https://wa.me/971523052680"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"

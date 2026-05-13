@@ -544,16 +544,16 @@ const Footer = () => {
           <Separator className="my-8" />
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
-            <div className="flex flex-col items-center md:items-start text-muted-foreground">
-              <div className="flex items-center space-x-2">
-                <p>&copy; {currentYear} British Premier Psychiatry & Psychology Center.</p>
-                <Heart className="h-4 w-4 text-red-500" />
-                <p>All rights reserved.</p>
-              </div>
+          <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:items-center">
 
-              {/* Site credit */}
-              <p className="text-xs md:text-sm mt-1">
+            {/* Left: copyright, credit, license — stacked, centered on mobile */}
+            <div className="flex flex-col items-center md:items-start gap-1 text-center md:text-left text-muted-foreground">
+              <p className="text-sm">
+                &copy; {currentYear} British Premier Psychiatry &amp; Psychology Center.{" "}
+                <Heart className="inline h-3.5 w-3.5 text-red-500 mx-0.5 -mt-0.5" />
+                {" "}All rights reserved.
+              </p>
+              <p className="text-xs">
                 Website designed &amp; maintained by{" "}
                 <a
                   href="https://yoururls.ca"
@@ -564,25 +564,22 @@ const Footer = () => {
                   YourURLs
                 </a>.
               </p>
+              <p className="text-xs">
+                MOHAP License No:{" "}
+                <span className="font-medium text-foreground">TWU5ROZY-130526</span>
+                {" "}(15/05/2026 – 15/05/2027)
+              </p>
             </div>
 
+            {/* Right: policy links */}
             <div className="flex space-x-6 text-sm">
-              <Link
-                to="/privacy"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
+              <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy
               </Link>
-              <Link
-                to="/terms"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
+              <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
                 Terms of Service
               </Link>
-              <Link
-                to="/accessibility"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
+              <Link to="/accessibility" className="text-muted-foreground hover:text-primary transition-colors">
                 Accessibility
               </Link>
             </div>

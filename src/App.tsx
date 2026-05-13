@@ -7,10 +7,19 @@ import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import { TrackPageViews } from "./hooks/TrackPageViews";
 import { routes } from "./routes";
+import MaintenancePage from "./components/MaintenancePage";
+
+// ⚠️ Set to false to bring the site back online
+const MAINTENANCE_MODE = false;
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  if (MAINTENANCE_MODE) {
+    return <MaintenancePage />;
+  }
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -28,6 +37,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;

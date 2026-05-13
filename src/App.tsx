@@ -4,18 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Clinicians from "./pages/Clinicians";
-import Blog from "./pages/Blog";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
-import BlogPost from "./pages/BlogPost";
-import ClinicianProfilePage from "./pages/ClinicianProfilePage";
 import { TrackPageViews } from "./hooks/TrackPageViews";
-
+import { routes } from "./routes";
 
 const queryClient = new QueryClient();
 
@@ -25,23 +16,13 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter basename="/">
-      <TrackPageViews />
+        <TrackPageViews />
         <Layout>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/clinicians" element={<Clinicians />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Index />} />
-            <Route path="/terms" element={<Index />} />
-            <Route path="/accessibility" element={<Index />} />
-            <Route path="/clinicians/:id" element={<ClinicianProfilePage />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
+            {routes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
           </Routes>
         </Layout>
       </BrowserRouter>

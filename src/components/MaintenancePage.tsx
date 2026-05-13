@@ -24,7 +24,7 @@ const MaintenancePage = () => {
           <p className="text-gray-500 text-base leading-relaxed">
             We're making some improvements to serve you better.
             <br />
-            We'll be back shortly.
+            We'll be back online on <span className="font-semibold text-gray-700">Saturday, May 16th 2026</span>.
           </p>
         </div>
 

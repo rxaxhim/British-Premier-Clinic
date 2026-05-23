@@ -207,20 +207,21 @@ export const clinicians: Clinician[] = [
     title: "Social Therapist - Psychologist",
     specializations: [
         "Anxiety Disorders & Panic",
-        "Mood Disorders (Depression and Mood Dysregulation)",
-        "Trauma and PTSD",
-        "Personality Disorders & Relational Patterns",
+        "Low Mood and Depression",
+        "Trauma and adverse life events",
+        "Personal growth and self- development",
+        "Personality Disorders",
         "Emotional Regulation",
         "Stress, Burnout & Emotional Exhaustion",
         "Identity Development & Self-Esteem",
-        "Grief & Loss",
-        "Major Life Transitions",
-        "Relationship Difficulties",
+        "Grief, Bereavement & Loss",
+        "Adjustment to life events or transitions",
+        "Relationship Difficulties (Non- romantic)",
         "Attachment & Relational Patterns",
-        "Couples Counseling",
+        "Couples Counselling",
         "Infertility, Maternal Mental Health & Family-Building Journeys",
         "Adoption & Adoption-Related Experiences",
-        "Attachment-Focused Parenting"
+        "Parenting support"
     ],
     experience: "+10 years",
     education: [
@@ -229,31 +230,29 @@ export const clinicians: Clinician[] = [
         "M.A. Counselling Psychology (India)",
     ],
     certifications: [
-        "Somatic experiencing Practitioner (In Progress)",
-        "Eating Disorder (In Progress)",
+        "Internal Family systems",
+        "Somatic experiencing Practitioner",
+        "Eating Disorder",
         "Circle of Security (Parenting)",
+        "Brainspotting Level I and II",
+        "British Infertility Counselling Association",
         "Acceptance & Commitment therapy",
-        "Brainspotting",
-        "Emotional Focused therapy for couples",
-        "Gottman therapy for couples",
+        "Emotional Focused therapy (Couples)",
+        "Gottman therapy (Couples)",
         "Certified Life Coach",
         "CDA Licensed"
     ],
-    bio: `Priyanka Bhatia Mahendru is a CDA-licensed psychologist with over a decade of experience supporting adolescents, adults, individuals in later stages of life, and couples navigating emotional challenges, relationship difficulties, and significant life transitions. Her work is grounded in a relational and trauma-informed approach, helping clients explore underlying emotional patterns, process difficult experiences, and develop greater resilience and self-understanding.
+    bio: `Priyanka Bhatia Mahendru is a CDA-licensed psychologist and Certified Professional Coach with over 12 years of experience supporting adolescents, adults, and couples through emotional challenges, relationship difficulties, and major life transitions. She believes healing begins when we feel truly seen, heard, and accepted — including the parts of ourselves we may struggle to share. She strives to create a warm, collaborative, and non-judgmental space where clients can safely explore their inner world, relationships, emotions, and life experiences with curiosity and compassion. 
     
-    Priyanka works with a wide range of psychological concerns, including trauma, personality disorders and related relational patterns, depression and other mood disorders, anxiety, stress and panic, eating disorders, infertility and maternal mental health challenges, adoption-related experiences, relationship and marital difficulties, separation or divorce, grief and loss, as well as burnout and emotional exhaustion. She also has particular experience supporting individuals and couples navigating the emotional complexities of fertility treatment, infertility, and family-building journeys.
+    She works with a wide range of concerns including trauma, anxiety disorders, depression and mood disorders, stress, personality disorders, eating disorders, maternal mental health, bereavement and loss as well as burnout. She has extensive experience supporting individuals and couples navigating parenting concerns, infertility and its treatments, adoption-related experiences, as well as family- building journeys. 
     
-    Her therapeutic approach is integrative and individualized. Drawing from person-centered therapy, psychodynamic perspectives, cognitive behavioral therapy (CBT), and acceptance and commitment therapy (ACT), Priyanka helps clients understand how past experiences, relational dynamics, and internal narratives shape present emotional experiences and relationships. 
+    Her approach is integrative and tailored to each individual, drawing from evidence-based Cognitive Behavioural Therapy (CBT) to Trauma focused, Nervous system and Body-based modalities such as Somatic Experiencing® and Brainspotting, as well as Internal Family Systems (IFS), to support emotional regulation, trauma healing, and a deeper sense of safety and balance. She works relationally and insightfully, helping clients understand unconscious patterns, attachment dynamics, and past experiences that may continue to shape their present emotional world and relationships.  
     
-    Alongside insight-oriented work, she incorporates nervous system-informed approaches, Brainspotting and Somatic Experiencing (a body-based approach to trauma healing) to support emotional regulation, deepen bodily awareness, and help clients process stress and trauma in ways that restore a greater sense of safety and balance.
+    In couples therapy, Priyanka combines the Gottman Method and Emotionally Focused Therapy (EFT) to strengthen communication, deepen emotional connection, and foster more secure and resilient relationships. Alongside insight-oriented therapy, she integrates short term solution-focused coaching principles to help clients clarify goals, move through periods of feeling stuck, and create meaningful change. 
     
-    Priyanka is also a Certified Professional Coach and incorporates solution-focused coaching principles when appropriate to help clients move through periods of feeling stuck, clarify goals, and take meaningful steps toward change.
+    She works collaboratively with clients to deepen self-awareness, understand patterns that may be keeping them stuck, and support meaningful, lasting change so they can live with greater peace, authenticity, and connection to themselves and others. Known for her calm, compassionate, and reflective approach, Priyanka creates a safe and supportive therapeutic space where clients can explore difficult emotions and work toward lasting psychological growth. 
     
-    In couples therapy, she integrates the Gottman Method and Emotionally Focused Therapy (EFT) to help partners strengthen emotional connection, improve communication, and build more secure and resilient relationships.
-    
-    Through her calm and reflective approach, Priyanka creates a therapeutic environment grounded in compassion, where clients feel safe exploring difficult emotions, deepening self-understanding, and working toward meaningful and lasting psychological change.
-    
-    Priyanka holds a double Master's degree in Counseling Psychology from Pacifica Graduate Institute in the United States and India. She works with clients from diverse cultural backgrounds and is fluent in English, Hindi, Urdu, and Punjabi.`,
+    Priyanka holds dual Master's degrees in Counselling Psychology from Pacifica Graduate Institute, United States and from India, and works with clients from diverse cultural backgrounds.`,
     // email: "e.rodriguez@britishpremier.com",
     // phone: "(416) 555-0125",
     image: PriyankaPFP,

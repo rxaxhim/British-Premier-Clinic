@@ -226,7 +226,6 @@ export const clinicians: Clinician[] = [
     experience: "+10 years",
     education: [
         "M.A. Counselling Psychology (Depth Psychology) Pacifica Graduate Institute (U.S.)",
-        "British Infertility Counselling Association",
         "M.A. Counselling Psychology (India)",
     ],
     certifications: [
@@ -265,7 +264,7 @@ export const clinicians: Clinician[] = [
     specializations: [
         "Child & Adolescent Psychology",
         "Young Adult Mental Health",
-        "Autism Spectrum Disorder (ASD)",
+        "Autism Spectrum Disorder (ASD)", 
         "Attention-Deficit/Hyperactivity Disorder (ADHD)",
         "Learning Difficulties",
         "Mood Disorders",

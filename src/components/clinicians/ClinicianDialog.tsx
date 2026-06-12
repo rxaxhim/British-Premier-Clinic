@@ -22,7 +22,7 @@ export default function ClinicianDialog({
   children: React.ReactNode;
 }) {
     const { toast } = useToast();
-    const profileUrl = `${window.location.origin}/clinicians/${clinician.id}`;
+    const profileUrl = `${window.location.origin}/clinicians/${clinician.url}`;
 
     const handleCopy = async () => {
     try {

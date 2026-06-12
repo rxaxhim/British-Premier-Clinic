@@ -11,6 +11,7 @@ export const clinicians: Clinician[] = [
 
   {
     id: "1",
+    url: "imran-mushtaq",
     name: "Dr.  Imran Mushtaq",
     title: "Medical Director & Consultant Psychiatrist",
     specializations: [
@@ -59,6 +60,7 @@ export const clinicians: Clinician[] = [
   },
     {
     id: "2",
+    url: "graham-williams",
     name: "Dr. Graham Williams",
     title: "Clinical Psychologist",
     specializations: [
@@ -114,6 +116,7 @@ export const clinicians: Clinician[] = [
   },
     {
     id: "3",
+    url: "sadia-mohammed",
     name: "Dr. Sadia Mohammed",
     title: "Consultant Child & Adolescent Psychiatrist",
     specializations: [
@@ -159,6 +162,7 @@ export const clinicians: Clinician[] = [
   },
     {
     id: "4",
+    url: "ghania-kabbara",
     name: "Ms. Ghania Kabbara",
     title: "Clinical Psychologist",
     specializations: [
@@ -203,6 +207,7 @@ export const clinicians: Clinician[] = [
   },
     {
     id: "5",
+    url: "priyanka-mehendru",
     name: "Ms. Priyanka Bhatia Mahendru",
     title: "Social Therapist - Psychologist",
     specializations: [
@@ -259,6 +264,7 @@ export const clinicians: Clinician[] = [
   },
   {
     id: "6",
+    url: "anvita-kamath",
     name: "Ms. Anvita Kamath",
     title: "Social Therapist - Psychologist",
     specializations: [

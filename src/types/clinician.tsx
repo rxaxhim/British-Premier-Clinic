@@ -1,5 +1,6 @@
 export interface Clinician {
   id: string;
+  url: string;
   name: string;
   title: string;
   specializations: string[];

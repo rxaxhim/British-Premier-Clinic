@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, Award, Users, BookOpen } from "lucide-react";
 
 export default function ClinicianProfilePage() {
-  const { id } = useParams();
+  const { url } = useParams();
 
-  const clinician = clinicians.find((c) => c.id === id);
+  const clinician = clinicians.find((c) => c.url === url);
 
   if (!clinician) {
     return <div className="p-10 text-center">Clinician not found</div>;

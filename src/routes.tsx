@@ -13,7 +13,7 @@ export const routes = [
   { path: "/about", element: <About /> },
   { path: "/services", element: <Services /> },
   { path: "/clinicians", element: <Clinicians /> },
-  { path: "/clinicians/:id", element: <ClinicianProfilePage /> },
+  { path: "/clinicians/:url", element: <ClinicianProfilePage /> },
   { path: "/blog", element: <Blog /> },
   { path: "/blog/:slug", element: <BlogPost /> },
   { path: "/contact", element: <Contact /> },

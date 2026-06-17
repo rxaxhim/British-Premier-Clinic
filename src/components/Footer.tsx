@@ -215,7 +215,7 @@ const Footer = () => {
                   </ul>
                   <p className="text-muted-foreground">
                     To submit a privacy request,{" "}
-                    <a className="text-primary underline underline-offset-2" href="mailto:info.britishpremier@gmail.com">
+                    <a className="text-primary underline underline-offset-2" href="mailto:info@britishpremierpsychiatry.ae">
                       email us here
                     </a>.
                   </p>
@@ -239,7 +239,7 @@ const Footer = () => {
                   <p className="text-muted-foreground">
                     British Premier Psychiatry & Psychology Center<br />
                     Address: Sheikh Zayed Rd, Kia Flagship Building, 1st Floor, Unit 110, Dubai, UAE<br />
-                    <a className="text-primary underline underline-offset-2" href="mailto:info.britishpremier@gmail.com">
+                    <a className="text-primary underline underline-offset-2" href="mailto:info@britishpremierpsychiatry.ae">
                       Email us here
                     </a><br />
                     Phone:{" "}
@@ -311,7 +311,7 @@ const Footer = () => {
                   </ul>
                   <p className="text-muted-foreground">
                     For cancellations or refund requests,{" "}
-                    <a className="text-primary underline underline-offset-2" href="mailto:info.britishpremier@gmail.com">
+                    <a className="text-primary underline underline-offset-2" href="mailto:info@britishpremierpsychiatry.ae">
                       email us here
                     </a>{" "}
                     or call{" "}
@@ -372,7 +372,7 @@ const Footer = () => {
                   <p className="text-muted-foreground">
                     British Premier Psychiatry & Psychology Center<br />
                     Address: Sheikh Zayed Rd, Kia Flagship Building, 1st Floor, Unit 110, Dubai, UAE<br />
-                    <a className="text-primary underline underline-offset-2" href="mailto:info.britishpremier@gmail.com">
+                    <a className="text-primary underline underline-offset-2" href="mailto:info@britishpremierpsychiatry.ae">
                       Email us here
                     </a><br />
                     Phone:{" "}
@@ -395,7 +395,7 @@ const Footer = () => {
                     If you encounter accessibility barriers, please contact us at{" "}
                     <a
                       className="text-primary underline underline-offset-2"
-                      href="mailto:info.britishpremier@gmail.com"
+                      href="mailto:info@britishpremierpsychiatry.ae"
                     >
                       Email Us
                     </a>{" "}
@@ -519,7 +519,7 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                   <a
-                    href="mailto:info.britishpremier@gmail.com"
+                    href="mailto:info@britishpremierpsychiatry.ae"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     Email Us

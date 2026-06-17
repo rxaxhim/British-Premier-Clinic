@@ -38,25 +38,25 @@ const MaintenancePage = () => {
           </p>
           <div className="space-y-3">
             <a
-              href="tel:+971523052680"
+              href="tel:+971502739020"
               className="flex items-center justify-center gap-3 text-gray-700 hover:text-blue-600 transition-colors text-sm"
             >
               <Phone className="h-4 w-4 flex-shrink-0 text-blue-600" />
-              <span>+971 52 305 2680</span>
+              <span>+971 50 273 9020</span>
             </a>
             <a
-              href="mailto:info.britishpremier@gmail.com"
+              href="mailto:info@britishpremierpsychiatry.ae"
               className="flex items-center justify-center gap-3 text-gray-700 hover:text-blue-600 transition-colors text-sm"
             >
               <Mail className="h-4 w-4 flex-shrink-0 text-blue-600" />
-              <span>info.britishpremier@gmail.com</span>
+              <span>info@britishpremierpsychiatry.ae</span>
             </a>
             <div className="flex items-center justify-center gap-3 text-gray-500 text-sm">
               <Clock className="h-4 w-4 flex-shrink-0 text-blue-600" />
               <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
             </div>
             <a
-              href="https://wa.me/971523052680"
+              href="https://wa.me/971502739020"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 text-gray-700 hover:text-[#25D366] transition-colors text-sm"

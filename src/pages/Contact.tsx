@@ -96,7 +96,7 @@ const Contact = () => {
       icon: Mail,
       title: "Email Us",
       details: "Click Here to Email Us",
-      action: "mailto:info.britishpremier@gmail.com",
+      action: "mailto:info@britishpremierpsychiatry.ae",
       description: "Get a response within 24 hours",
     },
     {
@@ -346,7 +346,7 @@ const Contact = () => {
                       className="text-[#25D366] hover:bg-[#25D366] hover:border-none"
                     >
                       <a
-                        href="https://wa.me/971523052680"
+                        href="https://wa.me/971502739020"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2"

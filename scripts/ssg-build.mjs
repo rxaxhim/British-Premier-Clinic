@@ -78,7 +78,7 @@ const routeMeta = {
   "/contact": {
     title: "Contact Us | British Premier Psychiatry & Psychology Center",
     description:
-      "Book an appointment or get in touch with British Premier Psychiatry & Psychology Center in Dubai. Call +971 52 305 2680.",
+      "Book an appointment or get in touch with British Premier Psychiatry & Psychology Center in Dubai. Call +971 50 273 9020.",
     canonical: "https://britishpremier.ae/contact",
   },
   "/privacy": {

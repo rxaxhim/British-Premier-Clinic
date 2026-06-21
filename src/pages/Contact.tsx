@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import valetParking from "@/assets/valet-parking.png";
 import { FaWhatsapp } from "react-icons/fa";
+import { trackConversion } from "@/lib/tracking";
 
 const API_URL = "https://urgbdxszsa.execute-api.us-east-2.amazonaws.com/prod/contact";
 const CLIENT_ID = "britishpremier";
@@ -79,6 +80,9 @@ const Contact = () => {
           `Request failed (${res.status})`;
         throw new Error(msg);
       }
+
+      // Google Ads: record a conversion only after the submission succeeds.
+      trackConversion("form");
 
       setIsSubmitted(true);
       setShowAppointmentVideo(true); // show the success video overlay

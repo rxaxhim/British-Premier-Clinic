@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { clinicians } from "@/data/clinicians";
+import { clinicians } from "@/data/clinicians.js";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

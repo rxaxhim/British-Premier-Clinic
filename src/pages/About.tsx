@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import drSarahImg from "@/assets/sarah.jpg";
 import drMichaelImg from "@/assets/michael.jpg";
 import drEmilyImg from "@/assets/emily.jpg";
-import { clinicians } from "@/data/clinicians";
+import { clinicians } from "@/data/clinicians.js";
 
 const numOfClinicians = clinicians.length;
 

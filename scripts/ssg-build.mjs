@@ -7,6 +7,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { clinicians } from "../src/data/clinicians.js"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -28,7 +29,9 @@ const staticRoutes = [
 
 // ── Dynamic routes ─────────────────────────────────────────────────────────
 // Clinician IDs (keep in sync with src/data/clinicians.tsx)
-const clinicianIds = ["1", "2", "3", "4", "5", "6"];
+const clinicianRoutes = clinicians.map(
+  (c) => `/clinicians/${c.url}`
+);
 
 // Blog slugs — read from the MDX files at build time
 const blogDir = path.resolve(root, "src/content/blog");
@@ -39,7 +42,7 @@ const blogSlugs = fs
 
 const allRoutes = [
   ...staticRoutes,
-  ...clinicianIds.map((id) => `/clinicians/${id}`),
+  ...clinicianRoutes,
   ...blogSlugs.map((slug) => `/blog/${slug}`),
 ];
 
@@ -102,10 +105,23 @@ function getMetaForRoute(route) {
   if (routeMeta[route]) return routeMeta[route];
   // Dynamic clinician pages
   if (route.startsWith("/clinicians/")) {
-    const id = route.split("/").pop();
+    const slug = route.split("/").pop();
+
+    const clinician = clinicians.find(
+      (c) => c.url === slug || c.id === slug
+    );
+
     return {
-      title: `Clinician Profile | British Premier Psychiatry & Psychology Center`,
-      description: `View the profile of our specialist clinician at British Premier Psychiatry & Psychology Center in Dubai.`,
+      title: clinician
+        ? `${clinician.name} | British Premier Psychiatry`
+        : "Clinician Profile | British Premier",
+
+      description:
+        clinician?.bio?.slice(0, 160) ||
+        "View our specialist clinician profile.",
+
+      image: clinician?.image || "https://britishpremier.ae/og-default.jpg",
+
       canonical: `https://britishpremier.ae${route}`,
     };
   }
@@ -140,10 +156,12 @@ function injectMeta(template, route) {
     <meta property="og:title" content="${meta.title}" />
     <meta property="og:description" content="${meta.description}" />
     <meta property="og:url" content="${meta.canonical}" />
+    <meta property="og:image" content="${meta.image}" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${meta.title}" />
-    <meta name="twitter:description" content="${meta.description}" />`;
+    <meta name="twitter:description" content="${meta.description}" />
+    <meta name="twitter:image" content="${meta.image}" />`;
 
   // Replace the existing title and description, then inject the rest
   return template

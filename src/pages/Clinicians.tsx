@@ -1,6 +1,6 @@
 import HeroBanner from "@/components/HeroBanner";
 import CliniciansSection from "@/components/clinicians/CliniciansSection";
-import { clinicians } from "@/data/clinicians";
+import { clinicians } from "@/data/clinicians.js";
 
 const Clinicians = () => {
   return (

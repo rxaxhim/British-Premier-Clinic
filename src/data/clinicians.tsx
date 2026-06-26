@@ -207,7 +207,7 @@ export const clinicians: Clinician[] = [
   },
     {
     id: "5",
-    url: "priyanka-mehendru",
+    url: "priyanka-mahendru",
     name: "Ms. Priyanka Bhatia Mahendru",
     title: "Social Therapist - Psychologist",
     specializations: [

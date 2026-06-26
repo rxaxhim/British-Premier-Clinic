@@ -4,17 +4,39 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, Award, Users, BookOpen } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function ClinicianProfilePage() {
   const { url } = useParams();
 
   const clinician = clinicians.find((c) => c.url === url);
 
+  const profileUrl = `${window.location.origin}/clinicians/${clinician?.url}`;
+
+  const imageUrl = clinician?.image?.startsWith("http")
+    ? clinician.image
+    : `${window.location.origin}${clinician?.image}`;
+
   if (!clinician) {
     return <div className="p-10 text-center">Clinician not found</div>;
   }
 
   return (
+  <>
+    <Helmet>
+      <title>{clinician.name}</title>
+
+      <meta property="og:title" content={clinician.name} />
+      <meta property="og:description" content={clinician.bio} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:url" content={profileUrl} />
+      <meta property="og:type" content="profile" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={clinician.name} />
+      <meta name="twitter:description" content={clinician.bio} />
+      <meta name="twitter:image" content={imageUrl} />
+    </Helmet>
     <div className="min-h-screen bg-background py-16 px-4">
       <div className="max-w-5xl mx-auto">
 
@@ -147,5 +169,6 @@ export default function ClinicianProfilePage() {
         </div>
       </div>
     </div>
+  </>
   );
 }

@@ -11,11 +11,18 @@ export default function ClinicianProfilePage() {
 
   const clinician = clinicians.find((c) => c.url === url);
 
-  const profileUrl = `${window.location.origin}/clinicians/${clinician?.url}`;
+  // Use the live origin in the browser; fall back to the canonical domain during
+  // the build-time pre-render (where `window` doesn't exist).
+  const origin =
+    typeof window !== "undefined"
+      ? window.location.origin
+      : "https://britishpremier.ae";
+
+  const profileUrl = `${origin}/clinicians/${clinician?.url}`;
 
   const imageUrl = clinician?.image?.startsWith("http")
     ? clinician.image
-    : `${window.location.origin}${clinician?.image}`;
+    : `${origin}${clinician?.image}`;
 
   if (!clinician) {
     return <div className="p-10 text-center">Clinician not found</div>;

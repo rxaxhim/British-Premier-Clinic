@@ -22,7 +22,11 @@ export default function ClinicianDialog({
   children: React.ReactNode;
 }) {
     const { toast } = useToast();
-    const profileUrl = `${window.location.origin}/clinicians/${clinician.url}`;
+    // Safe during the build-time pre-render where `window` doesn't exist.
+    const profileUrl =
+        typeof window !== "undefined"
+            ? `${window.location.origin}/clinicians/${clinician.url}`
+            : `https://britishpremier.ae/clinicians/${clinician.url}`;
 
     const handleCopy = async () => {
     try {

@@ -1,13 +1,12 @@
-import { Clinician } from "@/types/clinician";
-import YaraPFP from "@/assets/yara-profile-photo.png";
-import AnvitaPFP from "@/assets/anvita-profile-photo.png";
-import AnnabelPFP from "@/assets/annabel-profile-photo.png";
-import ImranPFP from "@/assets/imran-profile-photo.png";
-import PriyankaPFP from "@/assets/priyanka-profile-photo.jpeg";
-import GhaniaPFP from "@/assets/ghania-profile-photo.jpeg"
-import GrahamPFP from "@/assets/graham-profile-photo.jpeg"
-import SadiaPFP from "@/assets/sadia-profile-photo.png"
-export const clinicians: Clinician[] = [
+// import YaraPFP from "public/images/yara-profile-photo.png";
+// import AnvitaPFP from "public/images/anvita-profile-photo.png";
+// import AnnabelPFP from "public/images/annabel-profile-photo.png";
+// import ImranPFP from "public/images/imran-profile-photo.png";
+// import PriyankaPFP from "public/images/priyanka-profile-photo.jpeg";
+// import GhaniaPFP from "public/images/ghania-profile-photo.jpeg"
+// import GrahamPFP from "public/images/graham-profile-photo.jpeg"
+// import SadiaPFP from "public/images/sadia-profile-photo.png"
+export const clinicians = [
 
   {
     id: "1",
@@ -55,7 +54,7 @@ export const clinicians: Clinician[] = [
     Dr Mushtaq has published more than 40 articles in peer-reviewed scientific journals. He has presented at national and international conferences in the UK, Europe, Asia and Australia. He reviews journals' articles related to child and adolescent mental health. He is a children's writer and writes in the Urdu language. He has published many award-winning children's books and is also the chief editor of an Urdu Children's monthly magazine.`,
     // email: "j.thompson@britishpremier.com",
     // phone: "(416) 555-0126",
-    image: ImranPFP,
+    image: "/images/imran-profile-photo.png",
     // availability: "Monday - Friday, 9:00 AM - 3:00 PM"
   },
     {
@@ -111,7 +110,7 @@ export const clinicians: Clinician[] = [
     Today, at British Premier Psychiatry and Psychology Centre in Dubai, Dr. Graham continues his dedication to helping others navigate life's challenges with integrity, sensitivity, and professionalism. His clients often describe him as someone who truly listens, who helps them make sense of their experiences and find a way forward, one step at a time. `,
     // email:"test@gmail.com",
     // phone: "(416) 555-0123",
-    image: GrahamPFP,
+    image: "/images/graham-profile-photo.jpeg",
     // availability: "Monday - Friday, 9:00 AM - 5:00 PM"
   },
     {
@@ -157,7 +156,7 @@ export const clinicians: Clinician[] = [
     At the time of relocating to Dubai, Dr Sadia was awarded the ZYN Inspirational Professional Award (2024) and was a finalist in the Professional of the Year category at the Scottish Muslim Awards (2024), in recognition of her impact and achievements. `,
     // email: "e.rodriguez@britishpremier.com",
     // phone: "(416) 555-0125",
-    image: SadiaPFP,
+    image: "/images/sadia-profile-photo.png",
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
     {
@@ -202,12 +201,12 @@ export const clinicians: Clinician[] = [
     Ms. Ghania works with a wide range of psychological conditions, including depression and bipolar disorders, anxiety disorders, OCD, PTSD and trauma-related concerns, personality disorders, adjustment difficulties, bereavement, and relationship challenges involving couples and families. Grounded in empathy and open-minded collaboration, her therapeutic philosophy centers on helping individuals understand their experiences, build resilience, and move forward with clarity and strength. She resonates strongly with the guiding words: “Do what you can, with what you have, where you are.” — Theodore Roosevelt."`,
     // email: "e.rodriguez@britishpremier.com",
     // phone: "(416) 555-0125",
-    image: GhaniaPFP,
+    image: "/images/ghania-profile-photo.jpeg",
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
     {
     id: "5",
-    url: "priyanka-mehendru",
+    url: "priyanka-mahendru",
     name: "Ms. Priyanka Bhatia Mahendru",
     title: "Social Therapist - Psychologist",
     specializations: [
@@ -259,7 +258,7 @@ export const clinicians: Clinician[] = [
     Priyanka holds dual Master's degrees in Counselling Psychology from Pacifica Graduate Institute, United States and from India, and works with clients from diverse cultural backgrounds.`,
     // email: "e.rodriguez@britishpremier.com",
     // phone: "(416) 555-0125",
-    image: PriyankaPFP,
+    image: "/images/priyanka-profile-photo.jpeg",
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
   {
@@ -297,7 +296,7 @@ export const clinicians: Clinician[] = [
     Currently supporting clients within the UAE, Anvita works with children, adolescents and adults experiencing a wide range of emotional, behavioural, and developmental challenges. She also utilizes diverse neuropsychological/psychological assessments to accurately identify developmental and social-emotional concerns and create individualized treatment plans. She further aims to empower the adults in a child’s life and facilitates parent guidance workshops to help create a thriving environment for the child.`,
     // email: "test@gmail.com",
     // phone: "(416) 555-0124",
-    image: AnvitaPFP,
+    image: "/images/anvita-profile-photo.png",
     // availability: "Tuesday - Saturday, 8:00 AM - 4:00 PM"
   },
   // {

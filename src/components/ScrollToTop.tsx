@@ -1,11 +1,16 @@
 // src/components/ScrollToTop.tsx
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
+
+// useLayoutEffect in the browser (unchanged behaviour); useEffect during the
+// build-time pre-render, which avoids React's "useLayoutEffect on the server" warning.
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 export default function ScrollToTop() {
   const { pathname, hash, key } = useLocation();
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     // If navigating to a hash, try to scroll to that element instead of top
     if (hash) {
       const id = hash.slice(1);

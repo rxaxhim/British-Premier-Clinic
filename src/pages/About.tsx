@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import drSarahImg from "@/assets/sarah.jpg";
 import drMichaelImg from "@/assets/michael.jpg";
 import drEmilyImg from "@/assets/emily.jpg";
-import { clinicians } from "@/data/clinicians";
+import { clinicians } from "@/data/clinicians.js";
 
 const numOfClinicians = clinicians.length;
 
@@ -915,7 +915,7 @@ const About = () => {
                 asChild
                 className="border-primary text-blue-500 hover:bg-blue-500 hover:text-white"
               >
-                <a href="tel:+0097143357477">Call Now</a>
+                <a href="tel:+97143357477">Call Now</a>
               </Button>
             </div>
           </div>

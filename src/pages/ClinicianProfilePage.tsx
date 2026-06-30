@@ -11,8 +11,6 @@ export default function ClinicianProfilePage() {
 
   const clinician = clinicians.find((c) => c.url === url);
 
-  // Use the live origin in the browser; fall back to the canonical domain during
-  // the build-time pre-render (where `window` doesn't exist).
   const origin =
     typeof window !== "undefined"
       ? window.location.origin
@@ -31,14 +29,12 @@ export default function ClinicianProfilePage() {
   return (
   <>
     <Helmet>
-      <title>{clinician.name}</title>
-
+      <title>{clinician.name} | British Premier Psychiatry & Psychology Center</title>
       <meta property="og:title" content={clinician.name} />
       <meta property="og:description" content={clinician.bio} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:url" content={profileUrl} />
       <meta property="og:type" content="profile" />
-
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={clinician.name} />
       <meta name="twitter:description" content={clinician.bio} />

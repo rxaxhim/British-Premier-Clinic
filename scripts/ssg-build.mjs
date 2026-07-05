@@ -98,6 +98,44 @@ function physicianSchema(c) {
   };
 }
 
+// ── FAQ structured data (extracted from the FAQ component at build time) ───
+// Reads the Q&A pairs straight out of FAQSection.tsx so the schema always
+// matches what's actually shown on the homepage. If the file format ever
+// changes and extraction fails, we simply skip the FAQ schema (never break
+// the build).
+function extractFaqs() {
+  try {
+    const src = fs.readFileSync(
+      path.resolve(root, "src/components/FAQSection.tsx"),
+      "utf8"
+    );
+    const out = [];
+    const re = /question:\s*"((?:\\.|[^"\\])+)"\s*,\s*answer:\s*"((?:\\.|[^"\\])+)"/gs;
+    let m;
+    while ((m = re.exec(src))) {
+      out.push({
+        q: m[1].replace(/\\"/g, '"').trim(),
+        a: m[2].replace(/\\"/g, '"').trim(),
+      });
+    }
+    return out;
+  } catch {
+    return [];
+  }
+}
+
+function faqSchema(faqs) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
 // Which schema(s) to emit for a given route.
 function buildSchema(route) {
   const scripts = [jsonLd(clinicSchema())];
@@ -105,6 +143,10 @@ function buildSchema(route) {
     const slug = route.split("/").pop();
     const c = clinicians.find((x) => x.url === slug || x.id === slug);
     if (c) scripts.push(jsonLd(physicianSchema(c)));
+  }
+  if (route === "/") {
+    const faqs = extractFaqs();
+    if (faqs.length >= 2) scripts.push(jsonLd(faqSchema(faqs)));
   }
   return scripts.join("\n    ");
 }

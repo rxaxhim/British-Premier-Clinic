@@ -574,7 +574,7 @@ const Contact = () => {
 
               <div className="bg-background rounded-2xl p-2 border border-border shadow-sm overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8191.986107027252!2d55.23633267586803!3d25.169765067842985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69007b1597e1%3A0x917a80784576b3a!2sKia%20flagship%20building!5e0!3m2!1sen!2sca!4v1758477710427!5m2!1sen!2scaealthcare%20City!5e0!3m2!1sen!2sae!4v1699000000000!5m2!1sen!2sae"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8191.986107027252!2d55.23633267586803!3d25.169765067842985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69007b1597e1%3A0x917a80784576b3a!2sKia%20flagship%20building!5e0!3m2!1sen!2sca!4v1758477710427!5m2!1sen!2sca"
                   width="100%"
                   height="500"
                   style={{ border: 0, borderRadius: "1rem" }}

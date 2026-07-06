@@ -26,7 +26,7 @@ export default function ClinicianDialog({
     const profileUrl =
         typeof window !== "undefined"
             ? `${window.location.origin}/clinicians/${clinician.url}`
-            : `https://britishpremier.ae/clinicians/${clinician.url}`;
+            : `https://britishpremiercenter.ae/clinicians/${clinician.url}`;
 
     const handleCopy = async () => {
     try {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://britishpremier.ae/sitemap.xml
+Sitemap: https://britishpremiercenter.ae/sitemap.xml

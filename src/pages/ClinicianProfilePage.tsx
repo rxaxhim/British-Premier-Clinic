@@ -14,7 +14,7 @@ export default function ClinicianProfilePage() {
   const origin =
     typeof window !== "undefined"
       ? window.location.origin
-      : "https://britishpremier.ae";
+      : "https://britishpremiercenter.ae";
 
   const profileUrl = `${origin}/clinicians/${clinician?.url}`;
 

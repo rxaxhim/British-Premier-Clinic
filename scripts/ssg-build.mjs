@@ -20,13 +20,13 @@ const distDir = path.resolve(root, "dist");
 const distServerDir = path.resolve(root, "dist-server");
 
 // Default social-share image (a real file in /public). Swap for a 1200x630 image later.
-const OG_DEFAULT = "https://britishpremier.ae/hero-bg.jpg";
+const OG_DEFAULT = "https://britishpremiercenter.ae/hero-bg.jpg";
 
 // ── Real clinic data (from the site footer) used to build structured data ──
 const CLINIC = {
   name: "British Premier Psychiatry & Psychology Center",
-  url: "https://britishpremier.ae/",
-  logo: "https://britishpremier.ae/logo.png",
+  url: "https://britishpremiercenter.ae/",
+  logo: "https://britishpremiercenter.ae/logo.png",
   image: OG_DEFAULT,
   telephone: "+971 4 335 7477",
   email: "info@britishpremierpsychiatry.ae",
@@ -59,6 +59,12 @@ function clinicSchema() {
       addressLocality: CLINIC.addressLocality,
       addressCountry: CLINIC.addressCountry,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 25.169765,
+      longitude: 55.236333,
+    },
+    hasMap: "https://www.google.com/maps?q=25.169765,55.236333",
     areaServed: { "@type": "Country", name: "United Arab Emirates" },
     availableLanguage: CLINIC.languages,
     medicalSpecialty: ["Psychiatric", "Psychology"],
@@ -86,15 +92,150 @@ function physicianSchema(c) {
     "@context": "https://schema.org",
     "@type": "Physician",
     name: c.name,
-    url: `https://britishpremier.ae/clinicians/${c.url}`,
+    url: `https://britishpremiercenter.ae/clinicians/${c.url}`,
     image: c.image
       ? c.image.startsWith("http")
         ? c.image
-        : `https://britishpremier.ae${c.image}`
+        : `https://britishpremiercenter.ae${c.image}`
       : undefined,
     jobTitle: c.title,
     description: c.bio ? c.bio.slice(0, 300) : undefined,
     worksFor: { "@type": "MedicalClinic", name: CLINIC.name, url: CLINIC.url },
+  };
+}
+
+// ── FAQ structured data (extracted from the FAQ component at build time) ───
+// Reads the Q&A pairs straight out of FAQSection.tsx so the schema always
+// matches what's actually shown on the homepage. If the file format ever
+// changes and extraction fails, we simply skip the FAQ schema (never break
+// the build).
+function extractFaqs() {
+  try {
+    const src = fs.readFileSync(
+      path.resolve(root, "src/components/FAQSection.tsx"),
+      "utf8"
+    );
+    const out = [];
+    const re = /question:\s*"((?:\\.|[^"\\])+)"\s*,\s*answer:\s*"((?:\\.|[^"\\])+)"/gs;
+    let m;
+    while ((m = re.exec(src))) {
+      out.push({
+        q: m[1].replace(/\\"/g, '"').trim(),
+        a: m[2].replace(/\\"/g, '"').trim(),
+      });
+    }
+    return out;
+  } catch {
+    return [];
+  }
+}
+
+function faqSchema(faqs) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+// ── Breadcrumbs + blog article structured data ──────────────────────────────
+const SECTION_LABELS = {
+  "/about": "About Us",
+  "/services": "Our Services",
+  "/clinicians": "Our Clinicians",
+  "/blog": "Blog & Resources",
+  "/contact": "Contact Us",
+  "/privacy": "Privacy Policy",
+  "/terms": "Terms of Service",
+  "/accessibility": "Accessibility",
+};
+
+function slugToTitle(slug) {
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+// Reads title/date from a blog post's frontmatter (falls back gracefully).
+function blogFrontmatter(slug) {
+  try {
+    const raw = fs.readFileSync(
+      path.resolve(root, `src/content/blog/${slug}.mdx`),
+      "utf8"
+    );
+    const fm = raw.match(/^---([\s\S]*?)---/);
+    const pick = (k) => {
+      const m = fm && fm[1].match(new RegExp(`^${k}:\\s*"?([^"\\n]+)"?`, "m"));
+      return m ? m[1].trim() : undefined;
+    };
+    return { title: pick("title"), date: pick("date") };
+  } catch {
+    return {};
+  }
+}
+
+function breadcrumbSchema(route) {
+  const crumbs = [{ name: "Home", url: "https://britishpremiercenter.ae/" }];
+  if (route.startsWith("/clinicians/") && route !== "/clinicians") {
+    const slug = route.split("/").pop();
+    const c = clinicians.find((x) => x.url === slug || x.id === slug);
+    crumbs.push({
+      name: "Our Clinicians",
+      url: "https://britishpremiercenter.ae/clinicians",
+    });
+    crumbs.push({
+      name: c ? c.name : "Clinician Profile",
+      url: `https://britishpremiercenter.ae${route}`,
+    });
+  } else if (route.startsWith("/blog/") && route !== "/blog") {
+    const slug = route.split("/").pop();
+    crumbs.push({ name: "Blog & Resources", url: "https://britishpremiercenter.ae/blog" });
+    crumbs.push({
+      name: blogFrontmatter(slug).title || slugToTitle(slug),
+      url: `https://britishpremiercenter.ae${route}`,
+    });
+  } else if (SECTION_LABELS[route]) {
+    crumbs.push({
+      name: SECTION_LABELS[route],
+      url: `https://britishpremiercenter.ae${route}`,
+    });
+  } else {
+    return null; // homepage: no breadcrumb needed
+  }
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: c.url,
+    })),
+  };
+}
+
+function blogPostSchema(route) {
+  const slug = route.split("/").pop();
+  const fm = blogFrontmatter(slug);
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: fm.title || slugToTitle(slug),
+    ...(fm.date ? { datePublished: fm.date } : {}),
+    image: OG_DEFAULT,
+    url: `https://britishpremiercenter.ae${route}`,
+    author: { "@type": "Organization", name: CLINIC.name },
+    publisher: {
+      "@type": "Organization",
+      name: CLINIC.name,
+      logo: { "@type": "ImageObject", url: CLINIC.logo },
+    },
+    mainEntityOfPage: `https://britishpremiercenter.ae${route}`,
   };
 }
 
@@ -106,6 +247,15 @@ function buildSchema(route) {
     const c = clinicians.find((x) => x.url === slug || x.id === slug);
     if (c) scripts.push(jsonLd(physicianSchema(c)));
   }
+  if (route === "/") {
+    const faqs = extractFaqs();
+    if (faqs.length >= 2) scripts.push(jsonLd(faqSchema(faqs)));
+  }
+  if (route.startsWith("/blog/") && route !== "/blog") {
+    scripts.push(jsonLd(blogPostSchema(route)));
+  }
+  const bc = breadcrumbSchema(route);
+  if (bc) scripts.push(jsonLd(bc));
   return scripts.join("\n    ");
 }
 
@@ -161,58 +311,58 @@ const routeMeta = {
     title: "British Premier Psychiatry & Psychology Center | Mental Health UAE",
     description:
       "Premier mental health services in Dubai, UAE. Expert psychiatrists and psychologists providing comprehensive care for adults, children, and adolescents.",
-    canonical: "https://britishpremier.ae/",
+    canonical: "https://britishpremiercenter.ae/",
   },
   "/about": {
     title: "About Us | British Premier Psychiatry & Psychology Center",
     description:
       "Learn about British Premier Psychiatry & Psychology Center — our mission, values, and the expert team delivering evidence-based mental health care in Dubai.",
-    canonical: "https://britishpremier.ae/about",
+    canonical: "https://britishpremiercenter.ae/about",
   },
   "/services": {
     title: "Our Services | British Premier Psychiatry & Psychology Center",
     description:
       "Comprehensive psychiatry and psychology services for adults, children, couples, schools, and corporates in Dubai, UAE.",
-    canonical: "https://britishpremier.ae/services",
+    canonical: "https://britishpremiercenter.ae/services",
   },
   "/clinicians": {
     title: "Our Clinicians | British Premier Psychiatry & Psychology Center",
     description:
       "Meet our team of board-certified psychiatrists, licensed psychologists, and specialist therapists at British Premier in Dubai.",
-    canonical: "https://britishpremier.ae/clinicians",
+    canonical: "https://britishpremiercenter.ae/clinicians",
   },
   "/blog": {
     title: "Blog & Resources | British Premier Psychiatry & Psychology Center",
     description:
       "Mental health insights, research, and resources from the expert team at British Premier Psychiatry & Psychology Center in Dubai.",
-    canonical: "https://britishpremier.ae/blog",
+    canonical: "https://britishpremiercenter.ae/blog",
   },
   "/contact": {
     title: "Contact Us | British Premier Psychiatry & Psychology Center",
     description:
       "Book an appointment or get in touch with British Premier Psychiatry & Psychology Center in Dubai. Call +971 50 273 9020.",
-    canonical: "https://britishpremier.ae/contact",
+    canonical: "https://britishpremiercenter.ae/contact",
   },
   "/privacy": {
     title: "Privacy Policy | British Premier Psychiatry & Psychology Center",
     description: "Privacy Policy for British Premier Psychiatry & Psychology Center.",
-    canonical: "https://britishpremier.ae/privacy",
+    canonical: "https://britishpremiercenter.ae/privacy",
   },
   "/terms": {
     title: "Terms of Service | British Premier Psychiatry & Psychology Center",
     description: "Terms of Service for British Premier Psychiatry & Psychology Center.",
-    canonical: "https://britishpremier.ae/terms",
+    canonical: "https://britishpremiercenter.ae/terms",
   },
   "/accessibility": {
     title: "Accessibility | British Premier Psychiatry & Psychology Center",
     description: "Accessibility statement for British Premier Psychiatry & Psychology Center.",
-    canonical: "https://britishpremier.ae/accessibility",
+    canonical: "https://britishpremiercenter.ae/accessibility",
   },
 };
 
 function absoluteImage(image) {
   if (!image) return OG_DEFAULT;
-  return image.startsWith("http") ? image : `https://britishpremier.ae${image}`;
+  return image.startsWith("http") ? image : `https://britishpremiercenter.ae${image}`;
 }
 
 function getMetaForRoute(route) {
@@ -229,7 +379,7 @@ function getMetaForRoute(route) {
       description:
         clinician?.bio?.slice(0, 160) || "View our specialist clinician profile.",
       image: absoluteImage(clinician?.image),
-      canonical: `https://britishpremier.ae${route}`,
+      canonical: `https://britishpremiercenter.ae${route}`,
     };
   }
 
@@ -244,7 +394,7 @@ function getMetaForRoute(route) {
       title: `${title} | British Premier Blog`,
       description: `Read our latest article: ${title}. Mental health insights from British Premier Psychiatry & Psychology Center.`,
       image: OG_DEFAULT,
-      canonical: `https://britishpremier.ae${route}`,
+      canonical: `https://britishpremiercenter.ae${route}`,
     };
   }
 
@@ -252,7 +402,7 @@ function getMetaForRoute(route) {
     title: "British Premier Psychiatry & Psychology Center",
     description: "Premier mental health services in Dubai, UAE.",
     image: OG_DEFAULT,
-    canonical: `https://britishpremier.ae${route}`,
+    canonical: `https://britishpremiercenter.ae${route}`,
   };
 }
 
@@ -355,7 +505,7 @@ async function buildSSG() {
   );
   const urlEntries = sitemapRoutes
     .map((route) => {
-      const loc = `https://britishpremier.ae${route === "/" ? "" : route}`;
+      const loc = `https://britishpremiercenter.ae${route === "/" ? "" : route}`;
       const priority =
         route === "/" ? "1.0" : route.split("/").length === 2 ? "0.8" : "0.6";
       const changefreq = route === "/" ? "weekly" : "monthly";
@@ -379,7 +529,7 @@ ${urlEntries}
   const robots = `User-agent: *
 Allow: /
 
-Sitemap: https://britishpremier.ae/sitemap.xml
+Sitemap: https://britishpremiercenter.ae/sitemap.xml
 `;
   fs.writeFileSync(path.resolve(distDir, "robots.txt"), robots, "utf-8");
   console.log("🤖 robots.txt generated.\n");

@@ -43,9 +43,9 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <img src={logo} alt="British Premier Psychiatry" className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24" />
             <div className="block">
-              <h1 className="text-lg font-semibold text-foreground leading-tight">
+              <p className="text-lg font-semibold text-foreground leading-tight">
                 British Premier
-              </h1>
+              </p>
               <p className="text-sm text-muted-foreground -mt-1">
                 Psychiatry & Psychology
               </p>

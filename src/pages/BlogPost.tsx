@@ -1,27 +1,13 @@
-import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { getBlogPost, type BlogPost as BlogPostType } from "@/lib/blog";
+import { getBlogPostSync, type BlogPost as BlogPostType } from "@/lib/blog";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { MDXProvider } from "@mdx-js/react";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (!slug) return;
-    
-    const loadPost = async () => {
-      const blogPost = await getBlogPost(slug);
-      console.log('BlogPost component - loaded post:', blogPost);
-      setPost(blogPost);
-      setLoading(false);
-    };
-    
-    loadPost();
-  }, [slug]);
+  const post: BlogPostType | null = slug ? getBlogPostSync(slug) : null;
+  const loading = false;
 
   if (loading) {
     return (
@@ -75,7 +61,6 @@ const BlogPost = () => {
 
   const src = import.meta.env.BASE_URL + post.image;
 
-  console.log('BlogPost render - post:', post, 'loading:', loading);
 
   return (
     <div className="min-h-screen">

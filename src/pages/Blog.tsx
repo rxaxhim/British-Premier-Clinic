@@ -1,20 +1,10 @@
-import { useEffect, useState } from "react";
-import { getAllBlogPosts, type BlogPost } from "@/lib/blog";
+import { getAllBlogPostsSync, type BlogPost } from "@/lib/blog";
 import { BlogCard } from "@/components/BlogCard";
 import HeroBanner from "@/components/HeroBanner";
 
 const Blog = () => {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadPosts = async () => {
-      const blogPosts = await getAllBlogPosts();
-      setPosts(blogPosts);
-      setLoading(false);
-    };
-    loadPosts();
-  }, []);
+  const posts: BlogPost[] = getAllBlogPostsSync();
+  const loading = false;
 
   if (loading) {
     return (

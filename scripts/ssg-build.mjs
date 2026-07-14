@@ -20,7 +20,7 @@ const distDir = path.resolve(root, "dist");
 const distServerDir = path.resolve(root, "dist-server");
 
 // Default social-share image (a real file in /public). Swap for a 1200x630 image later.
-const OG_DEFAULT = "https://britishpremiercenter.ae/hero-bg.jpg";
+const OG_DEFAULT = "https://britishpremiercenter.ae/og-image.jpg";
 
 // ── Real clinic data (from the site footer) used to build structured data ──
 const CLINIC = {
@@ -523,6 +523,29 @@ async function buildSSG() {
 ${urlEntries}
 </urlset>`;
   fs.writeFileSync(path.resolve(distDir, "sitemap.xml"), sitemap, "utf-8");
+
+  // ── llms.txt: a clean, spec-compliant guide for AI crawlers (llmstxt.org) ──
+  const llmsLines = [
+    "# British Premier Psychiatry & Psychology Center",
+    "",
+    "> Premier mental health services in Dubai, UAE. DHA/CDA licensed psychiatrists and psychologists providing evidence-based care for children, adolescents, adults, and families.",
+    "",
+    "## Pages",
+    "",
+    ...sitemapRoutes.map((route) => {
+      const loc = `https://britishpremiercenter.ae${route === "/" ? "/" : route}`;
+      const name = route === "/" ? "Home" :
+        route.slice(1).split("/").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" — ").replace(/-/g, " ");
+      return `- [${name}](${loc})`;
+    }),
+    "",
+    "## Contact",
+    "",
+    "- Phone: +971 4 335 7477",
+    "- Address: Kia Flagship Building, 1st Floor, Unit 110, Sheikh Zayed Road, Dubai, UAE",
+  ];
+  fs.writeFileSync(path.resolve(distDir, "llms.txt"), llmsLines.join("\n") + "\n", "utf-8");
+  console.log("\n🧠 llms.txt generated.");
   console.log("🗺️  sitemap.xml generated.\n");
 
   // ── robots.txt ─────────────────────────────────────────────────────────────

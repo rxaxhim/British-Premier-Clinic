@@ -53,6 +53,7 @@ const ClinicCarousel = () => {
                 {/* Blurred background */}
                 <img
                 src={src}
+                alt=""
                 aria-hidden
                 className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-40"
                 />
@@ -60,7 +61,7 @@ const ClinicCarousel = () => {
                 {/* Main image */}
                 <img
                 src={src}
-                alt={`Clinic interior ${i + 1}`}
+                alt={`British Premier Center clinic interior ${i + 1}, Dubai`}
                 className="relative w-full h-full object-contain"
                 loading={i === 0 ? "eager" : "lazy"}
                 />

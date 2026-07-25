@@ -12,4 +12,10 @@ export interface Clinician {
   phone?: string;
   image: string;
   availability?: string;
+  idealFor?: string[];
+  extraSections?: {
+    heading: string;
+    content?: string;
+    items?: { label?: string; text: string }[];
+  }[];
 }

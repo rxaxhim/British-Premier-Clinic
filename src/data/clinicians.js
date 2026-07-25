@@ -57,8 +57,82 @@ export const clinicians = [
     image: "/images/imran-profile-photo.png",
     // availability: "Monday - Friday, 9:00 AM - 3:00 PM"
   },
-    {
+ {
     id: "2",
+    url: "farah-qadir",
+    name: "Dr. Farah Qadir",
+    title: "Immersive Therapy Practitioner",
+    specializations: [
+        "Mental Health Enhancement & Optimal Well-Being",
+        "Cognitive-Affective Restructuring",
+        "Somatic Integration",
+        "Relational Pattern Analysis",
+        "Trauma Resolution",
+        "Executive & Peak-Performance Coaching",
+        "Neuro-Linguistic Programming (NLP)",
+        "Cross-Cultural & Multi-Ethnic Psychotherapy",
+        "Bespoke Immersive Interventions (ELIXIR Program)"
+    ],
+    experience: "+20 years",
+    education: [
+        "Ph.D., Psychiatric Epidemiology — Institute of Psychiatry, King's College London, UK (2002–2005)",
+        "M.A., Counselling Psychology — Boston College, Chestnut Hill, MA (1992–1994)"
+    ],
+    certifications: [
+        "Chartered Psychologist, accredited by the British Psychological Society, UK (2016)",
+        "Licensed Practitioner for Neuro-Linguistic Programming (NLP) — NLP for Life by Richard Bandler, co-creator of NLP, London, UK (2015)",
+        "British Psychological Society Certified Occupational Test User — Ability Tests (Level A) and Personality Tests (Level B), Pearson: Talent Lens, London, UK (2015)"
+    ],
+    // New subheading: the population ELIXIR/Dr. Qadir's bespoke work is designed for
+    idealFor: [
+        "Creatives",
+        "Leaders",
+        "Visionaries",
+        "Legacy founders"
+    ],
+    bio: `Dr Farah Qadir is a clinician dedicated to mental health enhancement and optimal well-being. She has over two decades of experience spanning four continents, having worked across many multicultural hubs and metropolises, with her work covering diverse cultural, religious, and ethnic experiential landscapes.
+
+    She serves individuals who are deeply invested in their own evolution and who seek meaning, fulfillment, and enduring happiness across all dimensions of life. Her approach is grounded in evidence-based modalities and neurobiological principles, centering on cognitive-affective restructuring, somatic integration, and relational pattern analysis to facilitate measurable change.
+
+    Dr Qadir holds a Ph.D. in Psychiatric Epidemiology from the Institute of Psychiatry, King's College London, and an M.A. in Counselling Psychology from Boston College. She is a Chartered Psychologist accredited by the British Psychological Society and a Licensed Practitioner of Neuro-Linguistic Programming, trained directly under NLP co-creator Richard Bandler.
+
+    Since 2016, Dr Qadir has offered bespoke, immersive programs that are not a quick fix, but a catalytic accelerator for those who believe in growth and self-actualization — for those willing to work on self-enhancement but who have hit a ceiling. Her signature program, ELIXIR, provides the structure, expertise, and intensity needed to break through that ceiling, transforming not just symptoms but the very architecture of the self, helping individuals work with the brain's natural mechanisms rather than against them.
+
+    This approach is designed specifically for those who operate at the highest echelons of professional and public life — leaders, visionaries, and families — who require profound, accelerated, and lasting behavioral transformation.`,
+    extraSections: [
+        {
+            heading: "ELIXIR",
+            content: "ELIXIR is not a linear program. It is a dynamic, adaptive system that fuses the depth of psychotherapy with the forward-momentum of executive coaching, delivered in real time as the client's life unfolds. Every session is a bespoke intervention crafted from the client's neuroplasticity and their emotional, cognitive, and relational ecosystem."
+        },
+        {
+            heading: "What ELIXIR stands for",
+            items: [
+                { label: "Elite", text: "The client is treated as an elite athlete, continually refining their form in pursuit of mastery rather than an external goal." },
+                { label: "Life", text: "A holistic concept for high achievers, spanning personal, professional, and relational dimensions." },
+                { label: "Immersive", text: "Protocols that are intensive, real-time, and high-impact." },
+                { label: "eXperiential", text: "Built on subjective experience that is felt, not only recorded — experienced by both self and brain." },
+                { label: "Intervention", text: "Spans the full spectrum from trauma resolution to peak-performance strategy, with Dr Qadir selecting the modality in real time based on the client's state." },
+                { label: "Real-time", text: "Support responds to situations as they arise — during a conflict, a panic attack, a negotiation, a creative block — via secure, encrypted audio, video, or text channels." }
+            ]
+        },
+        {
+            heading: "Outcomes from ELIXIR",
+            items: [
+                { text: "Achievement of previously blocked goals, such as public speaking, conflict resolution, or creative breakthroughs, with greater ease and consistency" },
+                { text: "Improved relational depth and communication" },
+                { text: "Sustained neuroplastic gains" },
+                { text: "Reduction in anxiety and depressive symptoms within four to six weeks" },
+                { text: "Enhanced emotional regulation in high-stakes professional and personal contexts" }
+            ]
+        }
+    ],
+    // email: "",
+    // phone: "",
+    image: "/images/farah-profile-photo.jpeg",
+    // availability: ""
+  },
+    {
+    id: "3",
     url: "graham-williams",
     name: "Dr. Graham Williams",
     title: "Clinical Psychologist",
@@ -114,7 +188,7 @@ export const clinicians = [
     // availability: "Monday - Friday, 9:00 AM - 5:00 PM"
   },
     {
-    id: "3",
+    id: "4",
     url: "sadia-mohammed",
     name: "Dr. Sadia Mohammed",
     title: "Consultant Child & Adolescent Psychiatrist",
@@ -160,7 +234,7 @@ export const clinicians = [
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
     {
-    id: "4",
+    id: "5",
     url: "ghania-kabbara",
     name: "Ms. Ghania Kabbara",
     title: "Clinical Psychologist",
@@ -205,7 +279,7 @@ export const clinicians = [
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
     {
-    id: "5",
+    id: "6",
     url: "priyanka-mahendru",
     name: "Ms. Priyanka Bhatia Mahendru",
     title: "Social Therapist - Psychologist",
@@ -262,7 +336,7 @@ export const clinicians = [
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
   {
-    id: "6",
+    id: "7",
     url: "anvita-kamath",
     name: "Ms. Anvita Kamath",
     title: "Social Therapist - Psychologist",

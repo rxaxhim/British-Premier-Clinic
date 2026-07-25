@@ -6,7 +6,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Mail, Phone, Calendar, Award, Users, BookOpen } from "lucide-react";
+import { Mail, Phone, Calendar, Award, Users, BookOpen, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Clinician } from "@/types/clinician";
 import { useToast } from "@/hooks/use-toast";
@@ -145,6 +145,21 @@ export default function ClinicianDialog({
                   <span>{clinician.availability}</span>
                 </div>
               )}
+
+              {clinician.idealFor && clinician.idealFor.length > 0 && (
+                <div className="pt-2">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                    Made for
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {clinician.idealFor.map((item, idx) => (
+                      <Badge key={idx} variant="outline">
+                        {item}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -159,6 +174,45 @@ export default function ClinicianDialog({
                 {clinician.bio}
               </p>
             </div>
+            
+            {clinician.extraSections && clinician.extraSections.length > 0 && (
+              <>
+                {clinician.extraSections.map((section, sIdx) => (
+                  <div key={sIdx}>
+                    <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                      <Sparkles className="w-5 h-5 text-primary" />
+                      {section.heading}
+                    </h4>
+
+                    {section.content && (
+                      <p className="text-muted-foreground leading-relaxed">
+                        {section.content}
+                      </p>
+                    )}
+
+                    {section.items && section.items.length > 0 && (
+                      <ul className="space-y-2">
+                        {section.items.map((item, iIdx) => (
+                          <li key={iIdx} className="text-muted-foreground">
+                            {item.label ? (
+                              <>
+                                <span className="font-medium text-foreground">
+                                  {item.label}
+                                </span>
+                                {" — "}
+                                {item.text}
+                              </>
+                            ) : (
+                              <>• {item.text}</>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </>
+            )}
 
             <div>
               <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">

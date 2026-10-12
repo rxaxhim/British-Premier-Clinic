@@ -18,4 +18,8 @@ export interface Clinician {
     content?: string;
     items?: { label?: string; text: string }[];
   }[];
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
 }

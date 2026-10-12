@@ -99,6 +99,10 @@ export const clinicians = [
     Since 2016, Dr Qadir has offered bespoke, immersive programs that are not a quick fix, but a catalytic accelerator for those who believe in growth and self-actualization — for those willing to work on self-enhancement but who have hit a ceiling. Her signature program, ELIXIR, provides the structure, expertise, and intensity needed to break through that ceiling, transforming not just symptoms but the very architecture of the self, helping individuals work with the brain's natural mechanisms rather than against them.
 
     This approach is designed specifically for those who operate at the highest echelons of professional and public life — leaders, visionaries, and families — who require profound, accelerated, and lasting behavioral transformation.`,
+    // Generic reusable field — any clinician can use this for extra structured
+    // content beyond bio/specializations/education/certifications. Each entry is
+    // rendered as its own subheading, with either a paragraph (`content`) or a
+    // bullet list (`items`).
     extraSections: [
         {
             heading: "ELIXIR",
@@ -124,6 +128,28 @@ export const clinicians = [
                 { text: "Reduction in anxiety and depressive symptoms within four to six weeks" },
                 { text: "Enhanced emotional regulation in high-stakes professional and personal contexts" }
             ]
+        }
+    ],
+    faqs: [
+        {
+            question: "What services are included in ELIXIR?",
+            answer: "ELIXIR offers five core services: a neuro-qualia baseline and plasticity protocol that establishes a personalized blueprint for neural change; a real-time precision intervention during high-stakes moments such as negotiations or acute stress; a multi-day relational neuro-integration intensive for a client and partner; a private executive neuroplasticity retreat; and an ongoing continuum neuroplasticity membership combining deep-dive sessions, real-time micro-interventions, and progress tracking. All services are reviewed and delivered personally by Dr Qadir."
+        },
+        {
+            question: "Who is ELIXIR designed for?",
+            answer: "ELIXIR is designed for individuals who have both the resources and the priority to invest in profound psychological growth — accomplished leaders, visionary founders, and other high-responsibility individuals who require a highly discreet, dedicated clinical partnership and are prepared to commit significant time and focus to the work."
+        },
+        {
+            question: "How does ELIXIR fit into a demanding schedule?",
+            answer: "ELIXIR is built to work within an existing schedule rather than compete with it. Because interventions happen in real time, clients don't need to set aside separate blocks of clinical time — support is delivered through brief, high-impact micro-interventions during the day, or through intensives timed to a client's natural rhythms."
+        },
+        {
+            question: "How is client privacy protected?",
+            answer: "Privacy is treated as a core part of the programme's design, not an add-on policy. All communication runs through fully encrypted, proprietary channels with no third-party access, and client information is handled with the same level of security as sensitive intellectual property."
+        },
+        {
+            question: "How are results measured?",
+            answer: "Progress is tracked against the neural blueprint established at the outset, looking at measurable shifts such as improved cognitive flexibility, faster and clearer decision-making, fewer reactive episodes in high-stakes moments, and deeper relational coherence — so clients can observe change rather than take it on faith."
         }
     ],
     // email: "",

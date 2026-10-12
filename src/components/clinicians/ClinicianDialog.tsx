@@ -1,12 +1,14 @@
+import { useState } from "react";
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Mail, Phone, Calendar, Award, Users, BookOpen, Sparkles } from "lucide-react";
+import { Mail, Phone, Calendar, Award, Users, BookOpen, Sparkles, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Clinician } from "@/types/clinician";
 import { useToast } from "@/hooks/use-toast";
@@ -22,6 +24,7 @@ export default function ClinicianDialog({
   children: React.ReactNode;
 }) {
     const { toast } = useToast();
+    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
     // Safe during the build-time pre-render where `window` doesn't exist.
     const profileUrl =
         typeof window !== "undefined"
@@ -174,45 +177,6 @@ export default function ClinicianDialog({
                 {clinician.bio}
               </p>
             </div>
-            
-            {clinician.extraSections && clinician.extraSections.length > 0 && (
-              <>
-                {clinician.extraSections.map((section, sIdx) => (
-                  <div key={sIdx}>
-                    <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Sparkles className="w-5 h-5 text-primary" />
-                      {section.heading}
-                    </h4>
-
-                    {section.content && (
-                      <p className="text-muted-foreground leading-relaxed">
-                        {section.content}
-                      </p>
-                    )}
-
-                    {section.items && section.items.length > 0 && (
-                      <ul className="space-y-2">
-                        {section.items.map((item, iIdx) => (
-                          <li key={iIdx} className="text-muted-foreground">
-                            {item.label ? (
-                              <>
-                                <span className="font-medium text-foreground">
-                                  {item.label}
-                                </span>
-                                {" — "}
-                                {item.text}
-                              </>
-                            ) : (
-                              <>• {item.text}</>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
-              </>
-            )}
 
             <div>
               <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
@@ -255,6 +219,87 @@ export default function ClinicianDialog({
                 ))}
               </ul>
             </div>
+
+            {/* Generic extra content sections — any clinician can use this for content
+                that doesn't fit specializations/education/certifications (e.g. a
+                signature program). Only renders if the clinician has entries. */}
+            {clinician.extraSections && clinician.extraSections.length > 0 && (
+              <>
+                {clinician.extraSections.map((section, sIdx) => (
+                  <div key={sIdx}>
+                    <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                      <Sparkles className="w-5 h-5 text-primary" />
+                      {section.heading}
+                    </h4>
+
+                    {section.content && (
+                      <p className="text-muted-foreground leading-relaxed">
+                        {section.content}
+                      </p>
+                    )}
+
+                    {section.items && section.items.length > 0 && (
+                      <ul className="space-y-2">
+                        {section.items.map((item, iIdx) => (
+                          <li key={iIdx} className="text-muted-foreground">
+                            {item.label ? (
+                              <>
+                                <span className="font-medium text-foreground">
+                                  {item.label}
+                                </span>
+                                {" — "}
+                                {item.text}
+                              </>
+                            ) : (
+                              <>• {item.text}</>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </>
+            )}
+            {/* Generic FAQ section — any clinician can use this for a Q&A list. */}
+            {clinician.faqs && clinician.faqs.length > 0 && (
+              <div>
+                <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                  FAQ
+                </h4>
+                <div className="space-y-3">
+                  {clinician.faqs.map((faq, fIdx) => (
+                    <Card key={fIdx}>
+                      <button
+                        className="w-full flex items-center justify-between px-4 py-3 text-left"
+                        onClick={() =>
+                          setOpenFaqIndex(openFaqIndex === fIdx ? null : fIdx)
+                        }
+                      >
+                        <CardHeader className="p-0">
+                          <CardTitle className="text-base">
+                            {faq.question}
+                          </CardTitle>
+                        </CardHeader>
+
+                        <ChevronDown
+                          className={`h-4 w-4 flex-shrink-0 ml-2 transition-transform ${
+                            openFaqIndex === fIdx ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      {openFaqIndex === fIdx && (
+                        <CardContent className="px-4 pb-4 text-muted-foreground">
+                          {faq.answer}
+                        </CardContent>
+                      )}
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

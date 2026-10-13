@@ -443,53 +443,53 @@ export const clinicians = [
     image: "/images/anvita-profile-photo.png",
     // availability: "Tuesday - Saturday, 8:00 AM - 4:00 PM"
   },
-{
-  id: "9",
-  url: "aoife-mohan",
-  name: "Ms. Aoife Mohan",
-  title: "Psychologist",
-  specializations: [
-    "Anxiety, Panic and Stress",
-    "Depression and Low Mood",
-    "Self-Esteem and Confidence",
-    "Relationships and Attachment",
-    "Grief, Bereavement and Loss",
-    "Family Relationships and Parenting Challenges",
-    "Adolescent Mental Health and School-Related Difficulties",
-    "Neuroaffirming and Post-Diagnostic Support",
-    "Life Transitions and Adjustment",
-    "Women's Psychological Wellbeing",
-    "Professional Stress and Burnout",
-    "Expatriate Adjustment, Isolation and Belonging",
-    "Cultural and Societal Pressures",
-  ],
-//   experience: "",
-  education: [
-    "MSc Psychology (UK)",
-    "International Advanced Diploma in Clinical Hypnotherapy, Psychotherapy and Counselling (UK)",
-    "Doctoral Candidate in Counselling Psychology and Psychotherapy, Middlesex University, London / New School of Psychotherapy and Counselling",
-  ],
-  certifications: [
-    "CDA Licensed Psychologist",
-    "CBT Diploma in the Psychology and Treatment of Eating Disorders",
-    "CBT Diploma for the Treatment of Obsessive Compulsive Disorder (OCD)",
-    "Autism Diagnostic Observation Schedule, Second Edition (ADOS-2) Certification",
-    "Triple P Positive Parenting Programme - Accredited Provider",
-  ],
-  bio: `Originally from Ireland, Aoife is a CDA-licensed Psychologist with an established background supporting adults, adolescents and families. Having lived and worked in Dubai for many years, she brings considerable experience and a genuine understanding of the complexities of life within a diverse international community.
+// {
+//   id: "9",
+//   url: "aoife-mohan",
+//   name: "Ms. Aoife Mohan",
+//   title: "Psychologist",
+//   specializations: [
+//     "Anxiety, Panic and Stress",
+//     "Depression and Low Mood",
+//     "Self-Esteem and Confidence",
+//     "Relationships and Attachment",
+//     "Grief, Bereavement and Loss",
+//     "Family Relationships and Parenting Challenges",
+//     "Adolescent Mental Health and School-Related Difficulties",
+//     "Neuroaffirming and Post-Diagnostic Support",
+//     "Life Transitions and Adjustment",
+//     "Women's Psychological Wellbeing",
+//     "Professional Stress and Burnout",
+//     "Expatriate Adjustment, Isolation and Belonging",
+//     "Cultural and Societal Pressures",
+//   ],
+// //   experience: "",
+//   education: [
+//     "MSc Psychology (UK)",
+//     "International Advanced Diploma in Clinical Hypnotherapy, Psychotherapy and Counselling (UK)",
+//     "Doctoral Candidate in Counselling Psychology and Psychotherapy, Middlesex University, London / New School of Psychotherapy and Counselling",
+//   ],
+//   certifications: [
+//     "CDA Licensed Psychologist",
+//     "CBT Diploma in the Psychology and Treatment of Eating Disorders",
+//     "CBT Diploma for the Treatment of Obsessive Compulsive Disorder (OCD)",
+//     "Autism Diagnostic Observation Schedule, Second Edition (ADOS-2) Certification",
+//     "Triple P Positive Parenting Programme - Accredited Provider",
+//   ],
+//   bio: `Originally from Ireland, Aoife is a CDA-licensed Psychologist with an established background supporting adults, adolescents and families. Having lived and worked in Dubai for many years, she brings considerable experience and a genuine understanding of the complexities of life within a diverse international community.
 
-Aoife's practice spans anxiety, depression, stress, relationship difficulties, self-esteem, grief and the challenges that come with significant life changes. She has particular experience with adolescent emotional and behavioural concerns, parenting challenges and complex family dynamics. Her work also includes offering neuro affirming support to individuals and families navigating an autism or ADHD diagnosis, helping them better understand their strengths and needs, and make sense of what a diagnosis might mean for them and their families.
+// Aoife's practice spans anxiety, depression, stress, relationship difficulties, self-esteem, grief and the challenges that come with significant life changes. She has particular experience with adolescent emotional and behavioural concerns, parenting challenges and complex family dynamics. Her work also includes offering neuro affirming support to individuals and families navigating an autism or ADHD diagnosis, helping them better understand their strengths and needs, and make sense of what a diagnosis might mean for them and their families.
 
-Her interests also include women's psychological wellbeing, particularly the changing sense of self that can accompany motherhood, menopause and illness. Alongside this, she supports those facing professional pressures, burnout, high expectations and the demands of balancing work and personal life.
+// Her interests also include women's psychological wellbeing, particularly the changing sense of self that can accompany motherhood, menopause and illness. Alongside this, she supports those facing professional pressures, burnout, high expectations and the demands of balancing work and personal life.
 
-Her therapeutic approach is integrative and evidence-informed, drawing on Cognitive Behavioural Therapy (CBT), Person-Centred Therapy, Existential Psychotherapy, Family Systems Thinking and Clinical Hypnotherapy. She combines practical strategies with opportunities for deeper reflection and understanding, adapting her approach to each person's individual needs and circumstances.
+// Her therapeutic approach is integrative and evidence-informed, drawing on Cognitive Behavioural Therapy (CBT), Person-Centred Therapy, Existential Psychotherapy, Family Systems Thinking and Clinical Hypnotherapy. She combines practical strategies with opportunities for deeper reflection and understanding, adapting her approach to each person's individual needs and circumstances.
 
-At the heart of her approach is the belief that therapy is, above all, a human relationship. She recognises that taking the first step towards therapy can feel daunting and places real importance on helping clients feel comfortable from the outset. Warm, perceptive and down to earth, her approach is collaborative, grounded in a genuine desire to understand each person's perspective without judgement. Through thoughtful questions and, when helpful, gentle challenge, she encourages clients to explore different ways of seeing and understanding their experiences.`,
-  // email: "",
-  // phone: "",
-  image: "/images/aoife-profile-photo.png",
-  // availability: ""
-},
+// At the heart of her approach is the belief that therapy is, above all, a human relationship. She recognises that taking the first step towards therapy can feel daunting and places real importance on helping clients feel comfortable from the outset. Warm, perceptive and down to earth, her approach is collaborative, grounded in a genuine desire to understand each person's perspective without judgement. Through thoughtful questions and, when helpful, gentle challenge, she encourages clients to explore different ways of seeing and understanding their experiences.`,
+//   // email: "",
+//   // phone: "",
+//   image: "/images/aoife-profile-photo.png",
+//   // availability: ""
+// },
 
   // {
   //   id: "9",

@@ -300,11 +300,69 @@ export const clinicians = [
     She is also a regular keynote speaker at national and international mental-health conferences and is passionate about bringing together clinical expertise, education, family support and practical strategies to help children and young people thrive.`,
     // email: "",
     // phone: "",
-    image: "/images/kiran-profile-photo.png",
+    image: "/images/kiran-profile-photo.jpeg",
     // availability: ""
     },
-    {
+      {
     id: "6",
+    url: "dr-saima-jehanzeb",
+    name: "Dr Saima Jehanzeb",
+    title: "Consultant Psychiatrist",
+    specializations: [
+        "General Adult Psychiatry",
+        "Liaison Psychiatry",
+        "Adult ADHD Assessment",
+        "Autism Assessment",
+        "Autism Diagnostic Observation Schedule, Second Edition (ADOS-2)",
+        "Autism Diagnostic Interview-Revised (ADI-R)",
+        "Neurodevelopmental Psychiatry",
+        "Depression",
+        "Anxiety Disorders",
+        "Obsessive-Compulsive Disorder (OCD)",
+        "Post-Traumatic Stress Disorder (PTSD)",
+        "Bipolar Disorder",
+        "Psychosis",
+        "Schizophrenia",
+        "Neuropsychiatry",
+        "Perinatal Psychiatry",
+        "Complex Psychiatric Presentations"
+    ],
+    experience: "+15 years",
+    education: [
+        "Bachelor of Medicine, Bachelor of Surgery (MBBS), Pakistan",
+        "Certificate of Completion of Training (CCT) in General Adult and Liaison Psychiatry, United Kingdom",
+        "Member of the Royal College of Psychiatrists (MRCPsych)",
+        "Postgraduate Diploma in Medical Education"
+    ],
+    certifications: [
+        "UK Adult ADHD Assessment Training (UKAAN)",
+        "Autism Diagnostic Observation Schedule, Second Edition (ADOS-2) Training",
+        "Autism Diagnostic Interview-Revised (ADI-R) Training",
+        "Cognitive Behavioural Therapy (CBT)",
+        "Psychodynamic Psychotherapy",
+        "Behavioural Family Therapy",
+        "Clinical Assessment of Skills and Competencies (CASC) Examiner, Royal College of Psychiatrists"
+    ],
+    bio: `Dr Saima Jehanzeb is a United Kingdom-trained Consultant Psychiatrist with over 15 years of experience in General Adult and Liaison Psychiatry across the United Kingdom and the United Arab Emirates. She completed her Bachelor of Medicine, Bachelor of Surgery (MBBS) in Pakistan before undertaking specialist psychiatric training in the United Kingdom. She holds a Certificate of Completion of Training in General Adult and Liaison Psychiatry, Membership of the Royal College of Psychiatrists and a Postgraduate Diploma in Medical Education.
+
+    Prior to moving to the United Arab Emirates, Dr Jehanzeb worked as a Consultant Psychiatrist with Birmingham and Solihull Mental Health NHS Foundation Trust and provided online psychiatric assessments through Psychiatry-UK. From May 2023 to January 2026, she worked as a Consultant Psychiatrist at the American Centre for Psychiatry and Neurology in the United Arab Emirates, assessing and managing a broad range of adult psychiatric and neurodevelopmental conditions.
+
+    She has a particular clinical interest in adult Attention Deficit Hyperactivity Disorder (ADHD) and autism assessment. She has completed specialist training through the United Kingdom Adult ADHD Network (UKAAN) in adult ADHD assessment and is trained in the Autism Diagnostic Observation Schedule, Second Edition (ADOS-2) and the Autism Diagnostic Interview-Revised (ADI-R).
+
+    Her clinical experience includes depression, anxiety disorders, Obsessive-Compulsive Disorder (OCD), Post-Traumatic Stress Disorder (PTSD), bipolar disorder, psychosis, schizophrenia and complex psychiatric presentations. She also has experience across neuropsychiatry, perinatal psychiatry, addiction psychiatry, eating disorders, liaison psychiatry and psychiatric intensive care.
+
+    Dr Jehanzeb is trained in Cognitive Behavioural Therapy (CBT), psychodynamic psychotherapy and behavioural family therapy. These therapeutic approaches inform her holistic and individualised approach to psychiatric assessment and treatment.
+
+    She has a strong interest in medical education, teaching and clinical supervision and serves as a Clinical Assessment of Skills and Competencies (CASC) examiner with the Royal College of Psychiatrists. Her clinical approach is evidence-based, patient-centred and culturally sensitive, taking into consideration developmental, psychological, social, family and cultural factors.
+
+    Dr Jehanzeb conducts consultations in English, Urdu and Pashto.`,
+    // email: "",
+    // phone: "",
+    image: "/images/saima-jehanzeb-profile-photo.jpeg",
+    // availability: ""
+},
+    {
+    id: "7",
     url: "ghania-kabbara",
     name: "Ms. Ghania Kabbara",
     title: "Clinical Psychologist",
@@ -349,7 +407,7 @@ export const clinicians = [
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
     {
-    id: "7",
+    id: "8",
     url: "priyanka-mahendru",
     name: "Ms. Priyanka Bhatia Mahendru",
     title: "Social Therapist - Psychologist",
@@ -406,7 +464,7 @@ export const clinicians = [
     // availability: "Monday - Thursday, 10:00 AM - 6:00 PM"
   },
   {
-    id: "8",
+    id: "9",
     url: "anvita-kamath",
     name: "Ms. Anvita Kamath",
     title: "Social Therapist - Psychologist",
